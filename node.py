@@ -10,7 +10,7 @@ class Node(object):
     def getname(self):
         return self.name
 
-    def getid(self):
+    def getoid(self):
         return self.oid
 
     def __str__(self):

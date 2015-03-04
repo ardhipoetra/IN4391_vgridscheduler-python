@@ -1,6 +1,8 @@
 import Pyro4
 import sys
 from gridscheduler import GridScheduler
+from constant import Constant
+import utils
 
 if sys.version_info < (3, 0):
     input = raw_input
@@ -8,9 +10,19 @@ if sys.version_info < (3, 0):
 def main():
 	g_sch = GridScheduler()
 
-	for x in xrange(1,3):		
-		gs = g_sch.addnewGS("vgs.gridscheduler") #add GS(es)
-		rm = gs.addnewRM("vgs.resmgr") #add one RM per GS jurisdiction
+	gslist = []
+	rmlist = []
+
+	count = 0
+
+	for x in xrange(0,Constant.TOTAL_GS):		
+		n = utils.add_node(x, "", Constant.NODE_GRIDSCHEDULER)
+		gslist.append(n)
+		count+=1
+
+	for x in xrange(count, Constant.TOTAL_RM+count):		
+		n = utils.add_node(x, gslist[0], Constant.NODE_RESOURCEMANAGER) #for now all RM connected to GS[0]
+		rmlist.append(n)	
 
 	out = True
 	
