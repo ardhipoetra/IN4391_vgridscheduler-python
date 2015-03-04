@@ -11,6 +11,6 @@ class ResourceManager(Node):
     	ns = Pyro4.locateNS()
     	asgn = Pyro4.Proxy(assignee)
 
-    	print 'got job %s from %s' %(job, asgn.tostr())
+    	print '%s got job %s from %s' %(self, job, asgn.tostr())
 
     	asgn.receivereport(self.uri, job)
