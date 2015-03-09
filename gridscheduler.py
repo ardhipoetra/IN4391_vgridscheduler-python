@@ -5,6 +5,10 @@ from resourcemanager import ResourceManager
 from constant import Constant
 
 class DistributedGridScheduler(Node):
+
+   ## Define the data structure which maintains the state of each distributed GS
+
+  
     def __init__(self, oid, name="GS"):
         Node.__init__(self, oid, name)
         print 'gs %s created with id %d' %(name, oid)
@@ -30,10 +34,21 @@ class DistributedGridScheduler(Node):
 
         return Constant.TOTAL_GS
 
+    #Inform about the RM who has started executing the job
+    def updateJobDetailsToRM
+
+    #Update the data structure for consistency/replication
+    def updateJobDetails :
+        return false
+
 class GridScheduler(object):
 
     def gslength(self):
         return len(self.gslist)
+
+     
+    def sendJobDetailsToDistributedGS():
+   
 
     def submitjob(self, job):
         ns = Pyro4.locateNS()
@@ -52,3 +67,7 @@ class GridScheduler(object):
     def chooseGS(self):
 
         return 0
+    
+    #Maintain the job queue in case all the Distributed GS are occupied
+    def maintainJobQueue():
+        return 0 

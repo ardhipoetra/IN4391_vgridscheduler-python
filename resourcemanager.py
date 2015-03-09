@@ -11,6 +11,23 @@ class ResourceManager(Node):
     	ns = Pyro4.locateNS()
     	asgn = Pyro4.Proxy(assignee)
 
-    	print '%s got job %s from %s' %(self, job, asgn.tostr())
+    	print 'got job %s from %s' %(job, asgn.tostr())
 
     	asgn.receivereport(self.uri, job)
+
+    #Update the node details and job completion /failure details to the parent GS
+    def updateDistributedGridScheduler :
+    	return true
+
+    #maintain the job queue for the RM 
+    def rmQueue():
+    	return true
+
+
+
+ #Incase if we get time
+ class secondaryResourceManager () :
+
+
+
+
