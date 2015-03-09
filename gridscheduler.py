@@ -6,6 +6,10 @@ from resourcemanager import ResourceManager
 from constant import Constant
 
 class DistributedGridScheduler(Node):
+
+   ## Define the data structure which maintains the state of each distributed GS
+
+
     def __init__(self, oid, name="GS"):
         Node.__init__(self, oid, name)
         print 'gs %s created with id %d' %(name, oid)
@@ -15,7 +19,7 @@ class DistributedGridScheduler(Node):
     def receivereport(self, details, d_report):
         detobj = Pyro4.Proxy(details)
         report = serpent.loads(d_report)
-        
+
         print '%s received report %s from %s' %(self,report,detobj.tostr())
 
     def assignjob(self, assignee, d_job):
@@ -35,10 +39,23 @@ class DistributedGridScheduler(Node):
 
         return Constant.TOTAL_GS
 
+    #Inform about the RM who has started executing the job
+    def update_jobdetailsRM(self):
+        return True
+
+    #Update the data structure for consistency/replication
+    def update_structure(self):
+        return False
+
 class GridScheduler(object):
 
     def gslength(self):
         return len(self.gslist)
+
+
+    # I think this function serve the same purpose with submitjob
+    # def sendJobDetailsToDistributedGS(self):
+    #     return True
 
     def submitjob(self, job):
         ns = Pyro4.locateNS()
@@ -57,4 +74,8 @@ class GridScheduler(object):
 
     def chooseGS(self):
 
+        return 0
+
+    #Maintain the job queue in case all the Distributed GS are occupiedd
+    def maintain_jobqueue(self):
         return 0

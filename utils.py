@@ -13,6 +13,8 @@ def add_node(oid, parent="", type=Constant.NODE_WORKER):
         elif isinstance(node, DistributedGridScheduler):
             print "add DGS"
 
+        #deamon should be started with the seperate host IP and port address
+        ## which IP address should be taken and how ?
         daemon = Pyro4.Daemon()
         uri = daemon.register(node)
         node.seturi(uri)
@@ -37,6 +39,7 @@ def add_node(oid, parent="", type=Constant.NODE_WORKER):
         node = ""
         return
 
+     # Should be started as a seperate process separaate memory 
     thread = threading.Thread(target=_add_node, args=(oid, ns, parent, node, ))
     thread.setDaemon(True)
     thread.start()
