@@ -16,7 +16,7 @@ class ResourceManager(Node):
     	asgn.receivereport(self.uri, job)
 
     #Update the node details and job completion /failure details to the parent GS
-    def updateDistributedGridScheduler :
+    def updateDistributedGridScheduler():
     	return true
 
     #maintain the job queue for the RM 
@@ -26,7 +26,7 @@ class ResourceManager(Node):
 
 
  #Incase if we get time
- class secondaryResourceManager () :
+ #class secondaryResourceManager () :
 
 
 

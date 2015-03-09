@@ -35,10 +35,11 @@ class DistributedGridScheduler(Node):
         return Constant.TOTAL_GS
 
     #Inform about the RM who has started executing the job
-    def updateJobDetailsToRM
+    def updateJobDetailsToRM():
+        return true
 
     #Update the data structure for consistency/replication
-    def updateJobDetails :
+    def updateJobDetails():
         return false
 
 class GridScheduler(object):
@@ -48,7 +49,7 @@ class GridScheduler(object):
 
      
     def sendJobDetailsToDistributedGS():
-   
+        return true   
 
     def submitjob(self, job):
         ns = Pyro4.locateNS()
@@ -68,6 +69,6 @@ class GridScheduler(object):
 
         return 0
     
-    #Maintain the job queue in case all the Distributed GS are occupied
+    #Maintain the job queue in case all the Distributed GS are occupiedd
     def maintainJobQueue():
         return 0 
