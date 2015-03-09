@@ -2,41 +2,52 @@ import Pyro4
 import sys
 from gridscheduler import GridScheduler
 from constant import Constant
+from job import Job
 import utils
+import os
 
 if sys.version_info < (3, 0):
     input = raw_input
 
 def main():
-	g_sch = GridScheduler()
 
-	gslist = []
-	rmlist = []
+    # Pyro4.config.SERIALIZER = "json"
+    Pyro4.config.COMMTIMEOUT=0.5
+    os.environ["PYRO_LOGFILE"] = "pyro.log"
+    os.environ["PYRO_LOGLEVEL"] = "DEBUG"
 
-	count = 0
+    g_sch = GridScheduler()
 
-	for x in xrange(0,Constant.TOTAL_GS):		
-		n = utils.add_node(x, "", Constant.NODE_GRIDSCHEDULER)
-		gslist.append(n)
-		count+=1
+    gslist = []
+    rmlist = []
 
-	for x in xrange(count, Constant.TOTAL_RM+count):		
-		n = utils.add_node(x, gslist[0], Constant.NODE_RESOURCEMANAGER) #for now all RM connected to GS[0]
-		rmlist.append(n)	
+    count = 0
 
-	out = True
-	
-	while(out):
-	    print "\n\nPlease select: "
-	    print "1 Msg GS -> RM"
-	    print "other OUT"
-	    
-	    ip = input("Input:")
+    for x in xrange(0,Constant.TOTAL_GS):
+    	n = utils.add_node(x, "", Constant.NODE_GRIDSCHEDULER)
+    	gslist.append(n)
+    	count+=1
 
-	    if ip == '0':
-	    	out = False
-	    else:
-	    	g_sch.submitjob(ip)
+    for x in xrange(count, Constant.TOTAL_RM+count):
+    	n = utils.add_node(x, gslist[0], Constant.NODE_RESOURCEMANAGER) #for now all RM connected to GS[0]
+    	rmlist.append(n)
+
+    out = True
+    count = 0
+    while(out):
+
+        print "\n\nPlease select: "
+        print "other input: Msg GS -> RM"
+        print "0: OUT"
+
+        ip = input("Input:")
+
+        if ip == '0':
+        	out = False
+        else:
+        	j_ip = Job(count, ip, 1000)
+        	g_sch.submitjob(j_ip)
+        	count+=1
 
 if __name__=="__main__":
     main()
