@@ -29,13 +29,13 @@ def main():
     	count+=1
 
     for x in xrange(count, Constant.TOTAL_RM+count):
-    	n = utils.add_node(x, gslist[0], Constant.NODE_RESOURCEMANAGER) #for now all RM connected to GS[0]
+    	n = utils.add_node(x, gslist[0], Constant.NODE_RESOURCEMANAGER) #for now all RM connected to GS[0] FIX ME
     	rmlist.append(n)
 
     out = True
     count = 0
     while(out):
-
+        # sulabh >> We should ask for the priority of the job here and higher priority jobs go first in the cluster
         print "\n\nPlease select: "
         print "other input: Msg GS -> RM"
         print "0: OUT"

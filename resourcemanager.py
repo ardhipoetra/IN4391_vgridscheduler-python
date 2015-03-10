@@ -16,15 +16,23 @@ class ResourceManager(Node):
         print '%s got job %s from %s' %(self, job, asgn.tostr())
     	asgn.receivereport(self.uri, d_job)
 
-    #Update the node details and job completion /failure details to the parent GS
+    
+    # Activity :  this function Update the node details and job completion /failure details to the parent GS
+    # 
+    #output : datastructure with values such as failed node id , avaiable jobs spots, job completion details.
     def update_distributedGS(self):
     	return True
 
-    #maintain the job queue for the RM
-    def rmqueue(self):
+    #Activity : this function add the incoming jobs to the queue if all the jobs are occupied .
+    # output : do nt output anything 
+    def rmQueue(self):
     	return True
 
 
+    ###Activity : this function takes out the latest job for the RM Queue
+    ## output : the latest job
+    def  getJobFromRMQueue(self):
+    	return job
 
  #Incase if we get time
  #class secondaryResourceManager (Node) :
