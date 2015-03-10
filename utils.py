@@ -23,19 +23,21 @@ def add_node(oid, parent="", type=Constant.NODE_WORKER):
         ns.register(namespace+"."+node.getname()+str(oid), uri)
         daemon.requestLoop()
 
+        return
+
     if type == Constant.NODE_WORKER:
-        node = WorkerNode(oid, "WK-"+str(oid)) 
+        node = WorkerNode(oid, "[WK-"+str(oid)+"]")
         ns = Constant.NAMESPACE_WK
     elif type == Constant.NODE_RESOURCEMANAGER:
-        node = ResourceManager(oid, "RM-"+str(oid)) 
+        node = ResourceManager(oid, "[RM-"+str(oid)+"]")
         ns = Constant.NAMESPACE_RM
     elif type == Constant.NODE_GRIDSCHEDULER:
-        node = DistributedGridScheduler(oid, "GS-"+str(oid)) 
+        node = DistributedGridScheduler(oid, "[GS-"+str(oid)+"]")
         ns = Constant.NAMESPACE_GS
     else:
         print "ERROR"
         node = ""
-        return 
+        return
 
      # Should be started as a seperate process separaate memory 
     thread = threading.Thread(target=_add_node, args=(oid, ns, parent, node, ))
