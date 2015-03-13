@@ -4,6 +4,7 @@ import serpent
 from node import Node
 from resourcemanager import ResourceManager
 from constant import Constant
+import Queue
 
 class DistributedGridScheduler(Node):
 
@@ -69,15 +70,20 @@ class GridScheduler(object):
     def sendJobDetailsToDistributedGS(self):
       return false    
 
-    def submitjob(self, job):
+    def submitjob(self, job, queue):
         ns = Pyro4.locateNS()
 
         print 'push job %s' %job
+        self.maintain_jobqueue(queue,job)
+         
+
 
         for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
             gsobj = Pyro4.Proxy(gs_uri)
+            dgs_object = self.chooseGS()
 
-            if gsobj.getoid() == self.chooseGS():
+            if gsobj.getoid() == dgs_object:
+                job = self.getJobFromQueue(queue)
                 gsobj.assignjob(gs_uri, serpent.dumps(job, indent=True))
 
     def __init__(self):
@@ -91,13 +97,16 @@ class GridScheduler(object):
 
     # activity :Maintain the job queue in case all the Distributed GS are occupiedd
     #output nothing 
-    def maintain_jobqueue(self,job):
-      return 0
+    def maintain_jobqueue(self,queue,job):
+      queue.put(job)    
+
+    
 
     ## activity : Function to get the  latest job from the queue.   
     ## output : the num recent job
-    def getJobFromQueue(self):
-      return job 
+    def getJobFromQueue(self,queue):
+
+      return queue.get() 
 
     # get the current status of the cluster 
     # 

@@ -5,6 +5,8 @@ from constant import Constant
 from job import Job
 import utils
 import os
+import Queue
+
 
 if sys.version_info < (3, 0):
     input = raw_input
@@ -17,6 +19,8 @@ def main():
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
 
     g_sch = GridScheduler()
+
+    q = Queue.Queue()
 
     gslist = []
     rmlist = []
@@ -43,11 +47,11 @@ def main():
         ip = input("Input:")
 
         if ip == '0':
-        	out = False
+            out = False
         else:
-        	j_ip = Job(count, ip, 1000)
-        	g_sch.submitjob(j_ip)
-        	count+=1
+            j_ip = Job(count, ip, 1000)
+            g_sch.submitjob(j_ip,q)
+            count+=1
 
 if __name__=="__main__":
     main()
