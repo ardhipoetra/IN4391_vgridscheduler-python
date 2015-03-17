@@ -4,14 +4,10 @@ class Constant(object):
 	TOTAL_GS = 2
 	TOTAL_RM = 3
 	TOTAL_NODE = TOTAL_RM * 4
-
+	TOTAL_NODE_EACH = 4
 
 	WORKER_STATUS_IDLE = 0
 	WORKER_STATUS_BUSY = 1
-
-	gslist = []
-	rmlist = [] # cluster list also?
-
 
 	NODE_WORKER = "workernode"
 	NODE_RESOURCEMANAGER = "RMnode"
