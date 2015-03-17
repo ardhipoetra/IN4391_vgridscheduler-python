@@ -1,6 +1,15 @@
 import Pyro4
 
 class Job(object):
+
+	jid = 0
+	name = 'nameofthejob'
+	duration = 100
+
+	#need to initiate these var
+	RM_assigned = 0
+	GS_assignee = 1
+
 	def __init__(self, jid, name, duration):
 		self.jid = jid
 		self.name = name

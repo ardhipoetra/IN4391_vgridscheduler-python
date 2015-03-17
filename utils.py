@@ -2,7 +2,7 @@ import Pyro4
 import threading
 from node import Node
 from resourcemanager import ResourceManager
-from gridscheduler import DistributedGridScheduler
+from gridscheduler import GridScheduler
 from constant import Constant
 
 def add_node(oid, parent="", type=Constant.NODE_WORKER):
@@ -39,7 +39,7 @@ def add_node(oid, parent="", type=Constant.NODE_WORKER):
         node = ""
         return
 
-     # Should be started as a seperate process separaate memory 
+     # Should be started as a seperate process separaate memory
     thread = threading.Thread(target=_add_node, args=(oid, ns, parent, node, ))
     thread.setDaemon(True)
     thread.start()
