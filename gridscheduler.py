@@ -9,6 +9,8 @@ import time
 import signal
 import sys
 
+stop = True
+
 class GridScheduler(Node):
 
     # list of jobs that waiting
@@ -28,7 +30,7 @@ class GridScheduler(Node):
         Node.__init__(self, oid, name)
         print 'gs %s created with id %d' %(name, oid)
 
-        self.rmlist = [] #rm connected in this
+        self.RM_loads = [(i, 0.0) for i in range(Constant.TOTAL_RM)] #rm connected in this
 
     # report received after finishing the task from RM
     def receivereport(self, details, d_report):
@@ -38,10 +40,20 @@ class GridScheduler(Node):
         print '%s received report %s from %s' %(self,report,detobj.tostr())
 
     # add job to this GS
-    def addjob(self, assignee, d_job):
+    def addjob(self, d_job):
+        job = serpent.loads(d_job)
+        self.job_queue.append(job)
 
+        # should be do something else
+        print 'considering jobs.. %s' %(d_job)
+        jobsub = self._choose_job()
+        rmidsub = self._chooseRM()
 
-
+        if rmidsub == -1 :
+            print 'no rm!'
+            return False
+        else:
+            self._assignjob(rmidsub, serpent.dumps(jobsub))
         return True
 
     # handle when retrieving state from other GS
@@ -55,36 +67,39 @@ class GridScheduler(Node):
         return True
 
     # assign job to RM
-    def _assignjob(self, assignee, d_job):
+    def _assignjob(self, rmid, d_job):
         job = serpent.loads(d_job)
 
         print '%s assigned job %s' % (self,job)
 
         ns = Pyro4.locateNS()
+        uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
+        rmobj = Pyro4.Proxy(uri)
 
-        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
-            rmobj = Pyro4.Proxy(rm_uri)
-            if rmobj.getoid() == self.chooseRM():
-                print 'send job to %s' % (rmobj.tostr())
-                rmobj.assignjob(assignee,d_job)
+        print 'send job to %s' % (rmobj.tostr())
+
+        rmobj.add_job(d_job)
 
     # GS choose job
     def _choose_job(self):
-
-        return 'job'
+        job = self.job_queue.pop()
+        return job
 
     def _chooseRM(self):
         # probably need to ask other GS about RM current status (voting)
+        for idrm, rmload in self.RM_loads:
+            if rmload < 0.7:
+                return idrm
 
-        return Constant.TOTAL_GS
+        return -1
 
     # Inform about the RM who has started executing the job
     def _update_jobdetailsRM(self): # to be honest I don't understand this function
-      return True
+        return True
 
     # Update the data structure for consistency/replication to designated distributed GS (neighbor) -> create snapshot
     def _update_GSstructure(self):
-      return False
+        return False
 
     # push current structure to other GS (consistency)
     def _push_structure(self):
@@ -103,16 +118,14 @@ class GridScheduler(Node):
 def check_stop():
     return stop
 
-stop = True
-
 def main():
     # g_sch = GridScheduler()
     ns = Pyro4.locateNS()
 
     if len(sys.argv) == 0:
         oid = len(ns.list(prefix=Constant.NAMESPACE_GS+"."))
-    else
-        oid = int(sys.argv[0])
+    else:
+        oid = int(sys.argv[1])
 
     node = GridScheduler(oid, "[GS-"+str(oid)+"]")
 
@@ -126,7 +139,6 @@ def main():
         print('You pressed Ctrl+C on GS!')
         stop = False
         daemon.shutdown()
-
 
     signal.signal(signal.SIGINT, signal_handler)
 

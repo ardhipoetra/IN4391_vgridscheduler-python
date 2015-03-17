@@ -5,67 +5,75 @@ import time
 from constant import Constant
 from job import Job
 import utils
+import serpent
 import os
+import subprocess
+import random
+import signal
+import threading
 
 if sys.version_info < (3, 0):
     input = raw_input
 
+subp_gs = []
+subp_rm = []
+
 def main():
 
     # Pyro4.config.SERIALIZER = "json"
-    Pyro4.config.COMMTIMEOUT=0.5
+    # Pyro4.config.COMMTIMEOUT=0.5
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
 
 
     ns = Pyro4.locateNS()
 
-    while len(ns.list(prefix=Constant.NAMESPACE_GS+".")) != Constant.TOTAL_GS:
-        print len(ns.list(prefix=Constant.NAMESPACE_GS+"."))
-        time.sleep(2)
+    for gs_i in range(0, Constant.TOTAL_GS):
+        subp_gs.append(subprocess.Popen(['python', 'gridscheduler.py', str(gs_i)]))
 
-    # choose GS to submit job
-    # for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
-    #     gsobj = Pyro4.Proxy(gs_uri)
-    #
-    #     if gsobj.getoid() == self.chooseGS():
-    #         gsobj.assignjob(gs_uri, serpent.dumps(job, indent=True))
+    for rm_i in range(0, Constant.TOTAL_RM):
+        subp_rm.append(subprocess.Popen(['python', 'resourcemanager.py', str(rm_i)]))
 
 
-    # g_sch = GridScheduler()
-    #
-    # gslist = []
-    # rmlist = []
-    #
-    # count = 0
-    #
-    # for x in xrange(0,Constant.TOTAL_GS):
-    #   n = utils.add_node(x, "", Constant.NODE_GRIDSCHEDULER)
-    #   gslist.append(n)
-    #   count+=1
-    #
-    # for x in xrange(count, Constant.TOTAL_RM+count):
-    #   n = utils.add_node(x, gslist[0], Constant.NODE_RESOURCEMANAGER) #for now all RM connected to GS[0] FIX ME
-    #   rmlist.append(n)
-    #
-    # out = True
-    # count = 0
-    # while(out):
-    #     # sulabh >> We should ask for the priority of the job here and higher priority jobs go first in the cluster
-    #     print "\n\nPlease select: "
-    #     print "other input: Msg GS -> RM"
-    #     print "0: OUT"
-    #
-    #     ip = input("Input:")
-    #
-    #     if ip == '0':
-    #       out = False
-    #     else:
-    #       j_ip = Job(count, ip, 1000)
-    #       g_sch.submitjob(j_ip)
-    #       count+=1
-    # return
+    out = True
+    count = 0
+    while(out):
+        print "\n\nPlease select: "
+        print "other input: Msg GS -> RM"
+        print "0: OUT"
 
+        ip = input("Input:")
+
+        if ip == '0':
+            for gi in range(0, Constant.TOTAL_GS):
+                os.kill(subp_gs[gi].pid, signal.SIGINT)
+            for rmi in range(0, Constant.TOTAL_RM):
+                os.kill(subp_rm[rmi].pid, signal.SIGINT)
+            out = False
+        elif ip == '1':
+            for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+                rmobj = Pyro4.Proxy(rm_uri)
+                print rmobj.get_cluster_info()
+                print "========\n"
+        elif ip == '2':
+            pass
+        elif ip == '3':
+            pass
+        else:
+            # def _newjob(count):
+            uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-0]0")
+            gsobj = Pyro4.Proxy(uri)
+
+            jobsu = Job(count, "joob"+str(count), random.randint(5,15), random.random())
+            d_job = serpent.dumps(jobsu)
+
+            gsobj.addjob(d_job)
+
+            # thread = threading.Thread(target=_newjob, args=[count])
+            # thread.setDaemon(True)
+            # thread.start()
+
+    return
 
 if __name__=="__main__":
     main()
