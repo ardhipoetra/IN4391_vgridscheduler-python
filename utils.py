@@ -26,7 +26,7 @@ def add_node(oid, parent="", type=Constant.NODE_WORKER):
         return
 
     if type == Constant.NODE_WORKER:
-        node = WorkerNode(oid, "[WK-"+str(oid)+"]")
+        anode = WorkerNode(oid, "[WK-"+str(oid)+"]")
         ns = Constant.NAMESPACE_WK
     elif type == Constant.NODE_RESOURCEMANAGER:
         node = ResourceManager(oid, "[RM-"+str(oid)+"]")

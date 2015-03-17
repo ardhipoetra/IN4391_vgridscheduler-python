@@ -20,6 +20,9 @@ class GridScheduler(Node):
     # id RM, jobs on that cluster-RM
     jobs_assigned_RM = [(1, ["job1", "job2"]), (2, ["jobA", "jobC"])]
 
+    # every GS store everyone's state, except himself, maybe. including timestamp
+    neighbor_stateGS = [(123, 1, "stateGS1"), (41, 3, "stateGS3")]
+
    ## Define the data structure which maintains the state of each GS
     def __init__(self, oid, name="GS"):
         Node.__init__(self, oid, name)
@@ -34,8 +37,25 @@ class GridScheduler(Node):
 
         print '%s received report %s from %s' %(self,report,detobj.tostr())
 
+    # add job to this GS
+    def addjob(self, assignee, d_job):
+
+
+
+        return True
+
+    # handle when retrieving state from other GS
+    def get_structure(self, id_GS, structureObj):
+        return True;
+
+    # get the current status of the cluster AND RM in his jurisdiction
+    # activity: return the data structure containing the deails such as how many nodes are avaiable, current workload in the network etc
+    # output: data structure for the cluster status from the perticular cluster
+    def getclusterstatus(self, rmobject):
+        return True
+
     # assign job to RM
-    def assignjob(self, assignee, d_job):
+    def _assignjob(self, assignee, d_job):
         job = serpent.loads(d_job)
 
         print '%s assigned job %s' % (self,job)
@@ -48,48 +68,53 @@ class GridScheduler(Node):
                 print 'send job to %s' % (rmobj.tostr())
                 rmobj.assignjob(assignee,d_job)
 
-    def choose_job(self):
+    # GS choose job
+    def _choose_job(self):
 
         return 'job'
 
-    def chooseRM(self):
+    def _chooseRM(self):
+        # probably need to ask other GS about RM current status (voting)
 
-      return Constant.TOTAL_GS
+        return Constant.TOTAL_GS
 
-    #activity : Inform about the RM who has started executing the job
-    ## output : return the sucess/failure status of the update to the calling function
-    def update_jobdetailsRM(self):
+    # Inform about the RM who has started executing the job
+    def _update_jobdetailsRM(self): # to be honest I don't understand this function
       return True
 
-    #activity :Update the data structure for consistency/replication for designated distributed GS (neighbor)
-    def update_GSstructure(self):
+    # Update the data structure for consistency/replication to designated distributed GS (neighbor) -> create snapshot
+    def _update_GSstructure(self):
       return False
 
     # push current structure to other GS (consistency)
-    def push_structure(self):
+    def _push_structure(self):
         return True
 
-    # handle when retrieving state from other GS
-    def get_structure(self, id_GS, structureObj):
+    # monitor GS to handle fault in GS
+    def _monitorneighborGS(self):
+
         return True;
 
-    # get the current status of the cluster in his jurisdiction
-    # activity: return the data structure containing the deails such as how many nodes are avaiable, current workload in the network etc
-    # output: data structure for the cluster status from the perticular cluster
-    def getclusterstatus(self, rmobject):
-        return True
+    # monitor RM to handle fault in RM
+    def _monitorRM(self):
+
+        return True;
 
 def check_stop():
     return stop
+
 stop = True
 
 def main():
     # g_sch = GridScheduler()
     ns = Pyro4.locateNS()
 
-    oid = len(ns.list(prefix=Constant.NAMESPACE_GS+"."))
+    if len(sys.argv) == 0:
+        oid = len(ns.list(prefix=Constant.NAMESPACE_GS+"."))
+    else
+        oid = int(sys.argv[0])
 
-    node = DistributedGridScheduler(oid, "[GS-"+str(oid)+"]")
+    node = GridScheduler(oid, "[GS-"+str(oid)+"]")
 
     daemon = Pyro4.Daemon()
     uri = daemon.register(node)
@@ -98,14 +123,17 @@ def main():
     ns.register(Constant.NAMESPACE_GS+"."+node.getname()+str(oid), uri)
 
     def signal_handler(signal, frame):
-        print('You pressed Ctrl+C!')
+        print('You pressed Ctrl+C on GS!')
         stop = False
         daemon.shutdown()
 
 
     signal.signal(signal.SIGINT, signal_handler)
 
-    daemon.requestLoop(loopCondition=check_stop)
+    try:
+        daemon.requestLoop(loopCondition=check_stop)
+    finally:
+        ns.remove(name=Constant.NAMESPACE_GS+"."+node.getname()+str(oid))
 
 
 
