@@ -15,13 +15,13 @@ class WorkerNode(Node):
     def startjob(self, job_obj):
     	self.status = Constant.WORKER_STATUS_BUSY
 
-        def do_job(dur, load):
+        def do_job(dur, load, rmid):
             self.load = load
             time.sleep(dur)
             self.status = Constant.WORKER_STATUS_IDLE
             self.load = 0.0
 
-    	thread = threading.Thread(target=do_job, args=([job_obj["duration"], job_obj['load']]))
+    	thread = threading.Thread(target=do_job, args=([job_obj["duration"], job_obj['load'], job_obj["RM_assigned"]]))
         thread.setDaemon(True)
         thread.start()
 

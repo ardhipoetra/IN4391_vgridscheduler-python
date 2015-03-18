@@ -44,8 +44,8 @@ class GridScheduler(Node):
         job = serpent.loads(d_job)
         self.job_queue.append(job)
 
-        # should be do something else
-        print 'considering jobs.. %s' %(d_job)
+        # should do something
+
         jobsub = self._choose_job()
         rmidsub = self._chooseRM()
 
@@ -53,6 +53,7 @@ class GridScheduler(Node):
             print 'no rm!'
             return False
         else:
+            jobsub["RM_assigned"] = rmidsub
             self._assignjob(rmidsub, serpent.dumps(jobsub))
         return True
 
@@ -88,7 +89,7 @@ class GridScheduler(Node):
     def _chooseRM(self):
         # probably need to ask other GS about RM current status (voting)
         for idrm, rmload in self.RM_loads:
-            if rmload < 0.7:
+            if rmload < 0.1:
                 return idrm
 
         return -1
