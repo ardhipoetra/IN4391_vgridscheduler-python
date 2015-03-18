@@ -11,11 +11,12 @@ class Job(object):
 	RM_assigned = 0
 	GS_assignee = 1
 
-	def __init__(self, jid, name, duration, load):
+	def __init__(self, jid, name, duration, load, gsid):
 		self.jid = jid
 		self.name = name
 		self.duration = duration
 		self.load = load
+		self.GS_assignee = gsid
 
 	def getduration(self):
 		return self.duration

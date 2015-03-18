@@ -53,6 +53,7 @@ def main():
         elif ip == '1':
             for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
                 rmobj = Pyro4.Proxy(rm_uri)
+                print "from rm : "+str(rmobj.getoid())
                 print rmobj.get_cluster_info()
                 print "========\n"
         elif ip == '2':
@@ -60,11 +61,12 @@ def main():
         elif ip == '3':
             pass
         else:
-            # def _newjob(count):
+            # for now send to GS 0
             uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-0]0")
             gsobj = Pyro4.Proxy(uri)
 
-            jobsu = Job(count, "joob"+str(count), random.randint(5,15), random.random())
+            jobsu = Job(count, "joob"+str(count), random.randint(5,15), random.random(), 0)
+
             d_job = serpent.dumps(jobsu)
 
             gsobj.addjob(d_job)
