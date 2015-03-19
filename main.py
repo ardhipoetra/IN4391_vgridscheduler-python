@@ -38,9 +38,9 @@ def main():
     out = True
     count = 0
     while(out):
-        print "\n\nPlease select: "
-        print "other input: Msg GS -> RM"
-        print "0: OUT"
+        print ("\n\nPlease select")
+        print ("other input: Msg GS -> RM")
+        print ("0: OUT")
 
         ip = input("Input:")
 
@@ -53,15 +53,16 @@ def main():
         elif ip == '1':
             for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
                 rmobj = Pyro4.Proxy(rm_uri)
-                print "from rm : "+str(rmobj.getoid())
-                print rmobj.get_cluster_info()
-                print "========\n"
+                print ("from rm : "+str(rmobj.getoid()))
+                print (rmobj.get_cluster_info())
+                print ("========\n")
         elif ip == '2':
             pass
         elif ip == '3':
             pass
         else:
-            # for now send to GS 0
+            # for now send to GS 0  
+          
             uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-0]0")
             gsobj = Pyro4.Proxy(uri)
 

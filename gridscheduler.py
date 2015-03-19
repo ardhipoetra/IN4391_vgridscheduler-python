@@ -8,7 +8,7 @@ import utils
 import time
 import signal
 import sys
-
+from operator import attrgetter
 stop = True
 
 class GridScheduler(Node):
@@ -18,6 +18,7 @@ class GridScheduler(Node):
 
     # id RM, load per RM/cluster
     RM_loads = [(1,0.8), (2, 0.4)]
+    #RM_loads = []
 
     # id RM, jobs on that cluster-RM
     jobs_assigned_RM = [(1, ["job1", "job2"]), (2, ["jobA", "jobC"])]
@@ -78,7 +79,6 @@ class GridScheduler(Node):
         rmobj = Pyro4.Proxy(uri)
 
         print 'send job to %s' % (rmobj.tostr())
-
         rmobj.add_job(d_job)
 
     # GS choose job
@@ -87,14 +87,29 @@ class GridScheduler(Node):
         return job
 
     def _chooseRM(self):
-        # probably need to ask other GS about RM current status (voting)
-        for idrm, rmload in self.RM_loads:
-            if rmload < 0.1:
-                return idrm
+        ns = Pyro4.locateNS()
+        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+            rmobj = Pyro4.Proxy(rm_uri)
+            self.RM_loads.append(rmobj.get_workloadRM())
 
-        return -1
+        x = sorted(self.RM_loads, key = lambda x : x[1])
+        print x
+        if x[0][1] < 0.9 :    
+            return(x[0][0])
+
+        return -1        
+
 
     # Inform about the RM who has started executing the job
+
+    
+
+        
+
+
+
+
+
     def _update_jobdetailsRM(self): # to be honest I don't understand this function
         return True
 

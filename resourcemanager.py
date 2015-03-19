@@ -39,7 +39,7 @@ class ResourceManager(Node):
         return True
 
     # receive report from node
-    def receivereport(self, details, d_report):
+    def receive_report(self, details, d_report):
         return 'what?'
 
     def get_cluster_info(self):
@@ -85,6 +85,12 @@ class ResourceManager(Node):
     def _report_toGS(self):
         return True
 
+
+    ## Send the current workload status to the GS send the RM id and the workload
+    #how to get the object id of the resournce manager globally  ??
+    def get_workloadRM(self):
+        return (1, 0.5)    
+
 def check_stop():
     return stop
 
@@ -111,7 +117,6 @@ def main():
         print('You pressed Ctrl+C on RM!')
         stop = False
         daemon.shutdown()
-
 
     signal.signal(signal.SIGINT, signal_handler)
 
