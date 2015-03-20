@@ -53,20 +53,37 @@ def main():
         elif ip == '1':
             for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
                 rmobj = Pyro4.Proxy(rm_uri)
-                print ("from rm : "+str(rmobj.getoid()))
+                print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
                 print (rmobj.get_cluster_info())
                 print ("========\n")
+                print (rmobj.get_job_node())
+                print ("----------------\n")
         elif ip == '2':
-            pass
+            for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
+                gsobj = Pyro4.Proxy(gs_uri)
+                gsobj.update_GSstructure()
+                print ("from gs : "+str(gsobj.getoid()))
+                print (gsobj.get_gs_info())
+                print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         elif ip == '3':
-            pass
+            for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
+                gsobj = Pyro4.Proxy(gs_uri)
+                gsobj.do_push_TMP()
+                print ("PUSH FROM : "+str(gsobj.getoid()))
+        elif ip == '4':
+            for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
+                gsobj = Pyro4.Proxy(gs_uri)
+                gsobj.update_GSstructure()
+                print ("from gs : "+str(gsobj.getoid()))
+                print (gsobj.get_all_gs_info())
+                print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         else:
-            # for now send to GS 0  
-          
-            uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-0]0")
+            # for now send to GS 0
+            target = random.randint(0, Constant.TOTAL_GS-1)
+            uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
             gsobj = Pyro4.Proxy(uri)
 
-            jobsu = Job(count, "joob"+str(count), random.randint(5,15), random.random(), 0)
+            jobsu = Job(count, "joob"+str(count), random.randint(15,25), random.random(), 0)
 
             d_job = serpent.dumps(jobsu)
 
