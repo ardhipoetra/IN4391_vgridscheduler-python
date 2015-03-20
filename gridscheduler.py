@@ -19,7 +19,10 @@ class GridScheduler(Node):
     # id RM, load per RM/cluster
     RM_loads = [(1,0.8), (2, 0.4)]
     #RM_loads = []
+    gs_URI = ""
 
+    ## specify the current status of the neighbouring GS it containss the URI and TRUE/FALSE (functioning/non functioning)details
+    neighbor_state = [("URI","FALSE")] 
     # id RM, jobs on that cluster-RM
     jobs_assigned_RM = [(1, ["job1", "job2"]), (2, ["jobA", "jobC"])]
 
@@ -41,13 +44,15 @@ class GridScheduler(Node):
         print '%s received report %s from %s' %(self,report,detobj.tostr())
 
     # add job to this GS
-    def addjob(self, d_job):
+    def addjob(self, d_job, uri):
         job = serpent.loads(d_job)
         self.job_queue.append(job)
 
         # should do something
-
+        gs_URI = uri 
         jobsub = self._choose_job()
+        print "sulabh"
+        self._monitorneighborGS()
         rmidsub = self._chooseRM()
 
         if rmidsub == -1 :
@@ -101,16 +106,8 @@ class GridScheduler(Node):
 
 
     # Inform about the RM who has started executing the job
-
-    
-
-        
-
-
-
-
-
-    def _update_jobdetailsRM(self): # to be honest I don't understand this function
+    # Might not be required purpose was that central GS keep rack of all the Jobs and where they are running
+    #def _update_jobdetailsRM(self): # to be honest I don't understand this function
         return True
 
     # Update the data structure for consistency/replication to designated distributed GS (neighbor) -> create snapshot
@@ -123,11 +120,28 @@ class GridScheduler(Node):
 
     # monitor GS to handle fault in GS
     def _monitorneighborGS(self):
+        ns = Pyro4.locateNS()
+        for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
+            
+            if gs_uri == self.gs_URI :
+                continue
+            gsobj = Pyro4.Proxy(gs_uri)
+            self.neighbor_state.append(gsobj.get_gs_neighbour_status())
 
-        return True;
+
+        return self.neighbor_state;
+
+
+    def get_gs_neighbour_status(self):
+        return (str(self.gs_URI),"TRUE")
 
     # monitor RM to handle fault in RM
+    # This function might not be required
     def _monitorRM(self):
+        ns = Pyro4.locateNS()
+        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+            rmobj = Pyro4.Proxy(rm_uri)
+            rmobj.get_statusRM()
 
         return True;
 

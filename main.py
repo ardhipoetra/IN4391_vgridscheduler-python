@@ -70,7 +70,7 @@ def main():
 
             d_job = serpent.dumps(jobsu)
 
-            gsobj.addjob(d_job)
+            gsobj.addjob(d_job,uri)
 
             # thread = threading.Thread(target=_newjob, args=[count])
             # thread.setDaemon(True)

@@ -8239,3 +8239,1602 @@
 [2015-03-19 22:42:19.147,Pyro4.core,INFO] daemon localhost:59414 shut down
 [2015-03-19 22:42:19.195,Pyro4.core,DEBUG] daemon closing
 [2015-03-19 22:42:19.196,Pyro4.core,INFO] daemon localhost:42783 shut down
+[2015-03-20 19:24:46.515,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:24:46.515,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:24:46.522,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:24:46.537,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:24:46.544,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:24:46.561,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:24:46.561,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.562,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.562,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.562,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.563,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.563,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:46.563,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:24:46.564,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:46.564,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:24:46.565,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:24:46.574,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:24:46.576,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.576,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.576,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.577,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.577,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:24:46.578,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.578,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.579,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:46.579,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:24:46.580,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:46.580,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:24:46.580,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:24:46.581,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.581,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.582,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.582,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.583,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:46.583,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:24:46.583,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:46.584,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:24:46.585,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:24:46.590,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:24:46.591,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.591,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.591,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.591,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:24:46.592,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.592,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.592,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.592,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.592,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.593,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:24:46.593,Pyro4.core,DEBUG] created daemon on localhost:53346
+[2015-03-20 19:24:46.593,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:24:46.594,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:24:46.594,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:24:46.594,Pyro4.core,DEBUG] created daemon on localhost:39378
+[2015-03-20 19:24:46.594,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:24:46.594,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:24:46.595,Pyro4.core,INFO] daemon localhost:53346 entering requestloop
+[2015-03-20 19:24:46.595,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:24:46.596,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:46.596,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:46.596,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:46.596,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:24:46.596,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:46.596,Pyro4.core,INFO] daemon localhost:39378 entering requestloop
+[2015-03-20 19:24:46.596,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:24:46.597,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:46.597,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:24:46.597,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:46.597,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:24:46.597,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:24:46.598,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:24:46.598,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:24:46.600,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:24:46.600,Pyro4.core,DEBUG] created daemon on localhost:55036
+[2015-03-20 19:24:46.601,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:24:46.601,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:24:46.601,Pyro4.core,INFO] daemon localhost:55036 entering requestloop
+[2015-03-20 19:24:46.602,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:24:46.602,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:24:46.602,Pyro4.core,DEBUG] created daemon on localhost:52753
+[2015-03-20 19:24:46.602,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:24:46.603,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:24:46.603,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:24:46.603,Pyro4.core,DEBUG] created daemon on localhost:54366
+[2015-03-20 19:24:46.603,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:24:46.603,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:24:46.604,Pyro4.core,INFO] daemon localhost:52753 entering requestloop
+[2015-03-20 19:24:46.604,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:24:46.604,Pyro4.core,INFO] daemon localhost:54366 entering requestloop
+[2015-03-20 19:24:46.604,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:24:48.984,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38685)
+[2015-03-20 19:24:48.987,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:48.987,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:48.987,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:48.987,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:48.988,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:48.988,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:48.989,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:24:48.989,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:48.989,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:24:48.990,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:24:48.990,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:48.990,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:48.990,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:48.991,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:48.991,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:48.992,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:48.992,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:24:48.992,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:48.993,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:24:48.993,Pyro4.core,DEBUG] getting metadata for object obj_8b876802e4904d31a5cb5936c9cb423f
+[2015-03-20 19:24:48.994,Pyro4.core,DEBUG] connecting to PYRO:obj_8b876802e4904d31a5cb5936c9cb423f@localhost:54366
+[2015-03-20 19:24:48.999,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 32916)
+[2015-03-20 19:24:48.999,Pyro4.core,DEBUG] connected to PYRO:obj_8b876802e4904d31a5cb5936c9cb423f@localhost:54366
+[2015-03-20 19:24:48.999,Pyro4.core,DEBUG] getting metadata for object obj_8b876802e4904d31a5cb5936c9cb423f
+[2015-03-20 19:24:49.001,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:49.001,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:24:49.001,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:49.002,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:24:49.002,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 32916)
+[2015-03-20 19:24:49.002,Pyro4.core,DEBUG] getting metadata for object obj_cd5905c87087449e9361467911930e7b
+[2015-03-20 19:24:49.002,Pyro4.core,DEBUG] connecting to PYRO:obj_cd5905c87087449e9361467911930e7b@localhost:53346
+[2015-03-20 19:24:49.002,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 52852)
+[2015-03-20 19:24:49.003,Pyro4.core,DEBUG] connected to PYRO:obj_cd5905c87087449e9361467911930e7b@localhost:53346
+[2015-03-20 19:24:49.003,Pyro4.core,DEBUG] getting metadata for object obj_cd5905c87087449e9361467911930e7b
+[2015-03-20 19:24:49.004,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:49.004,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:24:49.005,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:49.005,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:24:49.006,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:24:49.006,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52852)
+[2015-03-20 19:24:49.006,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:49.006,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:49.006,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:49.007,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:24:49.007,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:24:49.008,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:49.008,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:24:49.008,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:49.009,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:24:49.009,Pyro4.core,DEBUG] getting metadata for object obj_cd5905c87087449e9361467911930e7b
+[2015-03-20 19:24:49.010,Pyro4.core,DEBUG] connecting to PYRO:obj_cd5905c87087449e9361467911930e7b@localhost:53346
+[2015-03-20 19:24:49.010,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 52854)
+[2015-03-20 19:24:49.011,Pyro4.core,DEBUG] connected to PYRO:obj_cd5905c87087449e9361467911930e7b@localhost:53346
+[2015-03-20 19:24:49.011,Pyro4.core,DEBUG] getting metadata for object obj_cd5905c87087449e9361467911930e7b
+[2015-03-20 19:24:49.012,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:24:49.013,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:24:49.013,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:24:49.016,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:24:49.016,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:24:49.016,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52854)
+[2015-03-20 19:25:02.678,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38685)
+[2015-03-20 19:25:02.679,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38692)
+[2015-03-20 19:25:02.681,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.681,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:25:02.681,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.682,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.682,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:25:02.683,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:25:02.683,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:25:02.683,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:25:02.684,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:25:02.685,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:02.685,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.685,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:25:02.685,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.686,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.686,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:25:02.687,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:25:02.687,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:25:02.687,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:25:02.687,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:25:02.688,Pyro4.core,DEBUG] getting metadata for object obj_8b876802e4904d31a5cb5936c9cb423f
+[2015-03-20 19:25:02.688,Pyro4.core,DEBUG] connecting to PYRO:obj_8b876802e4904d31a5cb5936c9cb423f@localhost:54366
+[2015-03-20 19:25:02.689,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 32923)
+[2015-03-20 19:25:02.690,Pyro4.core,DEBUG] connected to PYRO:obj_8b876802e4904d31a5cb5936c9cb423f@localhost:54366
+[2015-03-20 19:25:02.690,Pyro4.core,DEBUG] getting metadata for object obj_8b876802e4904d31a5cb5936c9cb423f
+[2015-03-20 19:25:02.691,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:25:02.691,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:25:02.691,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:25:02.692,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:02.692,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 32923)
+[2015-03-20 19:25:02.693,Pyro4.core,DEBUG] getting metadata for object obj_cd5905c87087449e9361467911930e7b
+[2015-03-20 19:25:02.693,Pyro4.core,DEBUG] connecting to PYRO:obj_cd5905c87087449e9361467911930e7b@localhost:53346
+[2015-03-20 19:25:02.693,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 52859)
+[2015-03-20 19:25:02.694,Pyro4.core,DEBUG] connected to PYRO:obj_cd5905c87087449e9361467911930e7b@localhost:53346
+[2015-03-20 19:25:02.694,Pyro4.core,DEBUG] getting metadata for object obj_cd5905c87087449e9361467911930e7b
+[2015-03-20 19:25:02.695,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:25:02.695,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:25:02.695,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:25:02.697,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:02.697,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:02.697,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52859)
+[2015-03-20 19:25:02.697,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.697,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:25:02.698,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.698,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:25:02.698,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:25:02.699,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:25:02.700,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:25:02.700,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:25:02.701,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:25:02.702,Pyro4.core,DEBUG] getting metadata for object obj_cd5905c87087449e9361467911930e7b
+[2015-03-20 19:25:02.702,Pyro4.core,DEBUG] connecting to PYRO:obj_cd5905c87087449e9361467911930e7b@localhost:53346
+[2015-03-20 19:25:02.702,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 52861)
+[2015-03-20 19:25:02.703,Pyro4.core,DEBUG] connected to PYRO:obj_cd5905c87087449e9361467911930e7b@localhost:53346
+[2015-03-20 19:25:02.703,Pyro4.core,DEBUG] getting metadata for object obj_cd5905c87087449e9361467911930e7b
+[2015-03-20 19:25:02.704,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:25:02.704,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:25:02.704,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:25:02.706,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:02.706,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:02.706,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52861)
+[2015-03-20 19:25:21.930,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:25:21.930,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:25:21.930,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:25:21.930,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38692)
+[2015-03-20 19:25:21.930,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:25:21.930,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:25:21.981,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 52862)
+[2015-03-20 19:25:21.981,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:25:21.981,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:25:21.981,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38700)
+[2015-03-20 19:25:21.982,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:25:21.982,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52862)
+[2015-03-20 19:25:21.982,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:25:21.982,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:25:21.982,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38700)
+[2015-03-20 19:25:21.982,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:21.983,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:21.983,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 50349)
+[2015-03-20 19:25:21.984,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:25:21.984,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:25:21.985,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 50349)
+[2015-03-20 19:25:21.985,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:21.986,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 52354)
+[2015-03-20 19:25:21.986,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 32931)
+[2015-03-20 19:25:21.986,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:25:21.986,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:25:21.987,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:25:21.987,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:25:21.987,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 52354)
+[2015-03-20 19:25:21.987,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:25:21.987,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:25:21.988,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:21.992,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:25:21.999,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 32931)
+[2015-03-20 19:25:22.031,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:25:22.031,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:25:22.032,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:25:22.032,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:25:22.032,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:25:22.032,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:25:22.032,Pyro4.core,INFO] daemon localhost:55036 shut down
+[2015-03-20 19:25:22.034,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:25:22.034,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:25:22.034,Pyro4.core,INFO] daemon localhost:53346 shut down
+[2015-03-20 19:25:22.035,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:25:22.035,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:25:22.036,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:25:22.036,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:25:22.036,Pyro4.core,INFO] daemon localhost:39378 shut down
+[2015-03-20 19:25:22.037,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:25:22.037,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:25:22.038,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:25:22.038,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:25:22.038,Pyro4.core,INFO] daemon localhost:52753 shut down
+[2015-03-20 19:25:22.050,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:25:22.051,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:25:22.051,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:25:22.052,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:25:22.052,Pyro4.core,INFO] daemon localhost:54366 shut down
+[2015-03-20 19:25:22.084,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:25:22.084,Pyro4.core,INFO] daemon localhost:53346 shut down
+[2015-03-20 19:25:22.094,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:25:22.095,Pyro4.core,INFO] daemon localhost:54366 shut down
+[2015-03-20 19:28:31.270,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:28:31.271,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:28:31.275,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:28:31.280,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:28:31.296,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:28:31.313,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:28:31.315,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.315,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.316,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.317,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.317,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.318,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:31.319,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:28:31.319,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:31.319,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:28:31.320,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:28:31.327,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:28:31.328,Pyro4.core,DEBUG] created daemon on localhost:51214
+[2015-03-20 19:28:31.328,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:28:31.328,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:28:31.329,Pyro4.core,INFO] daemon localhost:51214 entering requestloop
+[2015-03-20 19:28:31.329,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:28:31.334,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:28:31.336,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.336,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.336,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.337,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.337,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.338,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:31.338,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:28:31.339,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:31.339,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:28:31.340,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:28:31.346,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:28:31.347,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.348,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:28:31.348,Pyro4.core,DEBUG] created daemon on localhost:42857
+[2015-03-20 19:28:31.348,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:28:31.348,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:28:31.349,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.350,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.352,Pyro4.core,INFO] daemon localhost:42857 entering requestloop
+[2015-03-20 19:28:31.352,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:28:31.353,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.353,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.354,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:31.354,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:28:31.354,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:31.354,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:28:31.355,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:28:31.357,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:28:31.357,Pyro4.core,DEBUG] created daemon on localhost:58372
+[2015-03-20 19:28:31.357,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:28:31.357,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:28:31.358,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:28:31.358,Pyro4.core,INFO] daemon localhost:58372 entering requestloop
+[2015-03-20 19:28:31.359,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:28:31.359,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.359,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.359,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.360,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.360,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.359,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:28:31.361,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.361,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.361,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:31.361,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.361,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:28:31.362,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:31.362,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:28:31.363,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:28:31.363,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:31.363,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:31.364,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:31.364,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:28:31.364,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:31.365,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:28:31.366,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:28:31.368,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:28:31.368,Pyro4.core,DEBUG] created daemon on localhost:47321
+[2015-03-20 19:28:31.369,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:28:31.369,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:28:31.370,Pyro4.core,INFO] daemon localhost:47321 entering requestloop
+[2015-03-20 19:28:31.370,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:28:31.371,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:28:31.371,Pyro4.core,DEBUG] created daemon on localhost:51395
+[2015-03-20 19:28:31.371,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:28:31.371,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:28:31.372,Pyro4.core,INFO] daemon localhost:51395 entering requestloop
+[2015-03-20 19:28:31.372,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:28:33.443,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 40133)
+[2015-03-20 19:28:33.445,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.445,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:33.446,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.446,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.447,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:33.447,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:33.448,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:28:33.448,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:33.448,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:28:33.449,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:28:33.449,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.450,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:33.450,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.450,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.450,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:33.451,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:33.452,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:28:33.452,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:33.452,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:28:33.453,Pyro4.core,DEBUG] getting metadata for object obj_e86d4279a51b42e3bcfaf2519f3d5a0e
+[2015-03-20 19:28:33.453,Pyro4.core,DEBUG] connecting to PYRO:obj_e86d4279a51b42e3bcfaf2519f3d5a0e@localhost:58372
+[2015-03-20 19:28:33.459,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 53224)
+[2015-03-20 19:28:33.460,Pyro4.core,DEBUG] connected to PYRO:obj_e86d4279a51b42e3bcfaf2519f3d5a0e@localhost:58372
+[2015-03-20 19:28:33.460,Pyro4.core,DEBUG] getting metadata for object obj_e86d4279a51b42e3bcfaf2519f3d5a0e
+[2015-03-20 19:28:33.461,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:33.461,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:28:33.461,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:33.462,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:28:33.462,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 53224)
+[2015-03-20 19:28:33.462,Pyro4.core,DEBUG] getting metadata for object obj_6bc90061899740beb5999034d2b5a60b
+[2015-03-20 19:28:33.462,Pyro4.core,DEBUG] connecting to PYRO:obj_6bc90061899740beb5999034d2b5a60b@localhost:51395
+[2015-03-20 19:28:33.462,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 35142)
+[2015-03-20 19:28:33.463,Pyro4.core,DEBUG] connected to PYRO:obj_6bc90061899740beb5999034d2b5a60b@localhost:51395
+[2015-03-20 19:28:33.463,Pyro4.core,DEBUG] getting metadata for object obj_6bc90061899740beb5999034d2b5a60b
+[2015-03-20 19:28:33.464,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:33.465,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:28:33.465,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:33.466,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:28:33.466,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 35142)
+[2015-03-20 19:28:33.466,Pyro4.core,DEBUG] getting metadata for object obj_6d0da15f9e974d84818aa93bd706d5fd
+[2015-03-20 19:28:33.466,Pyro4.core,DEBUG] connecting to PYRO:obj_6d0da15f9e974d84818aa93bd706d5fd@localhost:42857
+[2015-03-20 19:28:33.467,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 54903)
+[2015-03-20 19:28:33.468,Pyro4.core,DEBUG] connected to PYRO:obj_6d0da15f9e974d84818aa93bd706d5fd@localhost:42857
+[2015-03-20 19:28:33.468,Pyro4.core,DEBUG] getting metadata for object obj_6d0da15f9e974d84818aa93bd706d5fd
+[2015-03-20 19:28:33.469,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:33.469,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:28:33.469,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:33.470,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:28:33.471,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:28:33.471,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54903)
+[2015-03-20 19:28:33.471,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.471,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:33.471,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.472,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:28:33.473,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:28:33.473,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:33.474,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:28:33.474,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:33.474,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:28:33.475,Pyro4.core,DEBUG] getting metadata for object obj_6d0da15f9e974d84818aa93bd706d5fd
+[2015-03-20 19:28:33.475,Pyro4.core,DEBUG] connecting to PYRO:obj_6d0da15f9e974d84818aa93bd706d5fd@localhost:42857
+[2015-03-20 19:28:33.476,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 54905)
+[2015-03-20 19:28:33.476,Pyro4.core,DEBUG] connected to PYRO:obj_6d0da15f9e974d84818aa93bd706d5fd@localhost:42857
+[2015-03-20 19:28:33.476,Pyro4.core,DEBUG] getting metadata for object obj_6d0da15f9e974d84818aa93bd706d5fd
+[2015-03-20 19:28:33.477,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:28:33.477,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:28:33.477,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:28:33.479,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:28:33.479,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:28:33.479,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54905)
+[2015-03-20 19:39:51.971,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 40133)
+[2015-03-20 19:39:51.972,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 40141)
+[2015-03-20 19:39:51.973,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.973,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:39:51.974,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.974,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.974,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:39:51.975,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:39:51.975,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:39:51.975,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:39:51.976,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:39:51.977,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:51.977,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.977,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:39:51.977,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.978,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.978,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:39:51.979,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:39:51.979,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:39:51.979,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:39:51.980,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:39:51.980,Pyro4.core,DEBUG] getting metadata for object obj_e86d4279a51b42e3bcfaf2519f3d5a0e
+[2015-03-20 19:39:51.981,Pyro4.core,DEBUG] connecting to PYRO:obj_e86d4279a51b42e3bcfaf2519f3d5a0e@localhost:58372
+[2015-03-20 19:39:51.981,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 53232)
+[2015-03-20 19:39:51.982,Pyro4.core,DEBUG] connected to PYRO:obj_e86d4279a51b42e3bcfaf2519f3d5a0e@localhost:58372
+[2015-03-20 19:39:51.982,Pyro4.core,DEBUG] getting metadata for object obj_e86d4279a51b42e3bcfaf2519f3d5a0e
+[2015-03-20 19:39:51.983,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:39:51.983,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:39:51.983,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:39:51.984,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:51.984,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 53232)
+[2015-03-20 19:39:51.984,Pyro4.core,DEBUG] getting metadata for object obj_6bc90061899740beb5999034d2b5a60b
+[2015-03-20 19:39:51.984,Pyro4.core,DEBUG] connecting to PYRO:obj_6bc90061899740beb5999034d2b5a60b@localhost:51395
+[2015-03-20 19:39:51.985,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 35150)
+[2015-03-20 19:39:51.985,Pyro4.core,DEBUG] connected to PYRO:obj_6bc90061899740beb5999034d2b5a60b@localhost:51395
+[2015-03-20 19:39:51.985,Pyro4.core,DEBUG] getting metadata for object obj_6bc90061899740beb5999034d2b5a60b
+[2015-03-20 19:39:51.986,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:39:51.986,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:39:51.987,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:39:51.987,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:51.987,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 35150)
+[2015-03-20 19:39:51.987,Pyro4.core,DEBUG] getting metadata for object obj_6d0da15f9e974d84818aa93bd706d5fd
+[2015-03-20 19:39:51.988,Pyro4.core,DEBUG] connecting to PYRO:obj_6d0da15f9e974d84818aa93bd706d5fd@localhost:42857
+[2015-03-20 19:39:51.988,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 54911)
+[2015-03-20 19:39:51.989,Pyro4.core,DEBUG] connected to PYRO:obj_6d0da15f9e974d84818aa93bd706d5fd@localhost:42857
+[2015-03-20 19:39:51.989,Pyro4.core,DEBUG] getting metadata for object obj_6d0da15f9e974d84818aa93bd706d5fd
+[2015-03-20 19:39:51.990,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:39:51.990,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:39:51.990,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:39:51.991,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:51.992,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:51.992,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54911)
+[2015-03-20 19:39:51.992,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.993,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:39:51.993,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.994,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:39:51.994,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:39:51.995,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:39:51.995,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:39:51.995,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:39:51.995,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:39:51.996,Pyro4.core,DEBUG] getting metadata for object obj_6d0da15f9e974d84818aa93bd706d5fd
+[2015-03-20 19:39:51.996,Pyro4.core,DEBUG] connecting to PYRO:obj_6d0da15f9e974d84818aa93bd706d5fd@localhost:42857
+[2015-03-20 19:39:51.997,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 54913)
+[2015-03-20 19:39:51.998,Pyro4.core,DEBUG] connected to PYRO:obj_6d0da15f9e974d84818aa93bd706d5fd@localhost:42857
+[2015-03-20 19:39:51.998,Pyro4.core,DEBUG] getting metadata for object obj_6d0da15f9e974d84818aa93bd706d5fd
+[2015-03-20 19:39:51.999,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:39:51.999,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 19:39:51.999,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:39:52.001,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:52.002,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:52.002,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54913)
+[2015-03-20 19:39:54.570,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:39:54.570,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:39:54.571,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:39:54.571,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:39:54.571,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:39:54.579,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 40141)
+[2015-03-20 19:39:54.622,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 35154)
+[2015-03-20 19:39:54.622,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:39:54.622,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 53238)
+[2015-03-20 19:39:54.622,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:39:54.623,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:39:54.624,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:39:54.624,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 33167)
+[2015-03-20 19:39:54.624,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 40151)
+[2015-03-20 19:39:54.624,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:39:54.624,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:39:54.624,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:39:54.624,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:39:54.624,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 35154)
+[2015-03-20 19:39:54.625,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:39:54.625,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 40151)
+[2015-03-20 19:39:54.625,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:39:54.626,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 33167)
+[2015-03-20 19:39:54.626,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:54.626,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:54.626,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:54.626,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 54918)
+[2015-03-20 19:39:54.626,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:39:54.626,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 53238)
+[2015-03-20 19:39:54.627,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:39:54.627,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54918)
+[2015-03-20 19:39:54.627,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:54.627,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:39:54.628,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:39:54.672,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:39:54.672,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:39:54.673,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:39:54.673,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:39:54.673,Pyro4.core,INFO] daemon localhost:51395 shut down
+[2015-03-20 19:39:54.674,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:39:54.674,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:39:54.675,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:39:54.675,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:39:54.675,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:39:54.675,Pyro4.core,INFO] daemon localhost:51214 shut down
+[2015-03-20 19:39:54.675,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:39:54.676,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:39:54.676,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:39:54.677,Pyro4.core,INFO] daemon localhost:47321 shut down
+[2015-03-20 19:39:54.677,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:39:54.677,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:39:54.677,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:39:54.677,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:39:54.677,Pyro4.core,INFO] daemon localhost:42857 shut down
+[2015-03-20 19:39:54.677,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:39:54.677,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:39:54.679,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:39:54.682,Pyro4.core,INFO] daemon localhost:58372 shut down
+[2015-03-20 19:39:54.691,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:39:54.742,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:39:54.743,Pyro4.core,INFO] daemon localhost:58372 shut down
+[2015-03-20 19:54:02.518,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:02.524,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:02.533,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:02.538,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:02.541,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:02.571,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:02.573,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.573,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.573,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.574,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.574,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.575,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:02.575,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:02.575,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:02.575,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:02.575,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:02.578,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:02.578,Pyro4.core,DEBUG] created daemon on localhost:49264
+[2015-03-20 19:54:02.578,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:02.578,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:02.579,Pyro4.core,INFO] daemon localhost:49264 entering requestloop
+[2015-03-20 19:54:02.579,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:02.587,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:02.588,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:02.589,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.589,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.589,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.590,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.590,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.590,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.590,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.590,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.591,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:02.591,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:02.591,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:02.591,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.591,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:02.592,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:02.592,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.593,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:02.593,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:02.593,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:02.593,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:02.594,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:02.596,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:02.597,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.597,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.598,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.599,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.599,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.599,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:02.600,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:02.600,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:02.600,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:02.600,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:02.601,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.601,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.601,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.601,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:02.602,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:02.602,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:02.602,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:02.602,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:02.602,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:02.603,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:02.603,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:02.604,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:02.604,Pyro4.core,DEBUG] created daemon on localhost:48408
+[2015-03-20 19:54:02.605,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:02.605,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:02.605,Pyro4.core,INFO] daemon localhost:48408 entering requestloop
+[2015-03-20 19:54:02.606,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:02.610,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:02.610,Pyro4.core,DEBUG] created daemon on localhost:37852
+[2015-03-20 19:54:02.610,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:02.610,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:02.611,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:02.611,Pyro4.core,DEBUG] created daemon on localhost:53761
+[2015-03-20 19:54:02.611,Pyro4.core,INFO] daemon localhost:37852 entering requestloop
+[2015-03-20 19:54:02.611,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:02.611,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:02.611,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:02.612,Pyro4.core,INFO] daemon localhost:53761 entering requestloop
+[2015-03-20 19:54:02.612,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:02.614,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:02.614,Pyro4.core,DEBUG] created daemon on localhost:36716
+[2015-03-20 19:54:02.614,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:02.614,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:02.615,Pyro4.core,INFO] daemon localhost:36716 entering requestloop
+[2015-03-20 19:54:02.615,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:04.812,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 57280)
+[2015-03-20 19:54:04.814,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:04.814,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:04.814,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:04.815,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:04.815,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:04.816,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:04.816,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:04.816,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:04.816,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:04.817,Pyro4.core,DEBUG] Exception occurred while handling request: NameError("global name 'gs_URI' is not defined",)
+[2015-03-20 19:54:04.818,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:54:04.822,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 57280)
+[2015-03-20 19:54:51.636,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:51.637,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:51.640,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:51.653,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:51.659,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:54:51.677,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:51.678,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.678,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.678,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.680,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.680,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.681,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:51.681,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:51.681,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:51.682,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:51.683,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:51.687,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:51.689,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.689,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.689,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.690,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.691,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.691,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:51.692,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:51.692,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:51.692,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:51.692,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:51.694,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:51.694,Pyro4.core,DEBUG] created daemon on localhost:47805
+[2015-03-20 19:54:51.694,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:51.694,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:51.696,Pyro4.core,INFO] daemon localhost:47805 entering requestloop
+[2015-03-20 19:54:51.696,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:51.696,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:51.696,Pyro4.core,DEBUG] created daemon on localhost:47698
+[2015-03-20 19:54:51.696,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:51.696,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:51.697,Pyro4.core,INFO] daemon localhost:47698 entering requestloop
+[2015-03-20 19:54:51.697,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:51.705,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:51.706,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.706,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.706,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.707,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.707,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.708,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:51.708,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:51.708,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:51.709,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:51.709,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:51.710,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:51.711,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.712,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.712,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.713,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.713,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.714,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:54:51.715,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:51.715,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:51.715,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:51.715,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.715,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.715,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.715,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:51.715,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:51.716,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:51.716,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:51.717,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:51.717,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:51.717,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:51.717,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:51.719,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:54:51.722,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:51.723,Pyro4.core,DEBUG] created daemon on localhost:41557
+[2015-03-20 19:54:51.723,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:51.723,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:51.723,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:51.723,Pyro4.core,DEBUG] created daemon on localhost:56881
+[2015-03-20 19:54:51.723,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:51.723,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:51.724,Pyro4.core,INFO] daemon localhost:56881 entering requestloop
+[2015-03-20 19:54:51.724,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:51.724,Pyro4.core,INFO] daemon localhost:41557 entering requestloop
+[2015-03-20 19:54:51.724,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:51.725,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:54:51.725,Pyro4.core,DEBUG] created daemon on localhost:49714
+[2015-03-20 19:54:51.725,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:54:51.725,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:54:51.726,Pyro4.core,INFO] daemon localhost:49714 entering requestloop
+[2015-03-20 19:54:51.726,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:54:53.355,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 59323)
+[2015-03-20 19:54:53.357,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:53.358,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:53.358,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:53.358,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:54:53.359,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:54:53.359,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:53.359,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:54:53.360,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:53.360,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:54:53.362,Pyro4.core,DEBUG] getting metadata for object obj_74e57afbcaec4b198f6b98f826a205a9
+[2015-03-20 19:54:53.362,Pyro4.core,DEBUG] connecting to PYRO:obj_74e57afbcaec4b198f6b98f826a205a9@localhost:49714
+[2015-03-20 19:54:53.367,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38653)
+[2015-03-20 19:54:53.368,Pyro4.core,DEBUG] connected to PYRO:obj_74e57afbcaec4b198f6b98f826a205a9@localhost:49714
+[2015-03-20 19:54:53.368,Pyro4.core,DEBUG] getting metadata for object obj_74e57afbcaec4b198f6b98f826a205a9
+[2015-03-20 19:54:53.369,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:54:53.369,Pyro4.core,DEBUG] from meta: methods=[u'addjob', u'assignjob', u'get_gs_neighbour_status', u'get_structure', u'getclusterstatus', u'getname', u'getoid', u'receivereport', u'seturi', u'tostr']
+[2015-03-20 19:54:53.369,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:54:53.369,Pyro4.core,DEBUG] Exception occurred while handling request: TypeError('get_gs_neighbour_status() takes no arguments (1 given)',)
+[2015-03-20 19:54:53.370,Pyro4.core,DEBUG] Exception occurred while handling request: TypeError(u'get_gs_neighbour_status() takes no arguments (1 given)',)
+[2015-03-20 19:54:53.371,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:54:53.371,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:54:53.371,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38653)
+[2015-03-20 19:54:53.374,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 59323)
+[2015-03-20 19:56:01.661,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:56:01.663,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:56:01.669,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:56:01.691,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:56:01.692,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.692,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.692,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.693,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.693,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.694,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:56:01.694,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:56:01.694,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:56:01.696,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:56:01.696,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:56:01.703,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:56:01.703,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 19:56:01.705,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:56:01.705,Pyro4.core,DEBUG] created daemon on localhost:34590
+[2015-03-20 19:56:01.705,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:56:01.705,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:56:01.706,Pyro4.core,INFO] daemon localhost:34590 entering requestloop
+[2015-03-20 19:56:01.706,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:56:01.707,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:56:01.708,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.708,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.708,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.709,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.710,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.711,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:56:01.711,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:56:01.711,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:56:01.712,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:56:01.712,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:56:01.715,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:56:01.715,Pyro4.core,DEBUG] created daemon on localhost:39920
+[2015-03-20 19:56:01.715,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:56:01.715,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:56:01.717,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:56:01.717,Pyro4.core,INFO] daemon localhost:39920 entering requestloop
+[2015-03-20 19:56:01.718,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:56:01.719,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.719,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.719,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.720,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.720,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.721,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:56:01.721,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:56:01.721,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:56:01.722,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:56:01.722,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:56:01.732,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:56:01.733,Pyro4.core,DEBUG] created daemon on localhost:45792
+[2015-03-20 19:56:01.733,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:56:01.733,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:56:01.734,Pyro4.core,INFO] daemon localhost:45792 entering requestloop
+[2015-03-20 19:56:01.735,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:56:01.741,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:56:01.742,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.742,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.742,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.743,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.743,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.744,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:56:01.744,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:56:01.744,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:56:01.744,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:56:01.745,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:56:01.750,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 19:56:01.766,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.767,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.767,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.769,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:01.769,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:01.770,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:56:01.770,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:56:01.770,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:56:01.771,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:56:01.771,Pyro4.core,DEBUG] created daemon on localhost:54063
+[2015-03-20 19:56:01.771,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:56:01.771,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:56:01.771,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:56:01.772,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 19:56:01.772,Pyro4.core,INFO] daemon localhost:54063 entering requestloop
+[2015-03-20 19:56:01.772,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:56:01.777,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 19:56:01.777,Pyro4.core,DEBUG] created daemon on localhost:39960
+[2015-03-20 19:56:01.777,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 19:56:01.777,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 19:56:01.779,Pyro4.core,INFO] daemon localhost:39960 entering requestloop
+[2015-03-20 19:56:01.779,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 19:56:03.162,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 47916)
+[2015-03-20 19:56:03.164,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:56:03.164,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:56:03.164,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:57:01.874,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:57:01.874,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:57:01.874,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:57:01.874,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:57:01.874,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:57:01.880,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 19:57:01.881,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 19:57:01.882,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:57:01.882,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 19:57:01.882,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:57:01.883,Pyro4.naming,DEBUG] located NS
+[2015-03-20 19:57:01.883,Pyro4.core,DEBUG] getting metadata for object obj_3780d8dd520842a6bb5c6b92732cf6dd
+[2015-03-20 19:57:01.884,Pyro4.core,DEBUG] connecting to PYRO:obj_3780d8dd520842a6bb5c6b92732cf6dd@localhost:39920
+[2015-03-20 19:57:01.890,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 41790)
+[2015-03-20 19:57:01.891,Pyro4.core,DEBUG] connected to PYRO:obj_3780d8dd520842a6bb5c6b92732cf6dd@localhost:39920
+[2015-03-20 19:57:01.891,Pyro4.core,DEBUG] getting metadata for object obj_3780d8dd520842a6bb5c6b92732cf6dd
+[2015-03-20 19:57:01.892,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 19:57:01.893,Pyro4.core,DEBUG] from meta: methods=[u'addjob', u'assignjob', u'get_gs_neighbour_status', u'get_structure', u'getclusterstatus', u'getname', u'getoid', u'receivereport', u'seturi', u'tostr']
+[2015-03-20 19:57:01.893,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 19:57:01.893,Pyro4.core,DEBUG] Exception occurred while handling request: NameError("global name 'false' is not defined",)
+[2015-03-20 19:57:01.895,Pyro4.core,DEBUG] Exception occurred while handling request: NameError(u"global name 'false' is not defined",)
+[2015-03-20 19:57:01.896,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:57:01.896,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:57:01.896,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 41790)
+[2015-03-20 19:57:01.896,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 47916)
+[2015-03-20 19:57:01.925,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 44740)
+[2015-03-20 19:57:01.925,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 54512)
+[2015-03-20 19:57:01.925,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 47920)
+[2015-03-20 19:57:01.926,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:57:01.926,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:57:01.926,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:57:01.926,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:57:01.926,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:57:01.926,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:57:01.926,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54512)
+[2015-03-20 19:57:01.926,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 44740)
+[2015-03-20 19:57:01.926,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 57570)
+[2015-03-20 19:57:01.926,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:57:01.927,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:57:01.927,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 47920)
+[2015-03-20 19:57:01.927,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:57:01.927,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 57570)
+[2015-03-20 19:57:01.927,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:57:01.927,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:57:01.927,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:57:01.927,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:57:01.927,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 19:57:01.928,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:57:01.928,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 41795)
+[2015-03-20 19:57:01.928,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 19:57:01.928,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 19:57:01.929,Pyro4.core,DEBUG] connection released
+[2015-03-20 19:57:01.937,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 41795)
+[2015-03-20 19:57:01.977,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:57:01.977,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:57:01.978,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:57:01.978,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:57:01.977,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:57:01.978,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:57:01.978,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:57:01.978,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:57:01.978,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:57:01.978,Pyro4.core,INFO] daemon localhost:54063 shut down
+[2015-03-20 19:57:01.978,Pyro4.core,INFO] daemon localhost:39960 shut down
+[2015-03-20 19:57:01.978,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:57:01.979,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:57:01.979,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:57:01.980,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:57:01.980,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:57:01.980,Pyro4.core,INFO] daemon localhost:34590 shut down
+[2015-03-20 19:57:01.979,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:57:01.984,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:57:01.984,Pyro4.core,INFO] daemon localhost:45792 shut down
+[2015-03-20 19:57:01.988,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:57:01.988,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 19:57:01.991,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 19:57:01.992,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 19:57:01.992,Pyro4.core,INFO] daemon localhost:39920 shut down
+[2015-03-20 19:57:02.029,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 19:57:02.029,Pyro4.core,INFO] daemon localhost:45792 shut down
+[2015-03-20 20:19:57.573,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:19:57.576,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:19:57.595,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:19:57.597,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:19:57.602,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:19:57.630,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:19:57.633,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.633,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.633,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.636,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.636,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.637,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:19:57.637,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:19:57.637,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:19:57.638,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:19:57.638,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:19:57.642,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:19:57.643,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.643,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.644,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.645,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.645,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.646,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:19:57.646,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:19:57.646,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:19:57.647,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:19:57.647,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:19:57.652,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:19:57.652,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.652,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.653,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.654,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.655,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.663,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:19:57.665,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.666,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.666,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.667,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.668,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.668,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:19:57.669,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:19:57.669,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:19:57.670,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:19:57.670,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:19:57.670,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:19:57.671,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:19:57.672,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:19:57.673,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:19:57.673,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.673,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.673,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.675,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:19:57.676,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:57.676,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:57.677,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:19:57.677,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:19:57.677,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:19:57.677,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:19:57.678,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:19:57.679,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:19:57.680,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:19:57.680,Pyro4.core,DEBUG] created daemon on localhost:55821
+[2015-03-20 20:19:57.680,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:19:57.680,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:19:57.682,Pyro4.core,INFO] daemon localhost:55821 entering requestloop
+[2015-03-20 20:19:57.683,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:19:57.683,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:19:57.684,Pyro4.core,DEBUG] created daemon on localhost:57377
+[2015-03-20 20:19:57.684,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:19:57.684,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:19:57.685,Pyro4.core,INFO] daemon localhost:57377 entering requestloop
+[2015-03-20 20:19:57.685,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:19:57.688,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:19:57.688,Pyro4.core,DEBUG] created daemon on localhost:34628
+[2015-03-20 20:19:57.689,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:19:57.689,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:19:57.689,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:19:57.689,Pyro4.core,DEBUG] created daemon on localhost:58015
+[2015-03-20 20:19:57.689,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:19:57.689,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:19:57.690,Pyro4.core,INFO] daemon localhost:34628 entering requestloop
+[2015-03-20 20:19:57.690,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:19:57.692,Pyro4.core,INFO] daemon localhost:58015 entering requestloop
+[2015-03-20 20:19:57.692,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:19:57.693,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:19:57.694,Pyro4.core,DEBUG] created daemon on localhost:58513
+[2015-03-20 20:19:57.694,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:19:57.694,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:19:57.695,Pyro4.core,INFO] daemon localhost:58513 entering requestloop
+[2015-03-20 20:19:57.695,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:19:59.374,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 45549)
+[2015-03-20 20:19:59.376,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:19:59.376,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:19:59.376,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:20:06.872,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:20:06.872,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:20:06.872,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:20:06.873,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:20:06.873,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:20:06.884,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:20:06.884,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:20:06.886,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:20:06.886,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:20:06.886,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:20:06.887,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:20:06.888,Pyro4.core,DEBUG] getting metadata for object obj_0b4d37e8aea04ec1bdc878f04b53ff81
+[2015-03-20 20:20:06.889,Pyro4.core,DEBUG] connecting to PYRO:obj_0b4d37e8aea04ec1bdc878f04b53ff81@localhost:55821
+[2015-03-20 20:20:06.899,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 45300)
+[2015-03-20 20:20:06.900,Pyro4.core,DEBUG] connected to PYRO:obj_0b4d37e8aea04ec1bdc878f04b53ff81@localhost:55821
+[2015-03-20 20:20:06.901,Pyro4.core,DEBUG] getting metadata for object obj_0b4d37e8aea04ec1bdc878f04b53ff81
+[2015-03-20 20:20:06.902,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:20:06.903,Pyro4.core,DEBUG] from meta: methods=[u'addjob', u'assignjob', u'get_gs_neighbour_status', u'get_structure', u'getclusterstatus', u'getname', u'getoid', u'receivereport', u'seturi', u'tostr']
+[2015-03-20 20:20:06.903,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:20:06.904,Pyro4.core,DEBUG] Exception occurred while handling request: NameError("global name 'TRUE' is not defined",)
+[2015-03-20 20:20:06.906,Pyro4.core,DEBUG] Exception occurred while handling request: NameError(u"global name 'TRUE' is not defined",)
+[2015-03-20 20:20:06.907,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:20:06.908,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:20:06.908,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 45549)
+[2015-03-20 20:20:06.908,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 45300)
+[2015-03-20 20:20:06.925,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 45552)
+[2015-03-20 20:20:06.925,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 59313)
+[2015-03-20 20:20:06.925,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:20:06.925,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:20:06.925,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:20:06.925,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:20:06.926,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 45303)
+[2015-03-20 20:20:06.926,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:20:06.926,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:20:06.926,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 45303)
+[2015-03-20 20:20:06.927,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 39021)
+[2015-03-20 20:20:06.927,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:20:06.927,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 59313)
+[2015-03-20 20:20:06.927,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:20:06.927,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:20:06.927,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:20:06.928,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:20:06.928,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 39021)
+[2015-03-20 20:20:06.929,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 34412)
+[2015-03-20 20:20:06.929,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:20:06.930,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:20:06.930,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:20:06.930,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:20:06.930,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 34412)
+[2015-03-20 20:20:06.931,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:20:06.931,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 45552)
+[2015-03-20 20:20:06.931,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:20:06.931,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:20:06.976,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:20:06.976,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:20:06.976,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:20:06.977,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:20:06.977,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:20:06.977,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:20:06.977,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:20:06.977,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:20:06.977,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:20:06.977,Pyro4.core,INFO] daemon localhost:58015 shut down
+[2015-03-20 20:20:06.977,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:20:06.977,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:20:06.977,Pyro4.core,INFO] daemon localhost:58513 shut down
+[2015-03-20 20:20:06.977,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:20:06.977,Pyro4.core,INFO] daemon localhost:55821 shut down
+[2015-03-20 20:20:06.980,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:20:06.980,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:20:06.981,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:20:06.981,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:20:06.981,Pyro4.core,INFO] daemon localhost:34628 shut down
+[2015-03-20 20:20:06.982,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:20:06.982,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:20:06.982,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:20:06.982,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:20:06.983,Pyro4.core,INFO] daemon localhost:57377 shut down
+[2015-03-20 20:26:59.590,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:26:59.596,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:26:59.596,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:26:59.600,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:26:59.606,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:26:59.648,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:26:59.648,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:26:59.649,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.649,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.649,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.649,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.650,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.650,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.650,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.650,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.651,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:26:59.651,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:26:59.651,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:26:59.651,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.651,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.651,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:26:59.652,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:26:59.652,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:26:59.652,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:26:59.652,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:26:59.652,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.652,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:26:59.652,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.653,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.654,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:26:59.654,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.654,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.655,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:26:59.655,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:26:59.656,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:26:59.656,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:26:59.656,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:26:59.657,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:26:59.663,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:26:59.663,Pyro4.core,DEBUG] created daemon on localhost:37969
+[2015-03-20 20:26:59.663,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:26:59.663,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:26:59.666,Pyro4.core,INFO] daemon localhost:37969 entering requestloop
+[2015-03-20 20:26:59.666,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:26:59.668,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:26:59.669,Pyro4.core,DEBUG] created daemon on localhost:60448
+[2015-03-20 20:26:59.669,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:26:59.669,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:26:59.669,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:26:59.669,Pyro4.core,DEBUG] created daemon on localhost:58652
+[2015-03-20 20:26:59.669,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:26:59.669,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:26:59.670,Pyro4.core,INFO] daemon localhost:60448 entering requestloop
+[2015-03-20 20:26:59.670,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:26:59.672,Pyro4.core,INFO] daemon localhost:58652 entering requestloop
+[2015-03-20 20:26:59.672,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:26:59.672,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:26:59.673,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.673,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.674,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.674,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.674,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.675,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:26:59.675,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:26:59.675,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:26:59.675,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:26:59.676,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:26:59.680,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:26:59.681,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.681,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.681,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.682,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:26:59.682,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:26:59.683,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:26:59.683,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:26:59.683,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:26:59.684,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:26:59.684,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:26:59.688,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:26:59.688,Pyro4.core,DEBUG] created daemon on localhost:56379
+[2015-03-20 20:26:59.688,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:26:59.688,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:26:59.690,Pyro4.core,INFO] daemon localhost:56379 entering requestloop
+[2015-03-20 20:26:59.690,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:26:59.692,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:26:59.692,Pyro4.core,DEBUG] created daemon on localhost:43161
+[2015-03-20 20:26:59.692,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:26:59.692,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:26:59.694,Pyro4.core,INFO] daemon localhost:43161 entering requestloop
+[2015-03-20 20:26:59.695,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:27:01.628,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 56502)
+[2015-03-20 20:27:01.630,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:27:01.630,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:27:01.630,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:27:01.631,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:27:01.631,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:27:01.632,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:27:01.632,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:27:01.633,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:27:01.633,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:27:01.634,Pyro4.core,DEBUG] getting metadata for object obj_26b2d8d8801e43678c51c7ce6281caf5
+[2015-03-20 20:27:01.634,Pyro4.core,DEBUG] connecting to PYRO:obj_26b2d8d8801e43678c51c7ce6281caf5@localhost:43161
+[2015-03-20 20:27:01.640,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 53821)
+[2015-03-20 20:27:01.640,Pyro4.core,DEBUG] connected to PYRO:obj_26b2d8d8801e43678c51c7ce6281caf5@localhost:43161
+[2015-03-20 20:27:01.641,Pyro4.core,DEBUG] getting metadata for object obj_26b2d8d8801e43678c51c7ce6281caf5
+[2015-03-20 20:27:01.642,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:27:01.642,Pyro4.core,DEBUG] from meta: methods=[u'addjob', u'assignjob', u'get_gs_neighbour_status', u'get_structure', u'getclusterstatus', u'getname', u'getoid', u'receivereport', u'seturi', u'tostr']
+[2015-03-20 20:27:01.642,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:27:01.642,Pyro4.core,DEBUG] Exception occurred while handling request: NameError("global name 'TRUE' is not defined",)
+[2015-03-20 20:27:01.643,Pyro4.core,DEBUG] Exception occurred while handling request: NameError(u"global name 'TRUE' is not defined",)
+[2015-03-20 20:27:01.653,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:27:01.653,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 53821)
+[2015-03-20 20:27:01.653,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:27:01.654,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 56502)
+[2015-03-20 20:29:35.868,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:29:35.873,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:29:35.874,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:29:35.885,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:29:35.892,Pyro4,INFO] Pyro log configured using built-in defaults, level=DEBUG
+[2015-03-20 20:29:35.919,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:29:35.921,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:29:35.922,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.923,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.923,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.924,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.924,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.925,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.925,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.925,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.926,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:35.926,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:35.926,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:35.926,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:35.927,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:29:35.929,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.929,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.930,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:35.930,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:35.931,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:35.931,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:35.932,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:29:35.935,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:29:35.935,Pyro4.core,DEBUG] created daemon on localhost:43566
+[2015-03-20 20:29:35.935,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:29:35.935,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:29:35.938,Pyro4.core,INFO] daemon localhost:43566 entering requestloop
+[2015-03-20 20:29:35.939,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:29:35.956,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:29:35.956,Pyro4.core,DEBUG] created daemon on localhost:59594
+[2015-03-20 20:29:35.956,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:29:35.956,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:29:35.957,Pyro4.core,INFO] daemon localhost:59594 entering requestloop
+[2015-03-20 20:29:35.957,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:29:35.963,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:29:35.965,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.966,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:29:35.966,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.966,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.966,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.966,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.966,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.967,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.967,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.967,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.968,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.968,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:35.968,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:35.968,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:35.970,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:35.970,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:35.971,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:35.971,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:35.972,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:29:35.972,Pyro4.core,DEBUG] exposing all members of <class 'Pyro4.core.DaemonObject'>
+[2015-03-20 20:29:35.972,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:35.973,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:29:35.973,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.973,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.973,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.975,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:35.975,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:35.976,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:35.976,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:35.976,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:35.979,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:35.979,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:29:35.979,Pyro4.core,DEBUG] created daemon on localhost:48336
+[2015-03-20 20:29:35.979,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:29:35.980,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:29:35.981,Pyro4.threadpoolserver,INFO] starting thread pool socketserver
+[2015-03-20 20:29:35.983,Pyro4.core,INFO] daemon localhost:48336 entering requestloop
+[2015-03-20 20:29:35.983,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:29:35.992,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:29:35.992,Pyro4.core,DEBUG] created daemon on localhost:35118
+[2015-03-20 20:29:35.992,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:29:35.992,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:29:35.992,Pyro4.threadpool,DEBUG] worker pool of size 16 created
+[2015-03-20 20:29:35.992,Pyro4.core,DEBUG] created daemon on localhost:37256
+[2015-03-20 20:29:35.992,Pyro4.core,DEBUG] accepted serializers: set(['json', 'marshal', 'serpent'])
+[2015-03-20 20:29:35.992,Pyro4.core,DEBUG] pyro protocol version: 47  pickle version: 2
+[2015-03-20 20:29:35.993,Pyro4.core,INFO] daemon localhost:35118 entering requestloop
+[2015-03-20 20:29:35.993,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:29:35.993,Pyro4.core,INFO] daemon localhost:37256 entering requestloop
+[2015-03-20 20:29:35.994,Pyro4.threadpoolserver,DEBUG] threadpool server requestloop
+[2015-03-20 20:29:37.696,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38019)
+[2015-03-20 20:29:37.698,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.698,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:37.698,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.698,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.699,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:37.699,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.699,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:37.700,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.700,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:37.701,Pyro4.core,DEBUG] getting metadata for object obj_a4aa295eed5c414cb2d8205fca982b3a
+[2015-03-20 20:29:37.701,Pyro4.core,DEBUG] connecting to PYRO:obj_a4aa295eed5c414cb2d8205fca982b3a@localhost:48336
+[2015-03-20 20:29:37.706,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 44452)
+[2015-03-20 20:29:37.706,Pyro4.core,DEBUG] connected to PYRO:obj_a4aa295eed5c414cb2d8205fca982b3a@localhost:48336
+[2015-03-20 20:29:37.707,Pyro4.core,DEBUG] getting metadata for object obj_a4aa295eed5c414cb2d8205fca982b3a
+[2015-03-20 20:29:37.707,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.707,Pyro4.core,DEBUG] from meta: methods=[u'addjob', u'assignjob', u'get_gs_neighbour_status', u'get_structure', u'getclusterstatus', u'getname', u'getoid', u'receivereport', u'seturi', u'tostr']
+[2015-03-20 20:29:37.707,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.708,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.708,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 44452)
+[2015-03-20 20:29:37.708,Pyro4.core,DEBUG] getting metadata for object obj_a7f092293eb44a8d98c2d0719bf7cc25
+[2015-03-20 20:29:37.708,Pyro4.core,DEBUG] connecting to PYRO:obj_a7f092293eb44a8d98c2d0719bf7cc25@localhost:59594
+[2015-03-20 20:29:37.709,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38022)
+[2015-03-20 20:29:37.709,Pyro4.core,DEBUG] connected to PYRO:obj_a7f092293eb44a8d98c2d0719bf7cc25@localhost:59594
+[2015-03-20 20:29:37.709,Pyro4.core,DEBUG] getting metadata for object obj_a7f092293eb44a8d98c2d0719bf7cc25
+[2015-03-20 20:29:37.710,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.710,Pyro4.core,DEBUG] from meta: methods=[u'addjob', u'assignjob', u'get_gs_neighbour_status', u'get_structure', u'getclusterstatus', u'getname', u'getoid', u'receivereport', u'seturi', u'tostr']
+[2015-03-20 20:29:37.710,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.710,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.710,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38022)
+[2015-03-20 20:29:37.710,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.711,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.711,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:37.711,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.711,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.711,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:37.712,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.712,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:37.712,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.712,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:37.712,Pyro4.core,DEBUG] getting metadata for object obj_05cebc32ba33470b8230ad3ea0eeb9c6
+[2015-03-20 20:29:37.713,Pyro4.core,DEBUG] connecting to PYRO:obj_05cebc32ba33470b8230ad3ea0eeb9c6@localhost:56379
+[2015-03-20 20:29:37.713,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 36141)
+[2015-03-20 20:29:37.713,Pyro4.core,DEBUG] connected to PYRO:obj_05cebc32ba33470b8230ad3ea0eeb9c6@localhost:56379
+[2015-03-20 20:29:37.713,Pyro4.core,DEBUG] getting metadata for object obj_05cebc32ba33470b8230ad3ea0eeb9c6
+[2015-03-20 20:29:37.714,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.714,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:37.714,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.714,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 36141)
+[2015-03-20 20:29:37.715,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.715,Pyro4.core,DEBUG] getting metadata for object obj_08d13820efa54a5b84f5d13dc85eab89
+[2015-03-20 20:29:37.715,Pyro4.core,DEBUG] connecting to PYRO:obj_08d13820efa54a5b84f5d13dc85eab89@localhost:43566
+[2015-03-20 20:29:37.715,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 59106)
+[2015-03-20 20:29:37.716,Pyro4.core,DEBUG] connected to PYRO:obj_08d13820efa54a5b84f5d13dc85eab89@localhost:43566
+[2015-03-20 20:29:37.716,Pyro4.core,DEBUG] getting metadata for object obj_08d13820efa54a5b84f5d13dc85eab89
+[2015-03-20 20:29:37.716,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.716,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:37.717,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.717,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 59106)
+[2015-03-20 20:29:37.718,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.718,Pyro4.core,DEBUG] getting metadata for object obj_2bef2dfba2824636aeeed4b52a195da7
+[2015-03-20 20:29:37.718,Pyro4.core,DEBUG] connecting to PYRO:obj_2bef2dfba2824636aeeed4b52a195da7@localhost:37256
+[2015-03-20 20:29:37.719,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 34417)
+[2015-03-20 20:29:37.719,Pyro4.core,DEBUG] connected to PYRO:obj_2bef2dfba2824636aeeed4b52a195da7@localhost:37256
+[2015-03-20 20:29:37.719,Pyro4.core,DEBUG] getting metadata for object obj_2bef2dfba2824636aeeed4b52a195da7
+[2015-03-20 20:29:37.720,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.720,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:37.720,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.721,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.721,Pyro4.core,DEBUG] getting metadata for object obj_18158244712541ddaa498060ff7d772b
+[2015-03-20 20:29:37.721,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 34417)
+[2015-03-20 20:29:37.721,Pyro4.core,DEBUG] connecting to PYRO:obj_18158244712541ddaa498060ff7d772b@localhost:58652
+[2015-03-20 20:29:37.722,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 44590)
+[2015-03-20 20:29:37.722,Pyro4.core,DEBUG] connected to PYRO:obj_18158244712541ddaa498060ff7d772b@localhost:58652
+[2015-03-20 20:29:37.722,Pyro4.core,DEBUG] getting metadata for object obj_18158244712541ddaa498060ff7d772b
+[2015-03-20 20:29:37.723,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.723,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:37.723,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.725,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.725,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.725,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 44590)
+[2015-03-20 20:29:37.726,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.726,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:37.726,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.726,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:37.726,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:37.727,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.727,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:37.727,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.728,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:37.728,Pyro4.core,DEBUG] getting metadata for object obj_18158244712541ddaa498060ff7d772b
+[2015-03-20 20:29:37.729,Pyro4.core,DEBUG] connecting to PYRO:obj_18158244712541ddaa498060ff7d772b@localhost:58652
+[2015-03-20 20:29:37.729,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 44592)
+[2015-03-20 20:29:37.729,Pyro4.core,DEBUG] connected to PYRO:obj_18158244712541ddaa498060ff7d772b@localhost:58652
+[2015-03-20 20:29:37.729,Pyro4.core,DEBUG] getting metadata for object obj_18158244712541ddaa498060ff7d772b
+[2015-03-20 20:29:37.730,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:37.730,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:37.730,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:37.732,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.732,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:37.732,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 44592)
+[2015-03-20 20:29:42.664,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38019)
+[2015-03-20 20:29:42.664,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38030)
+[2015-03-20 20:29:42.666,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.666,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:42.667,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.668,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.668,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:42.669,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.669,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:42.669,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.669,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:42.670,Pyro4.core,DEBUG] getting metadata for object obj_a4aa295eed5c414cb2d8205fca982b3a
+[2015-03-20 20:29:42.670,Pyro4.core,DEBUG] connecting to PYRO:obj_a4aa295eed5c414cb2d8205fca982b3a@localhost:48336
+[2015-03-20 20:29:42.671,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 44463)
+[2015-03-20 20:29:42.671,Pyro4.core,DEBUG] connected to PYRO:obj_a4aa295eed5c414cb2d8205fca982b3a@localhost:48336
+[2015-03-20 20:29:42.671,Pyro4.core,DEBUG] getting metadata for object obj_a4aa295eed5c414cb2d8205fca982b3a
+[2015-03-20 20:29:42.672,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.672,Pyro4.core,DEBUG] from meta: methods=[u'addjob', u'assignjob', u'get_gs_neighbour_status', u'get_structure', u'getclusterstatus', u'getname', u'getoid', u'receivereport', u'seturi', u'tostr']
+[2015-03-20 20:29:42.672,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.673,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.673,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 44463)
+[2015-03-20 20:29:42.673,Pyro4.core,DEBUG] getting metadata for object obj_a7f092293eb44a8d98c2d0719bf7cc25
+[2015-03-20 20:29:42.673,Pyro4.core,DEBUG] connecting to PYRO:obj_a7f092293eb44a8d98c2d0719bf7cc25@localhost:59594
+[2015-03-20 20:29:42.673,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38033)
+[2015-03-20 20:29:42.674,Pyro4.core,DEBUG] connected to PYRO:obj_a7f092293eb44a8d98c2d0719bf7cc25@localhost:59594
+[2015-03-20 20:29:42.674,Pyro4.core,DEBUG] getting metadata for object obj_a7f092293eb44a8d98c2d0719bf7cc25
+[2015-03-20 20:29:42.675,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.675,Pyro4.core,DEBUG] from meta: methods=[u'addjob', u'assignjob', u'get_gs_neighbour_status', u'get_structure', u'getclusterstatus', u'getname', u'getoid', u'receivereport', u'seturi', u'tostr']
+[2015-03-20 20:29:42.675,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.676,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.676,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.676,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38033)
+[2015-03-20 20:29:42.676,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.677,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:42.677,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.677,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.677,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:42.678,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.679,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:42.679,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.679,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:42.680,Pyro4.core,DEBUG] getting metadata for object obj_05cebc32ba33470b8230ad3ea0eeb9c6
+[2015-03-20 20:29:42.680,Pyro4.core,DEBUG] connecting to PYRO:obj_05cebc32ba33470b8230ad3ea0eeb9c6@localhost:56379
+[2015-03-20 20:29:42.681,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 36152)
+[2015-03-20 20:29:42.681,Pyro4.core,DEBUG] connected to PYRO:obj_05cebc32ba33470b8230ad3ea0eeb9c6@localhost:56379
+[2015-03-20 20:29:42.681,Pyro4.core,DEBUG] getting metadata for object obj_05cebc32ba33470b8230ad3ea0eeb9c6
+[2015-03-20 20:29:42.682,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.682,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:42.682,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.692,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.692,Pyro4.core,DEBUG] getting metadata for object obj_08d13820efa54a5b84f5d13dc85eab89
+[2015-03-20 20:29:42.693,Pyro4.core,DEBUG] connecting to PYRO:obj_08d13820efa54a5b84f5d13dc85eab89@localhost:43566
+[2015-03-20 20:29:42.693,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 36152)
+[2015-03-20 20:29:42.693,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 59117)
+[2015-03-20 20:29:42.693,Pyro4.core,DEBUG] connected to PYRO:obj_08d13820efa54a5b84f5d13dc85eab89@localhost:43566
+[2015-03-20 20:29:42.693,Pyro4.core,DEBUG] getting metadata for object obj_08d13820efa54a5b84f5d13dc85eab89
+[2015-03-20 20:29:42.694,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.694,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:42.694,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.695,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.695,Pyro4.core,DEBUG] getting metadata for object obj_2bef2dfba2824636aeeed4b52a195da7
+[2015-03-20 20:29:42.695,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 59117)
+[2015-03-20 20:29:42.695,Pyro4.core,DEBUG] connecting to PYRO:obj_2bef2dfba2824636aeeed4b52a195da7@localhost:37256
+[2015-03-20 20:29:42.696,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 34428)
+[2015-03-20 20:29:42.696,Pyro4.core,DEBUG] connected to PYRO:obj_2bef2dfba2824636aeeed4b52a195da7@localhost:37256
+[2015-03-20 20:29:42.697,Pyro4.core,DEBUG] getting metadata for object obj_2bef2dfba2824636aeeed4b52a195da7
+[2015-03-20 20:29:42.698,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.698,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:42.698,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.699,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.699,Pyro4.core,DEBUG] getting metadata for object obj_18158244712541ddaa498060ff7d772b
+[2015-03-20 20:29:42.699,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 34428)
+[2015-03-20 20:29:42.699,Pyro4.core,DEBUG] connecting to PYRO:obj_18158244712541ddaa498060ff7d772b@localhost:58652
+[2015-03-20 20:29:42.700,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 44601)
+[2015-03-20 20:29:42.700,Pyro4.core,DEBUG] connected to PYRO:obj_18158244712541ddaa498060ff7d772b@localhost:58652
+[2015-03-20 20:29:42.700,Pyro4.core,DEBUG] getting metadata for object obj_18158244712541ddaa498060ff7d772b
+[2015-03-20 20:29:42.701,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.701,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:42.701,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.702,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.702,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.702,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 44601)
+[2015-03-20 20:29:42.702,Pyro4.naming,DEBUG] locating the NS: PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.703,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:42.703,Pyro4.core,DEBUG] connecting to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.703,Pyro4.core,DEBUG] connected to PYRO:Pyro.NameServer@localhost:9090
+[2015-03-20 20:29:42.703,Pyro4.core,DEBUG] getting metadata for object Pyro.NameServer
+[2015-03-20 20:29:42.704,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.704,Pyro4.core,DEBUG] from meta: methods=[u'count', u'list', u'lookup', u'ping', u'register', u'remove']
+[2015-03-20 20:29:42.704,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.705,Pyro4.naming,DEBUG] located NS
+[2015-03-20 20:29:42.705,Pyro4.core,DEBUG] getting metadata for object obj_18158244712541ddaa498060ff7d772b
+[2015-03-20 20:29:42.705,Pyro4.core,DEBUG] connecting to PYRO:obj_18158244712541ddaa498060ff7d772b@localhost:58652
+[2015-03-20 20:29:42.706,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 44603)
+[2015-03-20 20:29:42.706,Pyro4.core,DEBUG] connected to PYRO:obj_18158244712541ddaa498060ff7d772b@localhost:58652
+[2015-03-20 20:29:42.706,Pyro4.core,DEBUG] getting metadata for object obj_18158244712541ddaa498060ff7d772b
+[2015-03-20 20:29:42.707,Pyro4.core,DEBUG] from meta: oneway methods=[]
+[2015-03-20 20:29:42.707,Pyro4.core,DEBUG] from meta: methods=[u'add_job', u'assignjob', u'get_cluster_info', u'get_workloadRM', u'getname', u'getoid', u'receive_report', u'seturi', u'tostr']
+[2015-03-20 20:29:42.707,Pyro4.core,DEBUG] from meta: attributes=[]
+[2015-03-20 20:29:42.709,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:42.709,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 44603)
+[2015-03-20 20:29:42.709,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:46.294,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:29:46.294,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:29:46.294,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:29:46.295,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:29:46.295,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:29:46.301,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38030)
+[2015-03-20 20:29:46.346,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 54194)
+[2015-03-20 20:29:46.347,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:29:46.347,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:29:46.347,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 34432)
+[2015-03-20 20:29:46.347,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:29:46.347,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:29:46.348,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 54194)
+[2015-03-20 20:29:46.348,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 34432)
+[2015-03-20 20:29:46.349,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:29:46.349,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:29:46.352,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 44474)
+[2015-03-20 20:29:46.352,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:29:46.352,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:29:46.352,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 59126)
+[2015-03-20 20:29:46.352,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:29:46.352,Pyro4.threadpoolserver,DEBUG] connected ('127.0.0.1', 38044)
+[2015-03-20 20:29:46.352,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:29:46.352,Pyro4.threadpoolserver,DEBUG] threadpool server exits requestloop
+[2015-03-20 20:29:46.352,Pyro4.core,DEBUG] daemon exits requestloop
+[2015-03-20 20:29:46.353,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 38044)
+[2015-03-20 20:29:46.353,Pyro4.core,DEBUG] daemon shutting down
+[2015-03-20 20:29:46.353,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 44474)
+[2015-03-20 20:29:46.353,Pyro4.threadpoolserver,DEBUG] disconnected ('127.0.0.1', 59126)
+[2015-03-20 20:29:46.353,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:46.354,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:46.354,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:46.354,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:46.354,Pyro4.core,DEBUG] connection released
+[2015-03-20 20:29:46.397,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:29:46.397,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:29:46.398,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:29:46.398,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:29:46.398,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:29:46.399,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:29:46.399,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:29:46.399,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:29:46.399,Pyro4.core,INFO] daemon localhost:35118 shut down
+[2015-03-20 20:29:46.400,Pyro4.core,INFO] daemon localhost:37256 shut down
+[2015-03-20 20:29:46.402,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:29:46.402,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:29:46.403,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:29:46.404,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:29:46.404,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:29:46.404,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:29:46.404,Pyro4.core,INFO] daemon localhost:43566 shut down
+[2015-03-20 20:29:46.404,Pyro4.core,DEBUG] daemon closing
+[2015-03-20 20:29:46.405,Pyro4.threadpoolserver,DEBUG] closing threadpool server
+[2015-03-20 20:29:46.405,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:29:46.405,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:29:46.405,Pyro4.core,INFO] daemon localhost:48336 shut down
+[2015-03-20 20:29:46.403,Pyro4.threadpool,DEBUG] closing down, 16 halt-jobs issued
+[2015-03-20 20:29:46.406,Pyro4.threadpool,DEBUG] closing down, 0 halt-jobs issued
+[2015-03-20 20:29:46.406,Pyro4.core,INFO] daemon localhost:59594 shut down
