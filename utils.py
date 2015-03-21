@@ -5,6 +5,12 @@ from resourcemanager import ResourceManager
 from gridscheduler import GridScheduler
 from constant import Constant
 
+def initarraylist_none(length):
+    l = []
+    for i in range(0, length):
+        l.append([None])
+    return l
+
 def add_node(oid, parent="", type=Constant.NODE_WORKER):
 
     def _add_node(oid, namespace, parent, node):

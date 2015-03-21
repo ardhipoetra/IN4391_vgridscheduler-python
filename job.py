@@ -8,8 +8,8 @@ class Job(object):
 	load = 0.6 # 0.0 - 1.0
 
 	#need to initiate these var
-	RM_assigned = 0
-	GS_assignee = 1
+	RM_assigned = -1
+	GS_assignee = -1
 
 	def __init__(self, jid, name, duration, load, gsid):
 		self.jid = jid
@@ -26,6 +26,9 @@ class Job(object):
 
 	def getname(self):
 		return self.name
+
+	def setRMobj(self, rmid):
+		self.RM_assigned = rmid
 
 	def __str__(self):
 		return "([%d] Job : %s; Duration: %d s; Take load %f)" %(self.jid, self.name, self.duration, self.load)

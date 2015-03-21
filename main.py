@@ -58,36 +58,40 @@ def main():
                 print ("========\n")
                 print (rmobj.get_job_node())
                 print ("----------------\n")
-        elif ip == '2':
+        elif ip == '2': # see message to send from all GS
             for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
                 gsobj = Pyro4.Proxy(gs_uri)
-                gsobj.update_GSstructure()
                 print ("from gs : "+str(gsobj.getoid()))
                 print (gsobj.get_gs_info())
                 print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         elif ip == '3':
+            pass
+        elif ip == '4': #see status all GS
             for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
                 gsobj = Pyro4.Proxy(gs_uri)
-                gsobj.do_push_TMP()
-                print ("PUSH FROM : "+str(gsobj.getoid()))
-        elif ip == '4':
-            for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
-                gsobj = Pyro4.Proxy(gs_uri)
-                gsobj.update_GSstructure()
                 print ("from gs : "+str(gsobj.getoid()))
                 print (gsobj.get_all_gs_info())
                 print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
+        elif ip.startswith("kill"):
+            keykill, idkill_s = ip.split()
+            idkill = int(idkill_s)
+            os.kill(subp_gs[idkill].pid, signal.SIGINT)
+        elif ip.startswith("spawn"):
+            keyspw, idspw_s = ip.split()
+            idspw = int(idspw_s)
+            subp_gs[idspw] = subprocess.Popen(['python', 'gridscheduler.py', str(idspw)])
         else:
             # for now send to GS 0
             target = random.randint(0, Constant.TOTAL_GS-1)
             uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
             gsobj = Pyro4.Proxy(uri)
 
-            jobsu = Job(count, "joob"+str(count), random.randint(15,25), random.random(), 0)
+            jobsu = Job(count, ip+str(count), random.randint(15,25), random.random(), target)
 
             d_job = serpent.dumps(jobsu)
 
             gsobj.addjob(d_job)
+            count+=1
 
             # thread = threading.Thread(target=_newjob, args=[count])
             # thread.setDaemon(True)

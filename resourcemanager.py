@@ -23,8 +23,8 @@ class ResourceManager(Node):
     def __init__(self, oid, name="RM", nodeamount=Constant.TOTAL_NODE_EACH):
         Node.__init__(self, oid, name)
         print 'rm %s created with id %d' %(name, oid)
-        self.nodes_stat = [None] * Constant.TOTAL_NODE_EACH
-        self.jobs_assigned_node = [None] * Constant.TOTAL_NODE_EACH
+        self.nodes_stat = [i for i in range(0, Constant.TOTAL_NODE_EACH)]
+        self.jobs_assigned_node = [i for i in range(0, Constant.TOTAL_NODE_EACH)]
         self._creating_wnodes(nodeamount)
 
 
@@ -39,8 +39,18 @@ class ResourceManager(Node):
         return True
 
     # receive report from node
-    def receive_report(self, node_id, job_id):
-        print "get report - %d > %d" %(node_id, job_id)
+    def receive_report(self, node_id, d_job):
+        job = serpent.loads(d_job)
+
+        #what happen if the job finish?
+        self.jobs_assigned_node[node_id - self.oid * 10000] = None
+        print "get report - %d > %s" %(node_id, str(job))
+
+        ns = Pyro4.locateNS()
+        uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(job["GS_assignee"])+"]"+str(job["GS_assignee"]))
+        gsobj_r = Pyro4.Proxy(uri)
+        gsobj_r.receive_report(self.oid, d_job)
+
 
     def get_cluster_info(self):
         buff = ""

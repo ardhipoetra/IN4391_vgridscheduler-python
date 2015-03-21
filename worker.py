@@ -4,6 +4,7 @@ from node import Node
 from job import Job
 from constant import Constant
 import threading
+import serpent
 
 class WorkerNode(Node):
 
@@ -16,7 +17,7 @@ class WorkerNode(Node):
         print 'job started at worker'
     	self.status = Constant.WORKER_STATUS_BUSY
 
-        def do_job(dur, jid, load, rmid):
+        def do_job(dur, jobj, load, rmid):
             self.load = load
             time.sleep(dur)
             self.status = Constant.WORKER_STATUS_IDLE
@@ -25,10 +26,10 @@ class WorkerNode(Node):
             ns = Pyro4.locateNS()
             uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
             rmobj = Pyro4.Proxy(uri)
-            rmobj.receive_report(self.oid, jid)
+            rmobj.receive_report(self.oid, serpent.dumps(jobj))
 
 
-    	thread = threading.Thread(target=do_job, args=([job_obj["duration"],job_obj["jid"],  job_obj['load'], job_obj["RM_assigned"]]))
+    	thread = threading.Thread(target=do_job, args=([job_obj["duration"],job_obj,  job_obj['load'], job_obj["RM_assigned"]]))
         thread.setDaemon(True)
         thread.start()
 

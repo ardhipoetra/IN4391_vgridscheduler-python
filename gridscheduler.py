@@ -41,15 +41,24 @@ class GridScheduler(Node):
         Node.__init__(self, oid, name)
         print 'gs %s created with id %d' %(name, oid)
 
-        self.jobs_assigned_RM = [[None]] * Constant.TOTAL_RM
+        self.jobs_assigned_RM = utils.initarraylist_none(Constant.TOTAL_RM)
         self.RM_loads = [0.0 for i in range(Constant.TOTAL_RM)] #rm connected in this
 
     # report received after finishing the task from RM
-    def receivereport(self, details, d_report):
-        detobj = Pyro4.Proxy(details)
-        report = serpent.loads(d_report)
+    def receive_report(self, rmid, d_job):
+        job = serpent.loads(d_job)
+        print '%s received report %s from %d' %(self, job, rmid)
 
-        print '%s received report %s from %s' %(self,report,detobj.tostr())
+        # remove from stat monitor
+        self.RM_loads[rmid] -= job["load"]
+        self.jobs_assigned_RM[rmid].remove(job)
+
+        # resync with neighbor
+        (act_neig, inact_neig) = self._monitorneighborGS()
+        self._push_structure(act_neig, self._update_GSstructure())
+
+        print 'job %s FINISHED' %(job)
+
 
     # add job to this GS
     def addjob(self, d_job):
@@ -125,16 +134,18 @@ class GridScheduler(Node):
     def _assignjob(self, rmid, d_job):
         job = serpent.loads(d_job)
 
-        print '%s assigned job %s' % (self,job)
-
         ns = Pyro4.locateNS()
         uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
         rmobj = Pyro4.Proxy(uri)
 
-        print 'send job to %s' % (rmobj.tostr())
+        print '%d send job to %s' % (self.oid, rmobj.tostr())
 
         self.RM_loads[rmid] += job["load"]
+
         self.jobs_assigned_RM[rmid].append(job)
+
+        (act_neig, inact_neig) = self._monitorneighborGS()
+        self._push_structure(act_neig, self._update_GSstructure())
 
         rmobj.add_job(d_job)
 
@@ -173,6 +184,9 @@ class GridScheduler(Node):
 
     # Update the data structure for consistency/replication to designated distributed GS (neighbor) -> create snapshot
     def update_GSstructure(self):
+        return self._update_GSstructure()
+
+    def _update_GSstructure(self):
         self.message_GS = {
             'id' : self.oid,
             'timestamp' : time.time(),
@@ -197,17 +211,19 @@ class GridScheduler(Node):
 
     # monitor GS to handle fault in GS
     def _monitorneighborGS(self):
+        ns = Pyro4.locateNS()
+
         activeid = [self.oid]
         inactiveid = []
         for gs_o, gso_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
             gsobj = Pyro4.Proxy(gso_uri)
             if gsobj.getoid() != self.oid:
-                activeid.append(gsobj.getoid)
+                activeid.append(gsobj.getoid())
 
         if len(activeid) != Constant.TOTAL_GS - 1:
             inactiveid = list(set([x for x in range(0, Constant.TOTAL_GS)]) - set(activeid))
 
-        return inactiveid
+        return (activeid, inactiveid)
 
     # monitor RM to handle fault in RM
     def _monitorRM(self):
