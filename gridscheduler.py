@@ -55,6 +55,11 @@ class GridScheduler(Node):
 
         # resync with neighbor
         (act_neig, inact_neig) = self._monitorneighborGS()
+
+        if len(inact_neig) != 0: #there some inactive GS
+            self._takeover_jobs(inact_neig)
+
+
         self._push_structure(act_neig, self._update_GSstructure())
 
         print 'job %s FINISHED' %(job)
@@ -145,6 +150,10 @@ class GridScheduler(Node):
         self.jobs_assigned_RM[rmid].append(job)
 
         (act_neig, inact_neig) = self._monitorneighborGS()
+
+        if len(inact_neig) != 0: #there some inactive GS
+            self._takeover_jobs(inact_neig)
+
         self._push_structure(act_neig, self._update_GSstructure())
 
         rmobj.add_job(d_job)
@@ -220,8 +229,9 @@ class GridScheduler(Node):
             if gsobj.getoid() != self.oid:
                 activeid.append(gsobj.getoid())
 
-        if len(activeid) != Constant.TOTAL_GS - 1:
+        if len(activeid) != Constant.TOTAL_GS:
             inactiveid = list(set([x for x in range(0, Constant.TOTAL_GS)]) - set(activeid))
+            print inactiveid
 
         return (activeid, inactiveid)
 
@@ -229,6 +239,56 @@ class GridScheduler(Node):
     def _monitorRM(self):
 
         return True;
+
+    def _takeover_jobs(self, inactive_lid):
+
+        print "%d try take care.." %self.oid
+
+        takeover_gsid=[]
+
+        # agreement of GS(es)
+        for gsdown_id in sorted(inactive_lid):
+            # if already stated as dead, do nothing
+            if self.neighbor_stateGS[gsdown_id] is None:
+                print "%d not take care %d [NONE VAL]" %(self.oid, gsdown_id)
+                continue
+
+            if self.oid == gsdown_id - 1: #just handled by gs before it
+                takeover_gsid.append(gsdown_id)
+            elif gsdown_id - 1 < 0 and self.oid == Constant.TOTAL_GS - 1: # if 0 died
+                takeover_gsid.append(gsdown_id)
+            pass
+
+            if len(takeover_gsid) != 0:
+                if max(takeover_gsid) + 1 == gsdown_id: #consecutive Gs down
+                    takeover_gsid.append(gsdown_id)
+
+
+        for tgsid in takeover_gsid:
+            #handle job if needed
+            (ts, gs_state) = self.neighbor_stateGS[tgsid]
+
+            #set neighbor stat as died
+            print "%d take care GS dead:%d" %(self.oid, tgsid)
+            self.neighbor_stateGS[tgsid] = None
+
+            # take over the job already run in RM, thus will discard it
+            print "add job in assigned job"
+            for ljob_inrm in gs_state["jobs_assigned_RM"]:
+                for job_in_rm in ljob_inrm:
+                    if job_in_rm is not None:
+                        print "loop 2"
+                        job_in_rm["GS_assignee"] = self.oid
+                        job_in_rm["RM_assigned"] = -1
+                        print ">>>>>> "+str(job_in_rm)
+                        self.addjob(serpent.dumps(job_in_rm))
+
+            print "add job in queue"
+            # also add the job in its queue
+            for dj in gs_state["job_queue"]:
+                dj["GS_assignee"] = self.oid
+                print "<<<<<<< "+str(dj)
+                self.addjob(dj)
 
 def check_stop():
     return stop

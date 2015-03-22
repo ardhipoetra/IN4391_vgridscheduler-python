@@ -47,9 +47,13 @@ class ResourceManager(Node):
         print "get report - %d > %s" %(node_id, str(job))
 
         ns = Pyro4.locateNS()
-        uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(job["GS_assignee"])+"]"+str(job["GS_assignee"]))
-        gsobj_r = Pyro4.Proxy(uri)
-        gsobj_r.receive_report(self.oid, d_job)
+        try:
+            uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(job["GS_assignee"])+"]"+str(job["GS_assignee"]))
+            gsobj_r = Pyro4.Proxy(uri)
+            gsobj_r.receive_report(self.oid, d_job)
+        except Pyro4.errors.NamingError as e:
+            print "CAN'T REACH GS, IGNORE REPORT TO GS"
+
 
 
     def get_cluster_info(self):
