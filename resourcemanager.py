@@ -52,7 +52,7 @@ class ResourceManager(Node):
             gsobj_r = Pyro4.Proxy(uri)
             gsobj_r.receive_report(self.oid, d_job)
         except Pyro4.errors.NamingError as e:
-            print "CAN'T REACH GS, IGNORE REPORT TO GS"
+            print "CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"]
 
 
 

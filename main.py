@@ -72,14 +72,22 @@ def main():
                 print ("from gs : "+str(gsobj.getoid()))
                 print (gsobj.get_all_gs_info())
                 print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
-        elif ip.startswith("kill"):
+        elif ip.startswith("killgs"):
             keykill, idkill_s = ip.split()
             idkill = int(idkill_s)
             os.kill(subp_gs[idkill].pid, signal.SIGINT)
-        elif ip.startswith("spawn"):
+        elif ip.startswith("spawngs"):
             keyspw, idspw_s = ip.split()
             idspw = int(idspw_s)
             subp_gs[idspw] = subprocess.Popen(['python', 'gridscheduler.py', str(idspw)])
+        elif ip.startswith("killrm"):
+            keykill, idkill_s = ip.split()
+            idkill = int(idkill_s)
+            os.kill(subp_rm[idkill].pid, signal.SIGINT)
+        elif ip.startswith("spawnrm"):
+            keyspw, idspw_s = ip.split()
+            idspw = int(idspw_s)
+            subp_rm[idspw] = subprocess.Popen(['python', 'resourcemanager.py', str(idspw)])
         else:
             # for now send to GS 0
             target = random.randint(0, Constant.TOTAL_GS-1)

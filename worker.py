@@ -23,10 +23,14 @@ class WorkerNode(Node):
             self.status = Constant.WORKER_STATUS_IDLE
             self.load = 0.0
 
-            ns = Pyro4.locateNS()
-            uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
-            rmobj = Pyro4.Proxy(uri)
-            rmobj.receive_report(self.oid, serpent.dumps(jobj))
+            try:
+                ns = Pyro4.locateNS()
+                uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
+                rmobj = Pyro4.Proxy(uri)
+                rmobj.receive_report(self.oid, serpent.dumps(jobj))
+            except Pyro4.errors.NamingError as e:
+                print "CAN'T REACH RM, IGNORE REPORT TO RM"
+
 
 
     	thread = threading.Thread(target=do_job, args=([job_obj["duration"],job_obj,  job_obj['load'], job_obj["RM_assigned"]]))

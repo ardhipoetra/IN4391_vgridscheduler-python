@@ -55,6 +55,8 @@ class GridScheduler(Node):
 
         # resync with neighbor
         (act_neig, inact_neig) = self._monitorneighborGS()
+        # monitor RM
+        self._monitorRM()
 
         if len(inact_neig) != 0: #there some inactive GS
             self._takeover_jobs(inact_neig)
@@ -71,7 +73,8 @@ class GridScheduler(Node):
         print "job {%s} " %(d_job)
         self.job_queue.append(job)
 
-        # should do something
+
+        self._monitorRM()
 
         rmidsub = self._chooseRM()
 
@@ -237,8 +240,35 @@ class GridScheduler(Node):
 
     # monitor RM to handle fault in RM
     def _monitorRM(self):
+        ns = Pyro4.locateNS()
 
-        return True;
+        # only look at related RM
+        for rmid, jobs_in_rm in enumerate(self.jobs_assigned_RM):
+            if jobs_in_rm == [None]:
+                print "%d RM %d none" %(self.oid, rmid)
+                continue
+
+            try:
+                print "%d check RM %d" %(self.oid, rmid)
+                ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
+            except Exception as e:
+                # handle dead RM
+                print "%d dead RM %d" %(self.oid, rmid)
+
+                # clean stats
+                print "%d clean RM %d" %(self.oid, rmid)
+                self.jobs_assigned_RM[rmid] = [None]
+
+                for jobs in jobs_in_rm:
+                    if jobs is None:
+                        print 'unimportant job'
+                        continue
+
+                    # readd this job to queue
+                    jobs["RM_assigned"] = -1
+                    self.addjob(serpent.dumps(jobs))
+
+
 
     def _takeover_jobs(self, inactive_lid):
 
