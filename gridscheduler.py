@@ -36,10 +36,13 @@ class GridScheduler(Node):
         'jobs_assigned_RM' : jobs_assigned_RM
     }
 
+    def _write(self, string):
+        utils.write(Constant.NODE_GRIDSCHEDULER, self.oid, string)
+
    ## Define the data structure which maintains the state of each GS
     def __init__(self, oid, name="GS"):
         Node.__init__(self, oid, name)
-        print 'gs %s created with id %d' %(name, oid)
+        utils.write(Constant.NODE_RESOURCEMANAGER, self.oid, "created with id %d" %(oid))
 
         self.jobs_assigned_RM = utils.initarraylist_none(Constant.TOTAL_RM)
         self.RM_loads = [0.0 for i in range(Constant.TOTAL_RM)] #rm connected in this
@@ -47,7 +50,7 @@ class GridScheduler(Node):
     # report received after finishing the task from RM
     def receive_report(self, rmid, d_job):
         job = serpent.loads(d_job)
-        print '%s received report %s from %d' %(self, job, rmid)
+        self._write('received report %s from RM-%d' %(job, rmid))
 
         # remove from stat monitor
         self.RM_loads[rmid] -= job["load"]
@@ -64,13 +67,13 @@ class GridScheduler(Node):
 
         self._push_structure(act_neig, self._update_GSstructure())
 
-        print 'job %s FINISHED' %(job)
+        self._write('job %s FINISHED at %f' %(job, time.time()))
 
 
     # add job to this GS
     def addjob(self, d_job):
         job = serpent.loads(d_job)
-        print "job {%s} " %(d_job)
+        self._write("job {%s} added" %(d_job))
         self.job_queue.append(job)
 
 
@@ -79,7 +82,7 @@ class GridScheduler(Node):
         rmidsub = self._chooseRM()
 
         if rmidsub == -1 :
-            print 'no rm!'
+            self._write('no rm available!')
             return False
         else:
             jobsub = self._choose_job()
@@ -146,7 +149,7 @@ class GridScheduler(Node):
         uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
         rmobj = Pyro4.Proxy(uri)
 
-        print '%d send job to %s' % (self.oid, rmobj.tostr())
+        self._write('send job to %s' % (rmobj.tostr()))
 
         self.RM_loads[rmid] += job["load"]
 
@@ -169,7 +172,6 @@ class GridScheduler(Node):
     def _chooseRM(self):
         ns = Pyro4.locateNS()
         rm_tmp = [0.0] * Constant.TOTAL_RM
-        print "find RM..."
         for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
             rmobj = Pyro4.Proxy(rm_uri)
             rm_tmp[rmobj.getoid()] = rmobj.get_workloadRM()
@@ -181,12 +183,11 @@ class GridScheduler(Node):
 
         return random.randint(0,Constant.TOTAL_RM-1)
 
-        print x
         if x[0] < 0.9 :
-            print "top RM with "+str(x[0])
+            self._write("find RM to submit with "+str(x[0]))
             return 0
         else:
-            print x[0]
+            self._write("no RM available")
             return -1
 
 
@@ -234,7 +235,8 @@ class GridScheduler(Node):
 
         if len(activeid) != Constant.TOTAL_GS:
             inactiveid = list(set([x for x in range(0, Constant.TOTAL_GS)]) - set(activeid))
-            print inactiveid
+
+        self._write("active GS : %s | inactive GS : %s" %(str(activeid), str(inactiveid)))
 
         return (activeid, inactiveid)
 
@@ -245,42 +247,35 @@ class GridScheduler(Node):
         # only look at related RM
         for rmid, jobs_in_rm in enumerate(self.jobs_assigned_RM):
             if jobs_in_rm == [None]:
-                print "%d RM %d none" %(self.oid, rmid)
                 continue
 
             try:
-                print "%d check RM %d" %(self.oid, rmid)
+                self._write("monitoring check RM %d" %(rmid))
                 ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
             except Exception as e:
                 # handle dead RM
-                print "%d dead RM %d" %(self.oid, rmid)
+                self._write("RM %d detected dead!" %(rmid))
 
                 # clean stats
-                print "%d clean RM %d" %(self.oid, rmid)
                 self.jobs_assigned_RM[rmid] = [None]
 
                 for jobs in jobs_in_rm:
                     if jobs is None:
-                        print 'unimportant job'
                         continue
 
                     # readd this job to queue
                     jobs["RM_assigned"] = -1
+                    self._write("readd job "+str(jobs))
                     self.addjob(serpent.dumps(jobs))
 
-
-
     def _takeover_jobs(self, inactive_lid):
-
-        print "%d try take care.." %self.oid
-
         takeover_gsid=[]
 
         # agreement of GS(es)
         for gsdown_id in sorted(inactive_lid):
             # if already stated as dead, do nothing
             if self.neighbor_stateGS[gsdown_id] is None:
-                print "%d not take care %d [NONE VAL]" %(self.oid, gsdown_id)
+                self._write("not take care %d [NONE VAL]" %gsdown_id)
                 continue
 
             if self.oid == gsdown_id - 1: #just handled by gs before it
@@ -299,25 +294,21 @@ class GridScheduler(Node):
             (ts, gs_state) = self.neighbor_stateGS[tgsid]
 
             #set neighbor stat as died
-            print "%d take care GS dead:%d" %(self.oid, tgsid)
+            self._write("take care GS dead:%d" %tgsid)
             self.neighbor_stateGS[tgsid] = None
 
             # take over the job already run in RM, thus will discard it
-            print "add job in assigned job"
             for ljob_inrm in gs_state["jobs_assigned_RM"]:
                 for job_in_rm in ljob_inrm:
                     if job_in_rm is not None:
-                        print "loop 2"
                         job_in_rm["GS_assignee"] = self.oid
                         job_in_rm["RM_assigned"] = -1
-                        print ">>>>>> "+str(job_in_rm)
+                        self._write("re-add jobs %d in GS %d" %(job_in_rm["jid"], tgsid))
                         self.addjob(serpent.dumps(job_in_rm))
 
-            print "add job in queue"
             # also add the job in its queue
             for dj in gs_state["job_queue"]:
                 dj["GS_assignee"] = self.oid
-                print "<<<<<<< "+str(dj)
                 self.addjob(dj)
 
 def check_stop():
@@ -341,7 +332,7 @@ def main():
     ns.register(Constant.NAMESPACE_GS+"."+node.getname()+str(oid), uri)
 
     def signal_handler(signal, frame):
-        print('You pressed Ctrl+C on GS!')
+        utils.write(Constant.NODE_GRIDSCHEDULER, oid, "GS will down!")
         stop = False
         daemon.shutdown()
 

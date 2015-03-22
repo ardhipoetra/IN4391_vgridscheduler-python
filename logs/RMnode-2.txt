@@ -1,0 +1,4 @@
+[1427058859.898540] RMnode-2 | created with id 2
+
+[1427058865.147327] RMnode-2 | RM will down!
+

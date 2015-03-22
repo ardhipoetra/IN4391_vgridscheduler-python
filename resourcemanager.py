@@ -6,7 +6,7 @@ from node import Node
 import sys
 import signal
 import random
-
+import utils
 stop = True;
 
 class ResourceManager(Node):
@@ -20,9 +20,12 @@ class ResourceManager(Node):
     # id node, jobs on that node. Assumption, 1 node 1 job, 1 job can be > 1 node
     jobs_assigned_node = []
 
+    def _write(self, string):
+        utils.write(Constant.NODE_RESOURCEMANAGER, self.oid, string)
+
     def __init__(self, oid, name="RM", nodeamount=Constant.TOTAL_NODE_EACH):
         Node.__init__(self, oid, name)
-        print 'rm %s created with id %d' %(name, oid)
+        utils.write(Constant.NODE_RESOURCEMANAGER, self.oid, "created with id %d" %(oid))
         self.nodes_stat = [i for i in range(0, Constant.TOTAL_NODE_EACH)]
         self.jobs_assigned_node = [i for i in range(0, Constant.TOTAL_NODE_EACH)]
         self._creating_wnodes(nodeamount)
@@ -44,7 +47,7 @@ class ResourceManager(Node):
 
         #what happen if the job finish?
         self.jobs_assigned_node[node_id - self.oid * 10000] = None
-        print "get report - %d > %s" %(node_id, str(job))
+        self._write("get report from node %d : %s" %(node_id, str(job)))
 
         ns = Pyro4.locateNS()
         try:
@@ -52,7 +55,7 @@ class ResourceManager(Node):
             gsobj_r = Pyro4.Proxy(uri)
             gsobj_r.receive_report(self.oid, d_job)
         except Pyro4.errors.NamingError as e:
-            print "CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"]
+            self._write("CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"])
 
 
 
@@ -74,7 +77,7 @@ class ResourceManager(Node):
 
         self.jobs_assigned_node[wnode.getoid() - self.oid * 10000] = job
 
-        print str(wnode)+' assigned job '+ str(job)
+        self._write(str(wnode)+' assigned job '+ str(job))
         wnode.startjob(job)
         return wnode
 
@@ -145,7 +148,7 @@ def main():
     ns.register(Constant.NAMESPACE_RM+"."+node.getname()+str(oid), uri)
 
     def signal_handler(signal, frame):
-        print('You pressed Ctrl+C on RM!')
+        utils.write(Constant.NODE_RESOURCEMANAGER, oid, "RM will down!")
         stop = False
         daemon.shutdown()
 

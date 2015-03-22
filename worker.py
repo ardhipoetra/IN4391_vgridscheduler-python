@@ -5,8 +5,12 @@ from job import Job
 from constant import Constant
 import threading
 import serpent
+import utils
 
 class WorkerNode(Node):
+
+    def _write(self, string):
+        utils.write(Constant.NODE_WORKER, self.oid, string)
 
     def __init__(self, oid, name="WK"):
         Node.__init__(self, oid, name)
@@ -14,7 +18,7 @@ class WorkerNode(Node):
         self.load = 0.0
 
     def startjob(self, job_obj):
-        print 'job started at worker'
+        self._write('job %s started' %str(job_obj))
     	self.status = Constant.WORKER_STATUS_BUSY
 
         def do_job(dur, jobj, load, rmid):
@@ -28,8 +32,9 @@ class WorkerNode(Node):
                 uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
                 rmobj = Pyro4.Proxy(uri)
                 rmobj.receive_report(self.oid, serpent.dumps(jobj))
+                self._write("Job finished from worker")
             except Pyro4.errors.NamingError as e:
-                print "CAN'T REACH RM, IGNORE REPORT TO RM"
+                self._write("CAN'T REACH RM, IGNORE REPORT TO RM")
 
 
 
