@@ -128,7 +128,7 @@ class GridScheduler(Node):
         buff += "RM_loads : "+str(self.RM_loads) + "\n"
         buff += "jobs_assigned_RM : \n"
         for jobl in self.jobs_assigned_RM:
-            buff += "\t["+str(len(jobl))+"]"+str(jobl)+"\n"
+            buff += "\t["+str(len(jobl)-1)+"]"+str(jobl)+"\n"
 
         buff += "------------------------------------------------\n"
         return buff

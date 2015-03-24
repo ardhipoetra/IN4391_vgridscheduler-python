@@ -91,7 +91,8 @@ class ResourceManager(Node):
     ###Activity : this function takes out the high prioirity job for the RM Queue
     ## output : the latest job
     def _choose_job(self):
-        return self.job_queue.pop()
+        job = self.job_queue.pop()
+        return job
 
     # choose nodes available
     def _choose_nodes(self):

@@ -38,7 +38,7 @@ def main():
                     uri = gs_ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
                     break
                 except Pyro4.errors.NamingError as e:
-                    print ("GS %d unavailable, try again", %target)
+                    print ("GS %d unavailable, try again" %target)
                     continue
 
             gsobj = Pyro4.Proxy(uri)
