@@ -1,6 +1,8 @@
 
 class Constant(object):
 
+	IP_NAMESERVER = "localhost"
+
 	TOTAL_GS = 2
 	TOTAL_RM = 3
 	TOTAL_NODE = TOTAL_RM * 4

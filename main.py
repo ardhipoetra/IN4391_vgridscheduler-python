@@ -26,14 +26,7 @@ def main():
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
 
 
-    ns = Pyro4.locateNS()
-
-    for gs_i in range(0, Constant.TOTAL_GS):
-        subp_gs.append(subprocess.Popen(['python', 'gridscheduler.py', str(gs_i)]))
-
-    for rm_i in range(0, Constant.TOTAL_RM):
-        subp_rm.append(subprocess.Popen(['python', 'resourcemanager.py', str(rm_i)]))
-
+    ns = Pyro4.locateNS(host=Constant.IP_NS)
 
     out = True
     count = 0
@@ -44,13 +37,7 @@ def main():
 
         ip = input("Input:")
 
-        if ip == '0':
-            for gi in range(0, Constant.TOTAL_GS):
-                os.kill(subp_gs[gi].pid, signal.SIGINT)
-            for rmi in range(0, Constant.TOTAL_RM):
-                os.kill(subp_rm[rmi].pid, signal.SIGINT)
-            out = False
-        elif ip == '1':
+    if ip == '1':
             for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
                 rmobj = Pyro4.Proxy(rm_uri)
                 print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
@@ -72,22 +59,6 @@ def main():
                 print ("from gs : "+str(gsobj.getoid()))
                 print (gsobj.get_all_gs_info())
                 print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
-        elif ip.startswith("killgs"):
-            keykill, idkill_s = ip.split()
-            idkill = int(idkill_s)
-            os.kill(subp_gs[idkill].pid, signal.SIGINT)
-        elif ip.startswith("spawngs"):
-            keyspw, idspw_s = ip.split()
-            idspw = int(idspw_s)
-            subp_gs[idspw] = subprocess.Popen(['python', 'gridscheduler.py', str(idspw)])
-        elif ip.startswith("killrm"):
-            keykill, idkill_s = ip.split()
-            idkill = int(idkill_s)
-            os.kill(subp_rm[idkill].pid, signal.SIGINT)
-        elif ip.startswith("spawnrm"):
-            keyspw, idspw_s = ip.split()
-            idspw = int(idspw_s)
-            subp_rm[idspw] = subprocess.Popen(['python', 'resourcemanager.py', str(idspw)])
         else:
             # for now send to GS 0
             target = random.randint(0, Constant.TOTAL_GS-1)

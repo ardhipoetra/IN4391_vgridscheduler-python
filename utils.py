@@ -19,9 +19,9 @@ def write(name, idp, stringtoprint):
 
     toprint = timestamp + nameid + " | " + stringtoprint
 
-    f = open(nameid+".txt","a")
+    f = open("logs/"+nameid+".txt","a")
 
     print(toprint+os.linesep, file=f)
-    # print toprint
+    # print(toprint)
 
     f.close()

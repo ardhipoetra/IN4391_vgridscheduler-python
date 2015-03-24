@@ -67,7 +67,7 @@ class GridScheduler(Node):
 
         self._push_structure(act_neig, self._update_GSstructure())
 
-        self._write('job %s FINISHED at %f' %(job, time.time()))
+        self._write('job %s GS-FINISHED at %f' %(job, time.time()))
 
 
     # add job to this GS
@@ -145,7 +145,7 @@ class GridScheduler(Node):
     def _assignjob(self, rmid, d_job):
         job = serpent.loads(d_job)
 
-        ns = Pyro4.locateNS()
+        ns = Pyro4.locateNS(host=Constant.IP_NS)
         uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
         rmobj = Pyro4.Proxy(uri)
 
@@ -170,7 +170,7 @@ class GridScheduler(Node):
         return job
 
     def _chooseRM(self):
-        ns = Pyro4.locateNS()
+        ns = Pyro4.locateNS(host=Constant.IP_NS)
         rm_tmp = [0.0] * Constant.TOTAL_RM
         for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
             rmobj = Pyro4.Proxy(rm_uri)
@@ -213,7 +213,7 @@ class GridScheduler(Node):
     # push current structure to other GS (consistency)
     # assumed gs_listid is active GS, msg is serpent dumps
     def _push_structure(self, gs_listid, msg_gs):
-        ns = Pyro4.locateNS()
+        ns = Pyro4.locateNS(host=Constant.IP_NS)
 
         for gsid in gs_listid:
             gso_uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(gsid)+"]"+str(gsid))
@@ -224,7 +224,7 @@ class GridScheduler(Node):
 
     # monitor GS to handle fault in GS
     def _monitorneighborGS(self):
-        ns = Pyro4.locateNS()
+        ns = Pyro4.locateNS(host=Constant.IP_NS)
 
         activeid = [self.oid]
         inactiveid = []
@@ -242,7 +242,7 @@ class GridScheduler(Node):
 
     # monitor RM to handle fault in RM
     def _monitorRM(self):
-        ns = Pyro4.locateNS()
+        ns = Pyro4.locateNS(host=Constant.IP_NS)
 
         # only look at related RM
         for rmid, jobs_in_rm in enumerate(self.jobs_assigned_RM):
@@ -316,7 +316,7 @@ def check_stop():
 
 def main():
     # g_sch = GridScheduler()
-    ns = Pyro4.locateNS()
+    ns = Pyro4.locateNS(host=Constant.IP_NS)
 
     if len(sys.argv) == 0:
         oid = len(ns.list(prefix=Constant.NAMESPACE_GS+"."))
@@ -325,7 +325,7 @@ def main():
 
     node = GridScheduler(oid, "[GS-"+str(oid)+"]")
 
-    daemon = Pyro4.Daemon()
+    daemon = Pyro4.Daemon(Constant.IP_NS)
     uri = daemon.register(node)
     node.seturi(uri)
 
