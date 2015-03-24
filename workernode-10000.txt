@@ -1,0 +1,16 @@
+[1427201961.476590] workernode-10000 | job {u'load': 0.3217980202108799, u'jid': 7, u'name': u'tr7', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 17, u'GS_assignee': 1} started
+
+[1427201978.596453] workernode-10000 | Job finished from worker
+
+[1427204838.200939] workernode-10000 | job {u'load': 0.41981413311967275, u'jid': 2, u'name': u'fd2', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 17, u'GS_assignee': 1} started
+
+[1427204855.336616] workernode-10000 | Job finished from worker
+
+[1427205033.987839] workernode-10000 | job {u'load': 0.6309365518953851, u'jid': 3, u'name': u'fd3', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 24, u'GS_assignee': 0} started
+
+[1427205058.055437] workernode-10000 | Job finished from worker
+
+[1427209873.817919] workernode-10000 | job {u'load': 0.5190718454438638, u'jid': 8, u'name': u'fsd8', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 18, u'GS_assignee': 0} started
+
+[1427210188.242374] workernode-10000 | job {u'load': 0.6720451060962045, u'jid': 1, u'name': u'fds1', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 25, u'GS_assignee': 0} started
+

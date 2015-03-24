@@ -175,17 +175,12 @@ class GridScheduler(Node):
         for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
             rmobj = Pyro4.Proxy(rm_uri)
             rm_tmp[rmobj.getoid()] = rmobj.get_workloadRM()
-
+       
         x = sorted(rm_tmp)
-
-        if min(x) > 0.0:
-            return -1
-
-        return random.randint(0,Constant.TOTAL_RM-1)
-
-        if x[0] < 0.9 :
-            self._write("find RM to submit with "+str(x[0]))
-            return 0
+       
+        if x[0] < 0.9 and x[0] >= 0.0:
+            self._write("found RM to submit with "+str(x[0]))
+            return rm_tmp.index(x[0])
         else:
             self._write("no RM available")
             return -1

@@ -1,0 +1,96 @@
+[1427201553.888149] RMnode-1 | created with id 1
+
+[1427201553.902341] RMnode-1 | created with id 1
+
+[1427201588.984071] RMnode-1 | [10001] [WK-10001] ;Load:0.000000; Stat:0 assigned job {u'load': 0.0016604980231557098, u'jid': 1, u'name': u'h1', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 18, u'GS_assignee': 0}
+
+[1427201607.038184] RMnode-1 | get report from node 10001 : {u'load': 0.0016604980231557098, u'jid': 1, u'name': u'h1', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 18, u'GS_assignee': 0}
+
+[1427201705.221309] RMnode-1 | RM will down!
+
+[1427201867.171027] RMnode-1 | created with id 1
+
+[1427201867.183706] RMnode-1 | created with id 1
+
+[1427201960.244627] RMnode-1 | [10003] [WK-10003] ;Load:0.000000; Stat:0 assigned job {u'load': 0.5888068043190016, u'jid': 6, u'name': u're6', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 23, u'GS_assignee': 0}
+
+[1427201961.476339] RMnode-1 | [10000] [WK-10000] ;Load:0.000000; Stat:0 assigned job {u'load': 0.3217980202108799, u'jid': 7, u'name': u'tr7', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 17, u'GS_assignee': 1}
+
+[1427201963.839213] RMnode-1 | [10001] [WK-10001] ;Load:0.000000; Stat:0 assigned job {u'load': 0.6582436351354201, u'jid': 8, u'name': u'y8', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 25, u'GS_assignee': 1}
+
+[1427201978.518667] RMnode-1 | get report from node 10000 : {u'load': 0.3217980202108799, u'jid': 7, u'name': u'tr7', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 17, u'GS_assignee': 1}
+
+[1427201983.286312] RMnode-1 | get report from node 10003 : {u'load': 0.5888068043190016, u'jid': 6, u'name': u're6', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 23, u'GS_assignee': 0}
+
+[1427201988.878170] RMnode-1 | get report from node 10001 : {u'load': 0.6582436351354201, u'jid': 8, u'name': u'y8', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 25, u'GS_assignee': 1}
+
+[1427203568.774874] RMnode-1 | RM will down!
+
+[1427204754.580351] RMnode-1 | created with id 1
+
+[1427204754.623974] RMnode-1 | created with id 1
+
+[1427204832.175283] RMnode-1 | created with id 1
+
+[1427204832.199069] RMnode-1 | created with id 1
+
+[1427204833.826491] RMnode-1 | [10003] [WK-10003] ;Load:0.000000; Stat:0 assigned job {u'load': 0.35501948142363915, u'jid': 0, u'name': u'fd0', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 16, u'GS_assignee': 0}
+
+[1427204838.200835] RMnode-1 | [10000] [WK-10000] ;Load:0.000000; Stat:0 assigned job {u'load': 0.41981413311967275, u'jid': 2, u'name': u'fd2', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 17, u'GS_assignee': 1}
+
+[1427204849.856401] RMnode-1 | get report from node 10003 : {u'load': 0.35501948142363915, u'jid': 0, u'name': u'fd0', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 16, u'GS_assignee': 0}
+
+[1427204855.237852] RMnode-1 | get report from node 10000 : {u'load': 0.41981413311967275, u'jid': 2, u'name': u'fd2', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 17, u'GS_assignee': 1}
+
+[1427204953.707194] RMnode-1 | [10001] [WK-10001] ;Load:0.000000; Stat:0 assigned job {u'load': 0.8428020636990465, u'jid': 22, u'name': u'fd22', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 16, u'GS_assignee': 0}
+
+[1427204959.124331] RMnode-1 | [10001] [WK-10001] ;Load:0.842802; Stat:1 assigned job {u'load': 0.007138962408863692, u'jid': 24, u'name': u'ds24', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 22, u'GS_assignee': 0}
+
+[1427204969.743118] RMnode-1 | get report from node 10001 : {u'load': 0.8428020636990465, u'jid': 22, u'name': u'fd22', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 16, u'GS_assignee': 0}
+
+[1427204980.640996] RMnode-1 | RM will down!
+
+[1427204982.890591] RMnode-1 | created with id 1
+
+[1427204982.911826] RMnode-1 | created with id 1
+
+[1427205018.490012] RMnode-1 | RM will down!
+
+[1427205020.992460] RMnode-1 | created with id 1
+
+[1427205021.038482] RMnode-1 | created with id 1
+
+[1427205021.993236] RMnode-1 | [10003] [WK-10003] ;Load:0.000000; Stat:0 assigned job {u'load': 0.6250695944022621, u'jid': 0, u'name': u'fd0', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 22, u'GS_assignee': 1}
+
+[1427205027.420025] RMnode-1 | [10003] [WK-10003] ;Load:0.625070; Stat:1 assigned job {u'load': 0.08388416505326923, u'jid': 1, u'name': u'ds1', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 24, u'GS_assignee': 0}
+
+[1427205033.987734] RMnode-1 | [10000] [WK-10000] ;Load:0.000000; Stat:0 assigned job {u'load': 0.6309365518953851, u'jid': 3, u'name': u'fd3', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 24, u'GS_assignee': 0}
+
+[1427205044.050099] RMnode-1 | get report from node 10003 : {u'load': 0.6250695944022621, u'jid': 0, u'name': u'fd0', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 22, u'GS_assignee': 1}
+
+[1427205051.464560] RMnode-1 | get report from node 10003 : {u'load': 0.08388416505326923, u'jid': 1, u'name': u'ds1', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 24, u'GS_assignee': 0}
+
+[1427205054.933258] RMnode-1 | [10001] [WK-10001] ;Load:0.000000; Stat:0 assigned job {u'load': 0.11404309773521537, u'jid': 7, u'name': u'ds7', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 23, u'GS_assignee': 1}
+
+[1427205058.020901] RMnode-1 | get report from node 10000 : {u'load': 0.6309365518953851, u'jid': 3, u'name': u'fd3', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 24, u'GS_assignee': 0}
+
+[1427205068.471172] RMnode-1 | RM will down!
+
+[1427209848.039143] RMnode-1 | created with id 1
+
+[1427209848.099273] RMnode-1 | created with id 1
+
+[1427209863.221391] RMnode-1 | [10002] [WK-10002] ;Load:0.000000; Stat:0 assigned job {u'load': 0.02150411944431485, u'jid': 4, u'name': u'fsd4', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 20, u'GS_assignee': 0}
+
+[1427209873.817833] RMnode-1 | [10000] [WK-10000] ;Load:0.000000; Stat:0 assigned job {u'load': 0.5190718454438638, u'jid': 8, u'name': u'fsd8', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 18, u'GS_assignee': 0}
+
+[1427209875.454856] RMnode-1 | RM will down!
+
+[1427210185.219769] RMnode-1 | created with id 1
+
+[1427210185.255659] RMnode-1 | created with id 1
+
+[1427210188.242275] RMnode-1 | [10000] [WK-10000] ;Load:0.000000; Stat:0 assigned job {u'load': 0.6720451060962045, u'jid': 1, u'name': u'fds1', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 25, u'GS_assignee': 0}
+
+[1427210191.224792] RMnode-1 | RM will down!
+

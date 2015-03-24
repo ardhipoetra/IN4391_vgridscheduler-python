@@ -1,0 +1,2 @@
+[1427209863.221468] workernode-10002 | job {u'load': 0.02150411944431485, u'jid': 4, u'name': u'fsd4', u'RM_assigned': 1, u'__class__': u'Job', u'duration': 20, u'GS_assignee': 0} started
+
