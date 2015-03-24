@@ -6,17 +6,19 @@ class Job(object):
 	name = 'nameofthejob'
 	duration = 10 # in seconds
 	load = 0.6 # 0.0 - 1.0
+	starttime = 1234.0
 
 	#need to initiate these var
 	RM_assigned = -1
 	GS_assignee = -1
 
-	def __init__(self, jid, name, duration, load, gsid):
+	def __init__(self, jid, name, duration, load, gsid, starttime=1234.0):
 		self.jid = jid
 		self.name = name
 		self.duration = duration
 		self.load = load
 		self.GS_assignee = gsid
+		self.starttime = starttime
 
 	def getduration(self):
 		return self.duration

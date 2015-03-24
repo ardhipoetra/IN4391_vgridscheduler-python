@@ -64,11 +64,23 @@ class GridScheduler(Node):
         if len(inact_neig) != 0: #there some inactive GS
             self._takeover_jobs(inact_neig)
 
-
         self._push_structure(act_neig, self._update_GSstructure())
 
-        self._write('job %s GS-FINISHED at %f' %(job, time.time()))
+        timedone = time.time()
+        tdiff = timedone - job["starttime"]
+        self._write('job %s GS-FINISHED at %f (%f)' %(job, timedone, tdiff))
 
+        # if there's job in the queue
+        if len(self.job_queue) != 0:
+            self._write("queue not empty, try assign job to RM")
+            rmidsub = self._chooseRM()
+            if rmidsub == -1:
+                self._write('no rm available!')
+                return False
+            else:
+                jobsub = self._choose_job()
+                jobsub["RM_assigned"] = rmidsub
+                self._assignjob(rmidsub, serpent.dumps(jobsub))
 
     # add job to this GS
     def addjob(self, d_job):
@@ -78,7 +90,6 @@ class GridScheduler(Node):
 
 
         self._monitorRM()
-
         rmidsub = self._chooseRM()
 
         if rmidsub == -1 :
@@ -110,19 +121,16 @@ class GridScheduler(Node):
 
         return return_stat;
 
-    # get the current status of the cluster AND RM in his jurisdiction
-    # activity: return the data structure containing the deails such as how many nodes are avaiable, current workload in the network etc
-    # output: data structure for the cluster status from the perticular cluster
-    def getclusterstatus(self, rmobject):
-        pass
-
     def get_gs_info(self):
         buff = ""
-        buff += "ID : "+str(self.message_GS["id"]) + "\n"
-        buff += "job_queue : "+str(self.message_GS["job_queue"]) + "\n"
-        buff += "RM_loads : "+str(self.message_GS["RM_loads"]) + "\n"
-        buff += "jobs_assigned_RM : "+str(self.message_GS["jobs_assigned_RM"]) + "\n"
+        buff += "ID : "+str(self.oid) + "\n"
+        buff += "job_queue : "+str(self.job_queue) + "\n"
+        buff += "RM_loads : "+str(self.RM_loads) + "\n"
+        buff += "jobs_assigned_RM : \n"
+        for jobl in self.jobs_assigned_RM:
+            buff += "\t["+str(len(jobl))+"]"+str(jobl)+"\n"
 
+        buff += "------------------------------------------------\n"
         return buff
 
     def get_all_gs_info(self):
@@ -134,12 +142,9 @@ class GridScheduler(Node):
                 buff += "ID : "+str(ns["id"]) + "\n"
                 buff += "job_queue : "+str(ns["job_queue"]) + "\n"
                 buff += "RM_loads : "+str(ns["RM_loads"]) + "\n"
-                buff += "jobs_assigned_RM : "+str(ns["jobs_assigned_RM"]) + "\n"
+                buff += "jobs_assigned_RM :"+str(ns["jobs_assigned_RM"]) + "\n"
                 buff += "<><><><>><><><><><><><>"
         return buff
-
-    def do_push_TMP(self):
-        self._push_structure([0,1], serpent.dumps(self.message_GS))
 
     # assign job to RM
     def _assignjob(self, rmid, d_job):
@@ -179,18 +184,12 @@ class GridScheduler(Node):
 
         x = sorted(rm_tmp)
 
-        if min(x) > 0.0:
-            return -1
-
-        return random.randint(0,Constant.TOTAL_RM-1)
-
-        if x[0] < 0.9 :
-            self._write("find RM to submit with "+str(x[0]))
-            return 0
+        if x[0] < 0.9 and x[0] >= 0.0:
+            self._write("found RM to submit with "+str(x[0]))
+            return rm_tmp.index(x[0])
         else:
             self._write("no RM available")
             return -1
-
 
     # Inform about the RM who has started executing the job
     def _update_jobdetailsRM(self): # to be honest I don't understand this function

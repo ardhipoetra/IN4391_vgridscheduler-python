@@ -44,6 +44,18 @@ def mainrm():
             for rmi in range(0, Constant.TOTAL_RM):
                 os.kill(subp_rm[rmi].pid, signal.SIGINT)
             out = False
+        elif ip == '1':
+            for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+                rmobj = Pyro4.Proxy(rm_uri)
+                print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
+                print (rmobj.get_cluster_info())
+                print ("========\n")
+        elif ip == '2':
+            for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+                rmobj = Pyro4.Proxy(rm_uri)
+                print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
+                print (rmobj.get_job_node())
+                print ("----------------\n")
         elif ip.startswith("killrm"):
             keykill, idkill_s = ip.split()
             idkill = int(idkill_s)

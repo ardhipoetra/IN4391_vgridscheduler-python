@@ -38,8 +38,10 @@ class ResourceManager(Node):
         self.job_queue.append(job)
 
         nodetosubmit = self._choose_nodes()
-        self._assignjob(nodetosubmit, job)
-        return True
+
+        if nodetosubmit is not None:
+            self._assignjob(nodetosubmit, job)
+
 
     # receive report from node
     def receive_report(self, node_id, d_job):
@@ -57,7 +59,13 @@ class ResourceManager(Node):
         except Pyro4.errors.NamingError as e:
             self._write("CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"])
 
+        if len(self.job_queue) != 0:
+            self._write("queue not empty, try assign job to nodes")
+            job = self._choose_job()
+            nodetosubmit = self._choose_nodes()
 
+            if nodetosubmit is not None:
+                self._assignjob(nodetosubmit, job)
 
     def get_cluster_info(self):
         buff = ""
@@ -74,9 +82,7 @@ class ResourceManager(Node):
 
     # assign job to node
     def _assignjob(self, wnode, job):
-
         self.jobs_assigned_node[wnode.getoid() - self.oid * 10000] = job
-
         self._write(str(wnode)+' assigned job '+ str(job))
         wnode.startjob(job)
         return wnode
@@ -85,21 +91,15 @@ class ResourceManager(Node):
     ###Activity : this function takes out the high prioirity job for the RM Queue
     ## output : the latest job
     def _choose_job(self):
-        return job_queue.pop()
+        return self.job_queue.pop()
 
     # choose nodes available
     def _choose_nodes(self):
-
-        return self.nodes_stat[random.randint(0, Constant.TOTAL_NODE_EACH-1)]
-
         for (idx, n) in enumerate(self.nodes_stat):
-            if n.getload() < 0.7: # example
+            status = n.checkstatus()
+            if status == Constant.WORKER_STATUS_IDLE:
                 return n
 
-        return None
-
-    # monitor the cluster status
-    def _get_cluster_stat(self):
         return None
 
     def _creating_wnodes(self, n):
@@ -107,13 +107,6 @@ class ResourceManager(Node):
             n_oid = self.oid * 10000 + x
             node = WorkerNode(n_oid, "[WK-"+str(n_oid)+"]")
             self.nodes_stat[x] = node
-
-    # Activity :  this function report the node details and job completion /failure details to the parent GS
-
-    #output : datastructure with values such as failed node id , avaiable jobs spots, job completion details.
-    def _report_toGS(self):
-        return True
-
 
     ## Send the current workload status to the GS send the RM id and the workload
     #how to get the object id of the resournce manager globally  ??

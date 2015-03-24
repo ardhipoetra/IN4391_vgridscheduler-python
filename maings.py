@@ -48,6 +48,12 @@ def maings():
             for gi in range(0, Constant.TOTAL_GS):
                 os.kill(subp_gs[gi].pid, signal.SIGINT)
             out = False
+        elif ip == '1':
+            for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
+                gsobj = Pyro4.Proxy(gs_uri)
+                print ("from gs : "+str(gsobj.getoid()))
+                print (gsobj.get_gs_info())
+                print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         elif ip.startswith("killgs"):
             keykill, idkill_s = ip.split()
             idkill = int(idkill_s)
