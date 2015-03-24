@@ -1,0 +1,2 @@
+[1427203360.465833] workernode-3 | job {u'load': 0.20702474781560942, u'jid': 0, u'name': u'asd0', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 20, u'GS_assignee': 1} started
+

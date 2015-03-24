@@ -1,0 +1,9 @@
+[1427203360.423252] GSnode-1 | job {# serpent utf-8 python2.6
+{'load':0.20702474781560942,'jid':0,'name':'asd0','__class__':'Job','duration':20,'GS_assignee':1}} added
+
+[1427203360.450320] GSnode-1 | send job to [0] [RM-0]
+
+[1427203360.456699] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427203378.589859] GSnode-1 | GS will down!
+

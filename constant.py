@@ -1,7 +1,8 @@
 
 class Constant(object):
 
-	IP_NAMESERVER = "localhost"
+	IP_GS_NS = "localhost"
+	IP_RM_NS = "localhost"
 
 	TOTAL_GS = 2
 	TOTAL_RM = 3

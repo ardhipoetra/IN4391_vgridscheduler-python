@@ -1,0 +1,18 @@
+[1427203364.483212] GSnode-0 | job {# serpent utf-8 python2.6
+{'load':0.42078647367541855,'jid':1,'name':'asd1','__class__':'Job','duration':23,'GS_assignee':0}} added
+
+[1427203364.513316] GSnode-0 | send job to [0] [RM-0]
+
+[1427203364.521591] GSnode-0 | active GS : [0, 1] | inactive GS : []
+
+[1427203373.564975] GSnode-0 | job {# serpent utf-8 python2.6
+{'load':0.8486016833152799,'jid':2,'name':'asda2','__class__':'Job','duration':22,'GS_assignee':0}} added
+
+[1427203373.567424] GSnode-0 | monitoring check RM 0
+
+[1427203373.599132] GSnode-0 | send job to [0] [RM-0]
+
+[1427203373.609260] GSnode-0 | active GS : [0, 1] | inactive GS : []
+
+[1427203378.589106] GSnode-0 | GS will down!
+

@@ -28,7 +28,7 @@ class WorkerNode(Node):
             self.load = 0.0
 
             try:
-                ns = Pyro4.locateNS(host=Constant.IP_NS)
+                ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
                 uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
                 rmobj = Pyro4.Proxy(uri)
                 rmobj.receive_report(self.oid, serpent.dumps(jobj))

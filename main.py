@@ -26,7 +26,8 @@ def main():
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
 
 
-    ns = Pyro4.locateNS(host=Constant.IP_NS)
+    nsrm = Pyro4.locateNS(host=Constant.IP_RM_NS)
+    nsgs = Pyro4.locateNS(host=Constant.IP_GS_NS)
 
     out = True
     count = 0
@@ -37,8 +38,8 @@ def main():
 
         ip = input("Input:")
 
-    if ip == '1':
-            for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+        if ip == '1':
+            for rm, rm_uri in nsrm.list(prefix=Constant.NAMESPACE_RM+".").items():
                 rmobj = Pyro4.Proxy(rm_uri)
                 print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
                 print (rmobj.get_cluster_info())
@@ -46,7 +47,7 @@ def main():
                 print (rmobj.get_job_node())
                 print ("----------------\n")
         elif ip == '2': # see message to send from all GS
-            for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
+            for gs, gs_uri in nsgs.list(prefix=Constant.NAMESPACE_GS+".").items():
                 gsobj = Pyro4.Proxy(gs_uri)
                 print ("from gs : "+str(gsobj.getoid()))
                 print (gsobj.get_gs_info())
@@ -54,7 +55,7 @@ def main():
         elif ip == '3':
             pass
         elif ip == '4': #see status all GS
-            for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
+            for gs, gs_uri in nsgs.list(prefix=Constant.NAMESPACE_GS+".").items():
                 gsobj = Pyro4.Proxy(gs_uri)
                 print ("from gs : "+str(gsobj.getoid()))
                 print (gsobj.get_all_gs_info())
@@ -62,7 +63,7 @@ def main():
         else:
             # for now send to GS 0
             target = random.randint(0, Constant.TOTAL_GS-1)
-            uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
+            uri = nsgs.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
             gsobj = Pyro4.Proxy(uri)
 
             jobsu = Job(count, ip+str(count), random.randint(15,25), random.random(), target)

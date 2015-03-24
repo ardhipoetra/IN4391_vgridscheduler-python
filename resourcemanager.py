@@ -49,7 +49,7 @@ class ResourceManager(Node):
         self.jobs_assigned_node[node_id - self.oid * 10000] = None
         self._write("get report from node %d : %s" %(node_id, str(job)))
 
-        ns = Pyro4.locateNS(host=Constant.IP_NS)
+        ns = Pyro4.locateNS(host=Constant.IP_GS_NS)
         try:
             uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(job["GS_assignee"])+"]"+str(job["GS_assignee"]))
             gsobj_r = Pyro4.Proxy(uri)
@@ -132,7 +132,7 @@ def check_stop():
 
 def main():
 
-    ns = Pyro4.locateNS(host=Constant.IP_NS)
+    ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
 
     if len(sys.argv) == 0:
         oid = len(ns.list(prefix=Constant.NAMESPACE_RM+"."))
@@ -141,7 +141,7 @@ def main():
 
     node = ResourceManager(oid, "[RM-"+str(oid)+"]", Constant.TOTAL_NODE_EACH)
 
-    daemon = Pyro4.Daemon(Constant.IP_NS)
+    daemon = Pyro4.Daemon(Constant.IP_RM_NS)
     uri = daemon.register(node)
     node.seturi(uri)
 

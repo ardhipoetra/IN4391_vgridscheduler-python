@@ -1,0 +1,12 @@
+[1427203324.505636] RMnode-0 | created with id 0
+
+[1427203333.542658] RMnode-0 | created with id 0
+
+[1427203360.465755] RMnode-0 | [3] [WK-3] ;Load:0.000000; Stat:0 assigned job {u'load': 0.20702474781560942, u'jid': 0, u'name': u'asd0', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 20, u'GS_assignee': 1}
+
+[1427203364.533006] RMnode-0 | [2] [WK-2] ;Load:0.000000; Stat:0 assigned job {u'load': 0.42078647367541855, u'jid': 1, u'name': u'asd1', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 23, u'GS_assignee': 0}
+
+[1427203373.624224] RMnode-0 | [2] [WK-2] ;Load:0.420786; Stat:1 assigned job {u'load': 0.8486016833152799, u'jid': 2, u'name': u'asda2', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 22, u'GS_assignee': 0}
+
+[1427203376.436457] RMnode-0 | RM will down!
+
