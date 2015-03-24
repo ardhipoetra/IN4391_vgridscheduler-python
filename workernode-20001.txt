@@ -1,6 +1,0 @@
-[1427205066.583196] workernode-20001 | job {u'load': 0.8609799811447375, u'jid': 9, u'name': u'fd9', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 24, u'GS_assignee': 1} started
-
-[1427209859.541084] workernode-20001 | job {u'load': 0.9978539850635187, u'jid': 2, u'name': u'fds2', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 20, u'GS_assignee': 0} started
-
-[1427209872.666413] workernode-20001 | job {u'load': 0.8556933519054003, u'jid': 7, u'name': u'fds7', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 22, u'GS_assignee': 1} started
-

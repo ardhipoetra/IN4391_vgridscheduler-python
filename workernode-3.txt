@@ -1,4 +1,0 @@
-[1427201871.190836] workernode-3 | job {u'load': 0.3347517239536164, u'jid': 3, u'name': u'tr3', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 16, u'GS_assignee': 0} started
-
-[1427201887.341279] workernode-3 | Job finished from worker
-
