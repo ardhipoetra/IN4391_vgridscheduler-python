@@ -37,10 +37,11 @@ class ResourceManager(Node):
 
         self.job_queue.append(job)
 
+        jobhead = self._choose_job()
         nodetosubmit = self._choose_nodes()
 
         if nodetosubmit is not None:
-            self._assignjob(nodetosubmit, job)
+            self._assignjob(nodetosubmit, jobhead)
 
 
     # receive report from node
@@ -61,11 +62,13 @@ class ResourceManager(Node):
 
         if len(self.job_queue) != 0:
             self._write("queue not empty, try assign job to nodes")
-            job = self._choose_job()
+            ajob = self._choose_job()
             nodetosubmit = self._choose_nodes()
 
             if nodetosubmit is not None:
-                self._assignjob(nodetosubmit, job)
+                self._assignjob(nodetosubmit, ajob)
+            else:
+                self.job_queue.append(ajob)
 
     def get_cluster_info(self):
         buff = ""
