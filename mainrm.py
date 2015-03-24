@@ -26,7 +26,7 @@ def mainrm():
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
 
 
-    ns = Pyro4.locateNS(host=Constant.IP_NS)
+    ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
 
     for rm_i in range(0, Constant.TOTAL_RM):
         subp_rm.append(subprocess.Popen(['python', 'resourcemanager.py', str(rm_i)]))

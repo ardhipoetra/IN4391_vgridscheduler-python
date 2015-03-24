@@ -29,6 +29,33 @@ def main():
     nsrm = Pyro4.locateNS(host=Constant.IP_RM_NS)
     nsgs = Pyro4.locateNS(host=Constant.IP_GS_NS)
 
+    jobcount = 0
+
+    def _jobgen(count,gs_ns):
+        for jid in range(0,count):
+            time.sleep(random.randint(50,200) * 0.01)
+            while True:
+                target = random.randint(0, Constant.TOTAL_GS-1)
+                try :
+                    uri = gs_ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
+                    break
+                except Pyro4.errors.NamingError as e:
+                    print ("GS %d unavailable, try again", %target)
+                    continue
+
+            gsobj = Pyro4.Proxy(uri)
+            jobsu = Job(jid, "gen-jobs-"+str(jid), random.randint(10,65), random.random(), target)
+            d_job = serpent.dumps(jobsu)
+            gsobj.addjob(d_job)
+            jobcount+=1
+        return
+
+
+    thread = threading.Thread(target=_jobgen, args=[Constant.NUMBER_OF_JOBS,nsgs])
+    thread.setDaemon(True)
+    thread.start()
+
+
     out = True
     count = 0
     while(out):
@@ -53,6 +80,7 @@ def main():
                 print (gsobj.get_gs_info())
                 print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         elif ip == '3':
+            print ("job count : %d"+jobcount)
             pass
         elif ip == '4': #see status all GS
             for gs, gs_uri in nsgs.list(prefix=Constant.NAMESPACE_GS+".").items():
@@ -62,21 +90,16 @@ def main():
                 print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         else:
             # for now send to GS 0
-            target = random.randint(0, Constant.TOTAL_GS-1)
-            uri = nsgs.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
-            gsobj = Pyro4.Proxy(uri)
-
-            jobsu = Job(count, ip+str(count), random.randint(15,25), random.random(), target)
-
-            d_job = serpent.dumps(jobsu)
-
-            gsobj.addjob(d_job)
-            count+=1
-
-            # thread = threading.Thread(target=_newjob, args=[count])
-            # thread.setDaemon(True)
-            # thread.start()
-
+            # target = random.randint(0, Constant.TOTAL_GS-1)
+            # uri = nsgs.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
+            # gsobj = Pyro4.Proxy(uri)
+            #
+            # jobsu = Job(count, ip+str(count), random.randint(15,25), random.random(), target)
+            #
+            # d_job = serpent.dumps(jobsu)
+            #
+            # gsobj.addjob(d_job)
+            # count+=1
     return
 
 if __name__=="__main__":

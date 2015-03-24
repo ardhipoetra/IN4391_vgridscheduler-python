@@ -73,7 +73,7 @@ class GridScheduler(Node):
     # add job to this GS
     def addjob(self, d_job):
         job = serpent.loads(d_job)
-        self._write("job {%s} added" %(d_job))
+        self._write("get job {%s} added" %(job))
         self.job_queue.append(job)
 
 
@@ -167,6 +167,7 @@ class GridScheduler(Node):
     # GS choose job
     def _choose_job(self):
         job = self.job_queue.pop()
+        self._write("choose job to submit..%s" %job)
         return job
 
     def _chooseRM(self):
@@ -213,6 +214,9 @@ class GridScheduler(Node):
     # push current structure to other GS (consistency)
     # assumed gs_listid is active GS, msg is serpent dumps
     def _push_structure(self, gs_listid, msg_gs):
+
+        self._write("push state to neighbor")
+
         ns = Pyro4.locateNS(host=Constant.IP_GS_NS)
 
         for gsid in gs_listid:

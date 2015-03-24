@@ -26,7 +26,7 @@ def maings():
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
 
 
-    ns = Pyro4.locateNS(host=Constant.IP_NS)
+    ns = Pyro4.locateNS(host=Constant.IP_GS_NS)
 
     for gs_i in range(0, Constant.TOTAL_GS):
         subp_gs.append(subprocess.Popen(['python', 'gridscheduler.py', str(gs_i)]))
