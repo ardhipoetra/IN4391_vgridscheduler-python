@@ -29,8 +29,6 @@ def main():
     nsrm = Pyro4.locateNS(host=Constant.IP_RM_NS)
     nsgs = Pyro4.locateNS(host=Constant.IP_GS_NS)
 
-    jobcount = 0
-
     def _jobgen(count,gs_ns):
         for jid in range(0,count):
             time.sleep(random.randint(50,200) * 0.01)
@@ -47,7 +45,6 @@ def main():
             jobsu = Job(jid, "gen-jobs-"+str(jid), random.randint(10,65), random.random(), target)
             d_job = serpent.dumps(jobsu)
             gsobj.addjob(d_job)
-            jobcount+=1
         return
 
 
@@ -80,7 +77,6 @@ def main():
                 print (gsobj.get_gs_info())
                 print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         elif ip == '3':
-            print ("job count : %d"+jobcount)
             pass
         elif ip == '4': #see status all GS
             for gs, gs_uri in nsgs.list(prefix=Constant.NAMESPACE_GS+".").items():
@@ -89,6 +85,7 @@ def main():
                 print (gsobj.get_all_gs_info())
                 print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         else:
+            pass
             # for now send to GS 0
             # target = random.randint(0, Constant.TOTAL_GS-1)
             # uri = nsgs.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
