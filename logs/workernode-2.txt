@@ -1,4 +1,0 @@
-[1427203364.533062] workernode-2 | job {u'load': 0.42078647367541855, u'jid': 1, u'name': u'asd1', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 23, u'GS_assignee': 0} started
-
-[1427203373.624283] workernode-2 | job {u'load': 0.8486016833152799, u'jid': 2, u'name': u'asda2', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 22, u'GS_assignee': 0} started
-
