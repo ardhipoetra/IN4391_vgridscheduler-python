@@ -1,2 +1,4 @@
-[1427203360.465833] workernode-3 | job {u'load': 0.20702474781560942, u'jid': 0, u'name': u'asd0', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 20, u'GS_assignee': 1} started
+[1427207296.359677] workernode-3 | job {u'load': 0.76439455058299999, u'jid': 31, u'name': u'gen-jobs-31', u'RM_assigned': 0, u'__class__': u'Job', u'duration': 12, u'GS_assignee': 1} started
+
+[1427207308.433137] workernode-3 | Job finished from worker
 

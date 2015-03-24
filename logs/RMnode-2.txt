@@ -1,4 +1,38 @@
-[1427203333.558477] RMnode-2 | created with id 2
+[1427207241.114026] RMnode-2 | created with id 2
 
-[1427203376.435742] RMnode-2 | RM will down!
+[1427207255.129083] RMnode-2 | [20002] [WK-20002] ;Load:0.000000; Stat:0 assigned job {u'load': 0.81072761684600003, u'jid': 0, u'name': u'gen-jobs-0', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 54, u'GS_assignee': 1}
+
+[1427207256.960589] RMnode-2 | [20003] [WK-20003] ;Load:0.000000; Stat:0 assigned job {u'load': 0.83996604749500003, u'jid': 1, u'name': u'gen-jobs-1', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 61, u'GS_assignee': 1}
+
+[1427207270.136815] RMnode-2 | [20003] [WK-20003] ;Load:0.839966; Stat:1 assigned job {u'load': 0.0032306521963199998, u'jid': 11, u'name': u'gen-jobs-11', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 25, u'GS_assignee': 1}
+
+[1427207270.777143] RMnode-2 | [20002] [WK-20002] ;Load:0.810728; Stat:1 assigned job {u'load': 0.47471218374500002, u'jid': 12, u'name': u'gen-jobs-12', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 24, u'GS_assignee': 1}
+
+[1427207294.817410] RMnode-2 | get report from node 20002 : {u'load': 0.47471218374500002, u'jid': 12, u'name': u'gen-jobs-12', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 24, u'GS_assignee': 1}
+
+[1427207295.170657] RMnode-2 | get report from node 20003 : {u'load': 0.0032306521963199998, u'jid': 11, u'name': u'gen-jobs-11', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 25, u'GS_assignee': 1}
+
+[1427207299.689283] RMnode-2 | [20002] [WK-20002] ;Load:0.000000; Stat:0 assigned job {u'load': 0.31755162478499999, u'jid': 34, u'name': u'gen-jobs-34', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 64, u'GS_assignee': 1}
+
+[1427207309.193165] RMnode-2 | get report from node 20002 : {u'load': 0.81072761684600003, u'jid': 0, u'name': u'gen-jobs-0', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 54, u'GS_assignee': 1}
+
+[1427207310.822512] RMnode-2 | [20000] [WK-20000] ;Load:0.000000; Stat:0 assigned job {u'load': 0.72392510504499996, u'jid': 42, u'name': u'gen-jobs-42', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 11, u'GS_assignee': 0}
+
+[1427207318.031164] RMnode-2 | get report from node 20003 : {u'load': 0.83996604749500003, u'jid': 1, u'name': u'gen-jobs-1', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 61, u'GS_assignee': 1}
+
+[1427207321.842792] RMnode-2 | get report from node 20000 : {u'load': 0.72392510504499996, u'jid': 42, u'name': u'gen-jobs-42', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 11, u'GS_assignee': 0}
+
+[1427207323.106176] RMnode-2 | [20003] [WK-20003] ;Load:0.000000; Stat:0 assigned job {u'load': 0.80038182213599995, u'jid': 52, u'name': u'gen-jobs-52', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 57, u'GS_assignee': 0}
+
+[1427207363.762414] RMnode-2 | get report from node 20002 : {u'load': 0.31755162478499999, u'jid': 34, u'name': u'gen-jobs-34', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 64, u'GS_assignee': 1}
+
+[1427207372.557432] RMnode-2 | [20003] [WK-20003] ;Load:0.800382; Stat:1 assigned job {u'load': 0.74850585916400003, u'jid': 88, u'name': u'gen-jobs-88', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 53, u'GS_assignee': 0}
+
+[1427207373.536351] RMnode-2 | [20000] [WK-20000] ;Load:0.000000; Stat:0 assigned job {u'load': 0.72365607009199995, u'jid': 89, u'name': u'gen-jobs-89', u'RM_assigned': 2, u'__class__': u'Job', u'duration': 20, u'GS_assignee': 1}
+
+[1427207380.172368] RMnode-2 | get report from node 20003 : {u'load': 0.80038182213599995, u'jid': 52, u'name': u'gen-jobs-52', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 57, u'GS_assignee': 0}
+
+[1427207393.564261] RMnode-2 | get report from node 20000 : {u'load': 0.72365607009199995, u'jid': 89, u'name': u'gen-jobs-89', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 20, u'GS_assignee': 1}
+
+[1427207425.618857] RMnode-2 | get report from node 20003 : {u'load': 0.74850585916400003, u'jid': 88, u'name': u'gen-jobs-88', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 53, u'GS_assignee': 0}
 

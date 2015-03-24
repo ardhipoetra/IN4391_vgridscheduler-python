@@ -1,9 +1,580 @@
-[1427203360.423252] GSnode-1 | job {# serpent utf-8 python2.6
-{'load':0.20702474781560942,'jid':0,'name':'asd0','__class__':'Job','duration':20,'GS_assignee':1}} added
+[1427207255.069095] GSnode-1 | get job {{u'load': 0.81072761684600003, u'jid': 0, u'name': u'gen-jobs-0', u'__class__': u'Job', u'duration': 54, u'GS_assignee': 1}} added
 
-[1427203360.450320] GSnode-1 | send job to [0] [RM-0]
+[1427207255.096429] GSnode-1 | choose job to submit..{u'load': 0.81072761684600003, u'jid': 0, u'name': u'gen-jobs-0', u'__class__': u'Job', u'duration': 54, u'GS_assignee': 1}
 
-[1427203360.456699] GSnode-1 | active GS : [1, 0] | inactive GS : []
+[1427207255.103920] GSnode-1 | send job to [2] [RM-2]
 
-[1427203378.589859] GSnode-1 | GS will down!
+[1427207255.115083] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207255.116234] GSnode-1 | push state to neighbor
+
+[1427207256.907443] GSnode-1 | get job {{u'load': 0.83996604749500003, u'jid': 1, u'name': u'gen-jobs-1', u'__class__': u'Job', u'duration': 61, u'GS_assignee': 1}} added
+
+[1427207256.911328] GSnode-1 | monitoring check RM 2
+
+[1427207256.928362] GSnode-1 | choose job to submit..{u'load': 0.83996604749500003, u'jid': 1, u'name': u'gen-jobs-1', u'__class__': u'Job', u'duration': 61, u'GS_assignee': 1}
+
+[1427207256.935947] GSnode-1 | send job to [2] [RM-2]
+
+[1427207256.946859] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207256.948132] GSnode-1 | push state to neighbor
+
+[1427207257.596972] GSnode-1 | get job {{u'load': 0.81576082584700005, u'jid': 2, u'name': u'gen-jobs-2', u'__class__': u'Job', u'duration': 11, u'GS_assignee': 1}} added
+
+[1427207257.601079] GSnode-1 | monitoring check RM 2
+
+[1427207257.618447] GSnode-1 | choose job to submit..{u'load': 0.81576082584700005, u'jid': 2, u'name': u'gen-jobs-2', u'__class__': u'Job', u'duration': 11, u'GS_assignee': 1}
+
+[1427207257.625921] GSnode-1 | send job to [1] [RM-1]
+
+[1427207257.636674] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207257.638250] GSnode-1 | push state to neighbor
+
+[1427207262.793571] GSnode-1 | get job {{u'load': 0.12565760270000001, u'jid': 6, u'name': u'gen-jobs-6', u'__class__': u'Job', u'duration': 62, u'GS_assignee': 1}} added
+
+[1427207262.797920] GSnode-1 | monitoring check RM 1
+
+[1427207262.799282] GSnode-1 | monitoring check RM 2
+
+[1427207262.816909] GSnode-1 | no rm available!
+
+[1427207267.006970] GSnode-1 | get job {{u'load': 0.65800871366500002, u'jid': 9, u'name': u'gen-jobs-9', u'__class__': u'Job', u'duration': 51, u'GS_assignee': 1}} added
+
+[1427207267.010985] GSnode-1 | monitoring check RM 1
+
+[1427207267.012418] GSnode-1 | monitoring check RM 2
+
+[1427207267.029784] GSnode-1 | no rm available!
+
+[1427207268.692603] GSnode-1 | received report {u'load': 0.81576082584700005, u'jid': 2, u'name': u'gen-jobs-2', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 11, u'GS_assignee': 1} from RM-1
+
+[1427207268.705141] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207268.709307] GSnode-1 | monitoring check RM 2
+
+[1427207268.711418] GSnode-1 | push state to neighbor
+
+[1427207268.724445] GSnode-1 | job {u'load': 0.81576082584700005, u'jid': 2, u'name': u'gen-jobs-2', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 11, u'GS_assignee': 1} GS-FINISHED at 1427207268.724426
+
+[1427207270.083233] GSnode-1 | get job {{u'load': 0.0032306521963199998, u'jid': 11, u'name': u'gen-jobs-11', u'__class__': u'Job', u'duration': 25, u'GS_assignee': 1}} added
+
+[1427207270.087110] GSnode-1 | monitoring check RM 2
+
+[1427207270.103695] GSnode-1 | choose job to submit..{u'load': 0.0032306521963199998, u'jid': 11, u'name': u'gen-jobs-11', u'__class__': u'Job', u'duration': 25, u'GS_assignee': 1}
+
+[1427207270.110808] GSnode-1 | send job to [2] [RM-2]
+
+[1427207270.122300] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207270.123971] GSnode-1 | push state to neighbor
+
+[1427207270.723184] GSnode-1 | get job {{u'load': 0.47471218374500002, u'jid': 12, u'name': u'gen-jobs-12', u'__class__': u'Job', u'duration': 24, u'GS_assignee': 1}} added
+
+[1427207270.726912] GSnode-1 | monitoring check RM 2
+
+[1427207270.743797] GSnode-1 | choose job to submit..{u'load': 0.47471218374500002, u'jid': 12, u'name': u'gen-jobs-12', u'__class__': u'Job', u'duration': 24, u'GS_assignee': 1}
+
+[1427207270.751275] GSnode-1 | send job to [2] [RM-2]
+
+[1427207270.762791] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207270.764580] GSnode-1 | push state to neighbor
+
+[1427207272.746628] GSnode-1 | get job {{u'load': 0.76297801527099995, u'jid': 14, u'name': u'gen-jobs-14', u'__class__': u'Job', u'duration': 58, u'GS_assignee': 1}} added
+
+[1427207272.750399] GSnode-1 | monitoring check RM 2
+
+[1427207272.766955] GSnode-1 | no rm available!
+
+[1427207274.302297] GSnode-1 | get job {{u'load': 0.89900640424199996, u'jid': 15, u'name': u'gen-jobs-15', u'__class__': u'Job', u'duration': 46, u'GS_assignee': 1}} added
+
+[1427207274.306248] GSnode-1 | monitoring check RM 2
+
+[1427207274.323546] GSnode-1 | no rm available!
+
+[1427207277.796720] GSnode-1 | get job {{u'load': 0.94339660658699998, u'jid': 17, u'name': u'gen-jobs-17', u'__class__': u'Job', u'duration': 56, u'GS_assignee': 1}} added
+
+[1427207277.819685] GSnode-1 | monitoring check RM 2
+
+[1427207277.836477] GSnode-1 | no rm available!
+
+[1427207279.202191] GSnode-1 | get job {{u'load': 0.68454810460500004, u'jid': 18, u'name': u'gen-jobs-18', u'__class__': u'Job', u'duration': 57, u'GS_assignee': 1}} added
+
+[1427207279.206147] GSnode-1 | monitoring check RM 2
+
+[1427207279.223255] GSnode-1 | no rm available!
+
+[1427207280.418829] GSnode-1 | get job {{u'load': 0.51065883431000003, u'jid': 19, u'name': u'gen-jobs-19', u'__class__': u'Job', u'duration': 61, u'GS_assignee': 1}} added
+
+[1427207280.422653] GSnode-1 | monitoring check RM 2
+
+[1427207280.438925] GSnode-1 | no rm available!
+
+[1427207282.841863] GSnode-1 | get job {{u'load': 0.88132575929599999, u'jid': 21, u'name': u'gen-jobs-21', u'__class__': u'Job', u'duration': 57, u'GS_assignee': 1}} added
+
+[1427207282.845531] GSnode-1 | monitoring check RM 2
+
+[1427207282.862594] GSnode-1 | no rm available!
+
+[1427207284.554937] GSnode-1 | get job {{u'load': 0.026268173628300001, u'jid': 23, u'name': u'gen-jobs-23', u'__class__': u'Job', u'duration': 19, u'GS_assignee': 1}} added
+
+[1427207284.558446] GSnode-1 | monitoring check RM 2
+
+[1427207284.574760] GSnode-1 | no rm available!
+
+[1427207285.479434] GSnode-1 | get job {{u'load': 0.80436934237199997, u'jid': 24, u'name': u'gen-jobs-24', u'__class__': u'Job', u'duration': 50, u'GS_assignee': 1}} added
+
+[1427207285.483341] GSnode-1 | monitoring check RM 2
+
+[1427207285.499590] GSnode-1 | no rm available!
+
+[1427207288.382564] GSnode-1 | get job {{u'load': 0.63060859942500003, u'jid': 26, u'name': u'gen-jobs-26', u'__class__': u'Job', u'duration': 16, u'GS_assignee': 1}} added
+
+[1427207288.387924] GSnode-1 | monitoring check RM 2
+
+[1427207288.404070] GSnode-1 | no rm available!
+
+[1427207291.327884] GSnode-1 | get job {{u'load': 0.29437225231300002, u'jid': 28, u'name': u'gen-jobs-28', u'__class__': u'Job', u'duration': 10, u'GS_assignee': 1}} added
+
+[1427207291.331863] GSnode-1 | monitoring check RM 2
+
+[1427207291.349085] GSnode-1 | no rm available!
+
+[1427207294.554207] GSnode-1 | get job {{u'load': 0.42753079697399998, u'jid': 30, u'name': u'gen-jobs-30', u'__class__': u'Job', u'duration': 30, u'GS_assignee': 1}} added
+
+[1427207294.558213] GSnode-1 | monitoring check RM 2
+
+[1427207294.575195] GSnode-1 | no rm available!
+
+[1427207294.825065] GSnode-1 | received report {u'load': 0.47471218374500002, u'jid': 12, u'name': u'gen-jobs-12', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 24, u'GS_assignee': 1} from RM-2
+
+[1427207294.836425] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207294.840497] GSnode-1 | monitoring check RM 2
+
+[1427207294.843853] GSnode-1 | push state to neighbor
+
+[1427207294.856856] GSnode-1 | job {u'load': 0.47471218374500002, u'jid': 12, u'name': u'gen-jobs-12', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 24, u'GS_assignee': 1} GS-FINISHED at 1427207294.856838
+
+[1427207295.177596] GSnode-1 | received report {u'load': 0.0032306521963199998, u'jid': 11, u'name': u'gen-jobs-11', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 25, u'GS_assignee': 1} from RM-2
+
+[1427207295.188926] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207295.193015] GSnode-1 | monitoring check RM 2
+
+[1427207295.196303] GSnode-1 | push state to neighbor
+
+[1427207295.209864] GSnode-1 | job {u'load': 0.0032306521963199998, u'jid': 11, u'name': u'gen-jobs-11', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 25, u'GS_assignee': 1} GS-FINISHED at 1427207295.209845
+
+[1427207296.301326] GSnode-1 | get job {{u'load': 0.76439455058299999, u'jid': 31, u'name': u'gen-jobs-31', u'__class__': u'Job', u'duration': 12, u'GS_assignee': 1}} added
+
+[1427207296.305229] GSnode-1 | monitoring check RM 2
+
+[1427207296.322279] GSnode-1 | choose job to submit..{u'load': 0.76439455058299999, u'jid': 31, u'name': u'gen-jobs-31', u'__class__': u'Job', u'duration': 12, u'GS_assignee': 1}
+
+[1427207296.329447] GSnode-1 | send job to [0] [RM-0]
+
+[1427207296.341346] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207296.344365] GSnode-1 | push state to neighbor
+
+[1427207297.716387] GSnode-1 | get job {{u'load': 0.60353966310499996, u'jid': 32, u'name': u'gen-jobs-32', u'__class__': u'Job', u'duration': 63, u'GS_assignee': 1}} added
+
+[1427207297.720328] GSnode-1 | monitoring check RM 0
+
+[1427207297.721556] GSnode-1 | monitoring check RM 2
+
+[1427207297.738289] GSnode-1 | choose job to submit..{u'load': 0.60353966310499996, u'jid': 32, u'name': u'gen-jobs-32', u'__class__': u'Job', u'duration': 63, u'GS_assignee': 1}
+
+[1427207297.745775] GSnode-1 | send job to [1] [RM-1]
+
+[1427207297.757571] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207297.760620] GSnode-1 | push state to neighbor
+
+[1427207299.629923] GSnode-1 | get job {{u'load': 0.31755162478499999, u'jid': 34, u'name': u'gen-jobs-34', u'__class__': u'Job', u'duration': 64, u'GS_assignee': 1}} added
+
+[1427207299.633866] GSnode-1 | monitoring check RM 0
+
+[1427207299.635122] GSnode-1 | monitoring check RM 1
+
+[1427207299.636336] GSnode-1 | monitoring check RM 2
+
+[1427207299.653256] GSnode-1 | choose job to submit..{u'load': 0.31755162478499999, u'jid': 34, u'name': u'gen-jobs-34', u'__class__': u'Job', u'duration': 64, u'GS_assignee': 1}
+
+[1427207299.660679] GSnode-1 | send job to [2] [RM-2]
+
+[1427207299.671935] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207299.675098] GSnode-1 | push state to neighbor
+
+[1427207300.396148] GSnode-1 | get job {{u'load': 0.44056202714300002, u'jid': 35, u'name': u'gen-jobs-35', u'__class__': u'Job', u'duration': 50, u'GS_assignee': 1}} added
+
+[1427207300.400027] GSnode-1 | monitoring check RM 0
+
+[1427207300.401214] GSnode-1 | monitoring check RM 1
+
+[1427207300.402376] GSnode-1 | monitoring check RM 2
+
+[1427207300.419217] GSnode-1 | no rm available!
+
+[1427207301.704247] GSnode-1 | get job {{u'load': 0.37689646739499999, u'jid': 36, u'name': u'gen-jobs-36', u'__class__': u'Job', u'duration': 55, u'GS_assignee': 1}} added
+
+[1427207301.708066] GSnode-1 | monitoring check RM 0
+
+[1427207301.709255] GSnode-1 | monitoring check RM 1
+
+[1427207301.710476] GSnode-1 | monitoring check RM 2
+
+[1427207301.727404] GSnode-1 | no rm available!
+
+[1427207303.052992] GSnode-1 | get job {{u'load': 0.34121167059800001, u'jid': 37, u'name': u'gen-jobs-37', u'__class__': u'Job', u'duration': 65, u'GS_assignee': 1}} added
+
+[1427207303.056806] GSnode-1 | monitoring check RM 0
+
+[1427207303.057958] GSnode-1 | monitoring check RM 1
+
+[1427207303.059130] GSnode-1 | monitoring check RM 2
+
+[1427207303.077335] GSnode-1 | no rm available!
+
+[1427207304.743082] GSnode-1 | get job {{u'load': 0.00537975956846, u'jid': 38, u'name': u'gen-jobs-38', u'__class__': u'Job', u'duration': 11, u'GS_assignee': 1}} added
+
+[1427207304.747037] GSnode-1 | monitoring check RM 0
+
+[1427207304.748180] GSnode-1 | monitoring check RM 1
+
+[1427207304.749330] GSnode-1 | monitoring check RM 2
+
+[1427207304.765896] GSnode-1 | no rm available!
+
+[1427207308.397836] GSnode-1 | received report {u'load': 0.76439455058299999, u'jid': 31, u'name': u'gen-jobs-31', u'__class__': u'Job', u'RM_assigned': 0, u'duration': 12, u'GS_assignee': 1} from RM-0
+
+[1427207308.408695] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207308.412802] GSnode-1 | monitoring check RM 1
+
+[1427207308.413924] GSnode-1 | monitoring check RM 2
+
+[1427207308.417916] GSnode-1 | push state to neighbor
+
+[1427207308.431787] GSnode-1 | job {u'load': 0.76439455058299999, u'jid': 31, u'name': u'gen-jobs-31', u'__class__': u'Job', u'RM_assigned': 0, u'duration': 12, u'GS_assignee': 1} GS-FINISHED at 1427207308.431768
+
+[1427207308.906374] GSnode-1 | get job {{u'load': 0.55238829227200004, u'jid': 41, u'name': u'gen-jobs-41', u'__class__': u'Job', u'duration': 60, u'GS_assignee': 1}} added
+
+[1427207308.910200] GSnode-1 | monitoring check RM 1
+
+[1427207308.911384] GSnode-1 | monitoring check RM 2
+
+[1427207308.927673] GSnode-1 | no rm available!
+
+[1427207309.201205] GSnode-1 | received report {u'load': 0.81072761684600003, u'jid': 0, u'name': u'gen-jobs-0', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 54, u'GS_assignee': 1} from RM-2
+
+[1427207309.212830] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207309.216832] GSnode-1 | monitoring check RM 1
+
+[1427207309.217890] GSnode-1 | monitoring check RM 2
+
+[1427207309.221833] GSnode-1 | push state to neighbor
+
+[1427207309.235628] GSnode-1 | job {u'load': 0.81072761684600003, u'jid': 0, u'name': u'gen-jobs-0', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 54, u'GS_assignee': 1} GS-FINISHED at 1427207309.235609
+
+[1427207313.957220] GSnode-1 | get job {{u'load': 0.22618954041700001, u'jid': 45, u'name': u'gen-jobs-45', u'__class__': u'Job', u'duration': 43, u'GS_assignee': 1}} added
+
+[1427207313.960986] GSnode-1 | monitoring check RM 1
+
+[1427207313.962288] GSnode-1 | monitoring check RM 2
+
+[1427207313.979198] GSnode-1 | no rm available!
+
+[1427207317.101336] GSnode-1 | get job {{u'load': 0.34685739073799998, u'jid': 47, u'name': u'gen-jobs-47', u'__class__': u'Job', u'duration': 22, u'GS_assignee': 1}} added
+
+[1427207317.105232] GSnode-1 | monitoring check RM 1
+
+[1427207317.106605] GSnode-1 | monitoring check RM 2
+
+[1427207317.123209] GSnode-1 | choose job to submit..{u'load': 0.34685739073799998, u'jid': 47, u'name': u'gen-jobs-47', u'__class__': u'Job', u'duration': 22, u'GS_assignee': 1}
+
+[1427207317.130390] GSnode-1 | send job to [0] [RM-0]
+
+[1427207317.142693] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207317.146489] GSnode-1 | push state to neighbor
+
+[1427207318.039306] GSnode-1 | received report {u'load': 0.83996604749500003, u'jid': 1, u'name': u'gen-jobs-1', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 61, u'GS_assignee': 1} from RM-2
+
+[1427207318.051611] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207318.055566] GSnode-1 | monitoring check RM 0
+
+[1427207318.056707] GSnode-1 | monitoring check RM 1
+
+[1427207318.057741] GSnode-1 | monitoring check RM 2
+
+[1427207318.061832] GSnode-1 | push state to neighbor
+
+[1427207318.076302] GSnode-1 | job {u'load': 0.83996604749500003, u'jid': 1, u'name': u'gen-jobs-1', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 61, u'GS_assignee': 1} GS-FINISHED at 1427207318.076283
+
+[1427207322.021925] GSnode-1 | get job {{u'load': 0.960113130516, u'jid': 51, u'name': u'gen-jobs-51', u'__class__': u'Job', u'duration': 57, u'GS_assignee': 1}} added
+
+[1427207322.025299] GSnode-1 | monitoring check RM 0
+
+[1427207322.026575] GSnode-1 | monitoring check RM 1
+
+[1427207322.027715] GSnode-1 | monitoring check RM 2
+
+[1427207322.043552] GSnode-1 | choose job to submit..{u'load': 0.960113130516, u'jid': 51, u'name': u'gen-jobs-51', u'__class__': u'Job', u'duration': 57, u'GS_assignee': 1}
+
+[1427207322.050660] GSnode-1 | send job to [1] [RM-1]
+
+[1427207322.061109] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207322.064904] GSnode-1 | push state to neighbor
+
+[1427207326.639232] GSnode-1 | get job {{u'load': 0.91120597021700001, u'jid': 55, u'name': u'gen-jobs-55', u'__class__': u'Job', u'duration': 59, u'GS_assignee': 1}} added
+
+[1427207326.643096] GSnode-1 | monitoring check RM 0
+
+[1427207326.644499] GSnode-1 | monitoring check RM 1
+
+[1427207326.645735] GSnode-1 | monitoring check RM 2
+
+[1427207326.662669] GSnode-1 | no rm available!
+
+[1427207328.488601] GSnode-1 | get job {{u'load': 0.73051856580499996, u'jid': 56, u'name': u'gen-jobs-56', u'__class__': u'Job', u'duration': 29, u'GS_assignee': 1}} added
+
+[1427207328.492355] GSnode-1 | monitoring check RM 0
+
+[1427207328.493626] GSnode-1 | monitoring check RM 1
+
+[1427207328.494853] GSnode-1 | monitoring check RM 2
+
+[1427207328.511769] GSnode-1 | no rm available!
+
+[1427207330.107380] GSnode-1 | get job {{u'load': 0.73180387315899997, u'jid': 57, u'name': u'gen-jobs-57', u'__class__': u'Job', u'duration': 52, u'GS_assignee': 1}} added
+
+[1427207330.111154] GSnode-1 | monitoring check RM 0
+
+[1427207330.112362] GSnode-1 | monitoring check RM 1
+
+[1427207330.113525] GSnode-1 | monitoring check RM 2
+
+[1427207330.130232] GSnode-1 | no rm available!
+
+[1427207339.201425] GSnode-1 | received report {u'load': 0.34685739073799998, u'jid': 47, u'name': u'gen-jobs-47', u'__class__': u'Job', u'RM_assigned': 0, u'duration': 22, u'GS_assignee': 1} from RM-0
+
+[1427207339.212378] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207339.216671] GSnode-1 | monitoring check RM 1
+
+[1427207339.217791] GSnode-1 | monitoring check RM 2
+
+[1427207339.222387] GSnode-1 | push state to neighbor
+
+[1427207339.236857] GSnode-1 | job {u'load': 0.34685739073799998, u'jid': 47, u'name': u'gen-jobs-47', u'__class__': u'Job', u'RM_assigned': 0, u'duration': 22, u'GS_assignee': 1} GS-FINISHED at 1427207339.236838
+
+[1427207350.957923] GSnode-1 | get job {{u'load': 0.68027228672200002, u'jid': 71, u'name': u'gen-jobs-71', u'__class__': u'Job', u'duration': 47, u'GS_assignee': 1}} added
+
+[1427207350.961904] GSnode-1 | monitoring check RM 1
+
+[1427207350.963123] GSnode-1 | monitoring check RM 2
+
+[1427207350.980267] GSnode-1 | no rm available!
+
+[1427207352.986519] GSnode-1 | get job {{u'load': 0.23335402997099999, u'jid': 72, u'name': u'gen-jobs-72', u'__class__': u'Job', u'duration': 12, u'GS_assignee': 1}} added
+
+[1427207352.990483] GSnode-1 | monitoring check RM 1
+
+[1427207352.991725] GSnode-1 | monitoring check RM 2
+
+[1427207353.009109] GSnode-1 | no rm available!
+
+[1427207353.934047] GSnode-1 | get job {{u'load': 0.80081555570600005, u'jid': 73, u'name': u'gen-jobs-73', u'__class__': u'Job', u'duration': 49, u'GS_assignee': 1}} added
+
+[1427207353.938193] GSnode-1 | monitoring check RM 1
+
+[1427207353.939498] GSnode-1 | monitoring check RM 2
+
+[1427207353.956885] GSnode-1 | no rm available!
+
+[1427207357.261548] GSnode-1 | get job {{u'load': 0.61850445689199995, u'jid': 75, u'name': u'gen-jobs-75', u'__class__': u'Job', u'duration': 21, u'GS_assignee': 1}} added
+
+[1427207357.265483] GSnode-1 | monitoring check RM 1
+
+[1427207357.266824] GSnode-1 | monitoring check RM 2
+
+[1427207357.283261] GSnode-1 | no rm available!
+
+[1427207357.797481] GSnode-1 | get job {{u'load': 0.35853031206399999, u'jid': 76, u'name': u'gen-jobs-76', u'__class__': u'Job', u'duration': 32, u'GS_assignee': 1}} added
+
+[1427207357.801453] GSnode-1 | monitoring check RM 1
+
+[1427207357.802702] GSnode-1 | monitoring check RM 2
+
+[1427207357.819197] GSnode-1 | no rm available!
+
+[1427207360.855384] GSnode-1 | received report {u'load': 0.60353966310499996, u'jid': 32, u'name': u'gen-jobs-32', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 63, u'GS_assignee': 1} from RM-1
+
+[1427207360.866900] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207360.871022] GSnode-1 | monitoring check RM 1
+
+[1427207360.872048] GSnode-1 | monitoring check RM 2
+
+[1427207360.876899] GSnode-1 | push state to neighbor
+
+[1427207360.892400] GSnode-1 | job {u'load': 0.60353966310499996, u'jid': 32, u'name': u'gen-jobs-32', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 63, u'GS_assignee': 1} GS-FINISHED at 1427207360.892380
+
+[1427207361.424819] GSnode-1 | get job {{u'load': 0.46000272384500002, u'jid': 78, u'name': u'gen-jobs-78', u'__class__': u'Job', u'duration': 29, u'GS_assignee': 1}} added
+
+[1427207361.428422] GSnode-1 | monitoring check RM 1
+
+[1427207361.429570] GSnode-1 | monitoring check RM 2
+
+[1427207361.445967] GSnode-1 | no rm available!
+
+[1427207363.770493] GSnode-1 | received report {u'load': 0.31755162478499999, u'jid': 34, u'name': u'gen-jobs-34', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 64, u'GS_assignee': 1} from RM-2
+
+[1427207363.782099] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207363.786125] GSnode-1 | monitoring check RM 1
+
+[1427207363.791022] GSnode-1 | push state to neighbor
+
+[1427207363.805805] GSnode-1 | job {u'load': 0.31755162478499999, u'jid': 34, u'name': u'gen-jobs-34', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 64, u'GS_assignee': 1} GS-FINISHED at 1427207363.805786
+
+[1427207364.388736] GSnode-1 | get job {{u'load': 0.69284962269100003, u'jid': 81, u'name': u'gen-jobs-81', u'__class__': u'Job', u'duration': 42, u'GS_assignee': 1}} added
+
+[1427207364.392684] GSnode-1 | monitoring check RM 1
+
+[1427207364.409513] GSnode-1 | no rm available!
+
+[1427207365.554782] GSnode-1 | get job {{u'load': 0.29610642398999998, u'jid': 82, u'name': u'gen-jobs-82', u'__class__': u'Job', u'duration': 33, u'GS_assignee': 1}} added
+
+[1427207365.558577] GSnode-1 | monitoring check RM 1
+
+[1427207365.575765] GSnode-1 | no rm available!
+
+[1427207368.220196] GSnode-1 | get job {{u'load': 0.21736467293600001, u'jid': 84, u'name': u'gen-jobs-84', u'__class__': u'Job', u'duration': 29, u'GS_assignee': 1}} added
+
+[1427207368.224398] GSnode-1 | monitoring check RM 1
+
+[1427207368.241575] GSnode-1 | no rm available!
+
+[1427207370.207445] GSnode-1 | get job {{u'load': 0.72160101164299995, u'jid': 85, u'name': u'gen-jobs-85', u'__class__': u'Job', u'duration': 23, u'GS_assignee': 1}} added
+
+[1427207370.211398] GSnode-1 | monitoring check RM 1
+
+[1427207370.228304] GSnode-1 | no rm available!
+
+[1427207371.032917] GSnode-1 | get job {{u'load': 0.27721148185400002, u'jid': 86, u'name': u'gen-jobs-86', u'__class__': u'Job', u'duration': 63, u'GS_assignee': 1}} added
+
+[1427207371.036853] GSnode-1 | monitoring check RM 1
+
+[1427207371.054207] GSnode-1 | no rm available!
+
+[1427207371.588550] GSnode-1 | get job {{u'load': 0.383353339643, u'jid': 87, u'name': u'gen-jobs-87', u'__class__': u'Job', u'duration': 12, u'GS_assignee': 1}} added
+
+[1427207371.592276] GSnode-1 | monitoring check RM 1
+
+[1427207371.609198] GSnode-1 | no rm available!
+
+[1427207373.474410] GSnode-1 | get job {{u'load': 0.72365607009199995, u'jid': 89, u'name': u'gen-jobs-89', u'__class__': u'Job', u'duration': 20, u'GS_assignee': 1}} added
+
+[1427207373.477864] GSnode-1 | monitoring check RM 1
+
+[1427207373.494897] GSnode-1 | choose job to submit..{u'load': 0.72365607009199995, u'jid': 89, u'name': u'gen-jobs-89', u'__class__': u'Job', u'duration': 20, u'GS_assignee': 1}
+
+[1427207373.502376] GSnode-1 | send job to [2] [RM-2]
+
+[1427207373.514845] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207373.520139] GSnode-1 | push state to neighbor
+
+[1427207374.603085] GSnode-1 | get job {{u'load': 0.21359161139899999, u'jid': 90, u'name': u'gen-jobs-90', u'__class__': u'Job', u'duration': 20, u'GS_assignee': 1}} added
+
+[1427207374.606956] GSnode-1 | monitoring check RM 1
+
+[1427207374.608149] GSnode-1 | monitoring check RM 2
+
+[1427207374.624003] GSnode-1 | choose job to submit..{u'load': 0.21359161139899999, u'jid': 90, u'name': u'gen-jobs-90', u'__class__': u'Job', u'duration': 20, u'GS_assignee': 1}
+
+[1427207374.631090] GSnode-1 | send job to [1] [RM-1]
+
+[1427207374.641985] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207374.647402] GSnode-1 | push state to neighbor
+
+[1427207377.440459] GSnode-1 | get job {{u'load': 0.1134882978, u'jid': 92, u'name': u'gen-jobs-92', u'__class__': u'Job', u'duration': 33, u'GS_assignee': 1}} added
+
+[1427207377.444280] GSnode-1 | monitoring check RM 1
+
+[1427207377.445522] GSnode-1 | monitoring check RM 2
+
+[1427207377.462733] GSnode-1 | no rm available!
+
+[1427207379.153857] GSnode-1 | received report {u'load': 0.960113130516, u'jid': 51, u'name': u'gen-jobs-51', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 57, u'GS_assignee': 1} from RM-1
+
+[1427207379.164401] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207379.168476] GSnode-1 | monitoring check RM 1
+
+[1427207379.169577] GSnode-1 | monitoring check RM 2
+
+[1427207379.175469] GSnode-1 | push state to neighbor
+
+[1427207379.190947] GSnode-1 | job {u'load': 0.960113130516, u'jid': 51, u'name': u'gen-jobs-51', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 57, u'GS_assignee': 1} GS-FINISHED at 1427207379.190921
+
+[1427207379.449013] GSnode-1 | get job {{u'load': 0.841625204972, u'jid': 93, u'name': u'gen-jobs-93', u'__class__': u'Job', u'duration': 45, u'GS_assignee': 1}} added
+
+[1427207379.452785] GSnode-1 | monitoring check RM 1
+
+[1427207379.453985] GSnode-1 | monitoring check RM 2
+
+[1427207379.470909] GSnode-1 | no rm available!
+
+[1427207382.961272] GSnode-1 | get job {{u'load': 0.91913523824999999, u'jid': 96, u'name': u'gen-jobs-96', u'__class__': u'Job', u'duration': 16, u'GS_assignee': 1}} added
+
+[1427207382.965033] GSnode-1 | monitoring check RM 1
+
+[1427207382.966348] GSnode-1 | monitoring check RM 2
+
+[1427207382.982576] GSnode-1 | no rm available!
+
+[1427207384.628257] GSnode-1 | get job {{u'load': 0.27578145569200002, u'jid': 97, u'name': u'gen-jobs-97', u'__class__': u'Job', u'duration': 30, u'GS_assignee': 1}} added
+
+[1427207384.632207] GSnode-1 | monitoring check RM 1
+
+[1427207384.633485] GSnode-1 | monitoring check RM 2
+
+[1427207384.650307] GSnode-1 | no rm available!
+
+[1427207385.825459] GSnode-1 | get job {{u'load': 0.196886167739, u'jid': 98, u'name': u'gen-jobs-98', u'__class__': u'Job', u'duration': 44, u'GS_assignee': 1}} added
+
+[1427207385.829172] GSnode-1 | monitoring check RM 1
+
+[1427207385.830342] GSnode-1 | monitoring check RM 2
+
+[1427207385.846572] GSnode-1 | no rm available!
+
+[1427207393.572585] GSnode-1 | received report {u'load': 0.72365607009199995, u'jid': 89, u'name': u'gen-jobs-89', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 20, u'GS_assignee': 1} from RM-2
+
+[1427207393.585060] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207393.589196] GSnode-1 | monitoring check RM 1
+
+[1427207393.595530] GSnode-1 | push state to neighbor
+
+[1427207393.611899] GSnode-1 | job {u'load': 0.72365607009199995, u'jid': 89, u'name': u'gen-jobs-89', u'__class__': u'Job', u'RM_assigned': 2, u'duration': 20, u'GS_assignee': 1} GS-FINISHED at 1427207393.611880
+
+[1427207394.701144] GSnode-1 | received report {u'load': 0.21359161139899999, u'jid': 90, u'name': u'gen-jobs-90', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 20, u'GS_assignee': 1} from RM-1
+
+[1427207394.712596] GSnode-1 | active GS : [1, 0] | inactive GS : []
+
+[1427207394.721705] GSnode-1 | push state to neighbor
+
+[1427207394.738184] GSnode-1 | job {u'load': 0.21359161139899999, u'jid': 90, u'name': u'gen-jobs-90', u'__class__': u'Job', u'RM_assigned': 1, u'duration': 20, u'GS_assignee': 1} GS-FINISHED at 1427207394.738154
 
