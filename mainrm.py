@@ -25,6 +25,7 @@ def mainrm():
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
     os.environ["THREADPOOL_SIZE"] = "50000"
+    # os.environ["SERVERTYPE"] = "multiplex"
 
     ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
 

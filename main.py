@@ -25,6 +25,7 @@ def main():
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
     os.environ["THREADPOOL_SIZE"] = "50000"
+    # os.environ["SERVERTYPE"] = "multiplex"
 
 
     nsrm = Pyro4.locateNS(host=Constant.IP_RM_NS)
@@ -45,7 +46,8 @@ def main():
             with Pyro4.Proxy(uri) as gsobj:
                 jobsu = Job(jid, "gen-jobs-"+str(jid), random.randint(10,35), random.random(), target, time.time())
                 d_job = serpent.dumps(jobsu)
-                gsobj.addjob(d_job)
+                aycall = Pyro4.async(gsobj)
+                aycall.addjob(d_job)
 
                 if jid % 50 == 0:
                     gsobj._pyroRelease()
