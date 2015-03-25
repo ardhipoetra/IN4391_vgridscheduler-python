@@ -28,7 +28,7 @@ class ResourceManager(Node):
         Node.__init__(self, oid, name)
         utils.write(Constant.NODE_RESOURCEMANAGER, self.oid, "created with id %d" %(oid))
         self.nodes_stat = [i for i in range(0, Constant.TOTAL_NODE_EACH)]
-        self.jobs_assigned_node = [i for i in range(0, Constant.TOTAL_NODE_EACH)]
+        self.jobs_assigned_node = [None for i in range(0, Constant.TOTAL_NODE_EACH)]
         self._creating_wnodes(nodeamount)
         self.job_queue = Queue()
 
