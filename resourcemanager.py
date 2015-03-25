@@ -7,6 +7,7 @@ import sys
 import signal
 import random
 import utils
+from Queue import Queue
 stop = True;
 
 class ResourceManager(Node):
@@ -41,7 +42,7 @@ class ResourceManager(Node):
 
         self.job_queue.put(job)
 
-        # jobhead = self._choose_job()
+        jobhead = self._choose_job()
         nodetosubmit = self._choose_nodes()
 
         if nodetosubmit is not None and jobhead is not None:
@@ -139,7 +140,11 @@ class ResourceManager(Node):
         return sum(x)/float(len(x))
 
     def get_jobq(self):
-        return self.job_queue
+        buff = "["
+        for elem in list(self.job_queue.queue):
+            buff += elem["jid"]+","
+        buff+="]\n"
+        return buff
 
 def check_stop():
     return stop

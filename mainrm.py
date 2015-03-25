@@ -11,7 +11,7 @@ import subprocess
 import random
 import signal
 import threading
-
+from Queue import Queue
 if sys.version_info < (3, 0):
     input = raw_input
 
