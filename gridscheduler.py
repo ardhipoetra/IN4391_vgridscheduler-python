@@ -64,7 +64,8 @@ class GridScheduler(Node):
         self._write('received report %s from RM-%d' %(job, rmid))
 
         # remove from stat monitor
-        self.RM_loads[rmid] -= job["load"]
+        self.RM_loads[rmid] -= (job["load"]/float(len(self.RM_loads)))
+        
         self.jobs_assigned_RM[rmid].remove(job)
 
         # resync with neighbor
@@ -187,7 +188,7 @@ class GridScheduler(Node):
         with Pyro4.Proxy(uri) as rmobj:
             self._write('send job %d to %s' % (job["jid"], rmobj.tostr()))
 
-            self.RM_loads[rmid] += job["load"]
+            self.RM_loads[rmid] += (job["load"]/float(len(self.RM_loads)))
 
             self.jobs_assigned_RM[rmid].append(job)
 
