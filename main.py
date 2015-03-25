@@ -24,7 +24,7 @@ def main():
     # Pyro4.config.COMMTIMEOUT=0.5
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
-    os.environ["THREADPOOL_SIZE"] = 50000
+    os.environ["THREADPOOL_SIZE"] = "50000"
 
 
     nsrm = Pyro4.locateNS(host=Constant.IP_RM_NS)
@@ -32,7 +32,7 @@ def main():
 
     def _jobgen(count,gs_ns):
         for jid in range(0,count):
-            time.sleep(random.randint(50,200) * 0.01)
+            time.sleep(random.randint(5,10) * 0.01)
             while True:
                 target = random.randint(0, Constant.TOTAL_GS-1)
                 try :

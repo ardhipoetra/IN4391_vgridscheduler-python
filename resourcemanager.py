@@ -87,7 +87,7 @@ class ResourceManager(Node):
     def _assignjob(self, wnode, job):
         self.jobs_assigned_node[wnode.getoid() - self.oid * 10000] = job
         self._write(str(wnode)+' assigned job '+ str(job))
-        wnode.startjob(job)
+        wnode.startjob(job, self)
         return wnode
 
 

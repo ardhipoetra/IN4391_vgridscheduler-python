@@ -17,11 +17,11 @@ class WorkerNode(Node):
         self.status = Constant.WORKER_STATUS_IDLE
         self.load = 0.0
 
-    def startjob(self, job_obj):
+    def startjob(self, job_obj, rmobj):
         self._write('job %s started' %str(job_obj))
     	self.status = Constant.WORKER_STATUS_BUSY
 
-        def do_job(dur, jobj, load, rmid):
+        def do_job(dur, jobj, load, rmid, lermobj):
             self.load = load
             time.sleep(dur)
             self.status = Constant.WORKER_STATUS_IDLE
@@ -30,15 +30,16 @@ class WorkerNode(Node):
             try:
                 ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
                 uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
-                with Pyro4.Proxy(uri) as rmobj:
-                    self._write("Job finished from worker")
-                    rmobj.receive_report(self.oid, serpent.dumps(jobj))
+
+                self._write("Job finished from worker")
+                lermobj.receive_report(self.oid, serpent.dumps(jobj))
+
             except Pyro4.errors.NamingError as e:
                 self._write("CAN'T REACH RM, IGNORE REPORT TO RM")
 
 
 
-    	thread = threading.Thread(target=do_job, args=([job_obj["duration"],job_obj,  job_obj['load'], job_obj["RM_assigned"]]))
+    	thread = threading.Thread(target=do_job, args=([job_obj["duration"],job_obj,  job_obj['load'], job_obj["RM_assigned"], rmobj]))
         thread.setDaemon(True)
         thread.start()
 
