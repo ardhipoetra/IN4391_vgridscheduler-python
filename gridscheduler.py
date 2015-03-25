@@ -82,20 +82,20 @@ class GridScheduler(Node):
         self._write('job %s GS-FINISHED at %f (%f)' %(job, timedone, tdiff))
 
         # if there's job in the queue
-        if len(self.job_queue) != 0:
-            self._write("queue not empty, try assign job to RM")
-            rmidsub = self._chooseRM()
-            if rmidsub == -1:
-                self._write('no rm available!')
-                return False
-            else:
-                jobsub = self._choose_job()
-
-                if jobsub is None:
-                    self._write("no job available")
-                else:
-                    jobsub["RM_assigned"] = rmidsub
-                    self._assignjob(rmidsub, serpent.dumps(jobsub))
+        # if len(self.job_queue) != 0:
+        #     self._write("queue not empty, try assign job to RM")
+        #     rmidsub = self._chooseRM()
+        #     if rmidsub == -1:
+        #         self._write('no rm available!')
+        #         return False
+        #     else:
+        #         jobsub = self._choose_job()
+        #
+        #         if jobsub is None:
+        #             self._write("no job available")
+        #         else:
+        #             jobsub["RM_assigned"] = rmidsub
+        #             self._assignjob(rmidsub, serpent.dumps(jobsub))
 
     # add job to this GS
     @Pyro4.oneway
@@ -153,7 +153,11 @@ class GridScheduler(Node):
         buff += "RM_loads : "+str(self.RM_loads) + "\n"
         buff += "jobs_assigned_RM : \n"
         for jobl in self.jobs_assigned_RM:
-            buff += "\t["+str(len(jobl)-1)+"]"+str(jobl)+"\n"
+            buff += "\t["+str(len(jobl)-1)+"] - "
+            for ajob in jobl:
+                if ajob is not None:
+                    buff += str(ajob["jid"])+","
+            buff += "\n"
 
         buff += "------------------------------------------------\n"
         return buff
@@ -194,7 +198,7 @@ class GridScheduler(Node):
             self._push_structure(act_neig, self._update_GSstructure())
 
             # aycall = Pyro4.async(rmobj)
-            rmobj.addjob(d_job)
+            rmobj.add_job(d_job)
 
     # GS choose job
     def _choose_job(self):
