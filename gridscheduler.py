@@ -82,20 +82,21 @@ class GridScheduler(Node):
         self._write('job %s GS-FINISHED at %f (%f)' %(job, timedone, tdiff))
 
         # if there's job in the queue
-        # if len(self.job_queue) != 0:
-        #     self._write("queue not empty, try assign job to RM")
-        #     rmidsub = self._chooseRM()
-        #     if rmidsub == -1:
-        #         self._write('no rm available!')
-        #         return False
-        #     else:
-        #         jobsub = self._choose_job()
-        #
-        #         if jobsub is None:
-        #             self._write("no job available")
-        #         else:
-        #             jobsub["RM_assigned"] = rmidsub
-        #             self._assignjob(rmidsub, serpent.dumps(jobsub))
+        if len(self.job_queue) != 0:
+            self._write("queue not empty, try assign job to RM")
+            rmidsub = self._chooseRM()
+            if rmidsub == -1:
+                self._write('no rm available!')
+                return False
+            else:
+                jobsub = self._choose_job()
+
+                if jobsub is None:
+                    self._write("no job available")
+                else:
+                    jobsub["RM_assigned"] = rmidsub
+                    self._write("job %d submitted to %d" %(str(jobsub["jid"], rmidsub)))
+                    self._assignjob(rmidsub, serpent.dumps(jobsub))
 
     # add job to this GS
     @Pyro4.oneway
