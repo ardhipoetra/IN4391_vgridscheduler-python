@@ -64,9 +64,8 @@ class GridScheduler(Node):
         self._write('received report %s from RM-%d' %(job, rmid))
 
         # remove from stat monitor
-        print str(self.oid)+" dec : "+str(job["load"]/float(len(self.RM_loads)))
+        # print str(self.oid)+" dec  "+str(job["load"]/float(len(self.RM_loads)))
         self.RM_loads[rmid] -= (job["load"]/float(len(self.RM_loads)))
-
         self.jobs_assigned_RM[rmid].remove(job)
 
         # resync with neighbor
