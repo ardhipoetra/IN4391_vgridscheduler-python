@@ -48,9 +48,10 @@ class ResourceManager(Node):
         if nodetosubmit is not None and jobhead is not None:
             self._assignjob(nodetosubmit, jobhead)
         elif jobhead is not None:
-            self._write("WAITING for turn {%s}" %(jobhead))
+            self.job_queue.put(jobhead, True, 2)
+            self._write("WAITING for available node {%s}" %(jobhead))
         elif nodetosubmit is not None:
-            self._write("WAITING for available {%s}" %str(nodetosubmit))
+            self._write("WAITING for available job {%s}" %str(nodetosubmit))
 
 
     # receive report from node
