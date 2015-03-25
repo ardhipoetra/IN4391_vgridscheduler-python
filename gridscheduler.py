@@ -43,6 +43,7 @@ class GridScheduler(Node):
         while True:
             time.sleep(3)
             self._write("[CLUSTERLOAD]"+self.get_csvrmload())
+            self._write("[QUERY_WORKLOAD] %f" %(self.query_rmload()))
 
    ## Define the data structure which maintains the state of each GS
     def __init__(self, oid, name="GS"):
@@ -188,7 +189,7 @@ class GridScheduler(Node):
         with Pyro4.Proxy(uri) as rmobj:
             self._write('send job %d to %s' % (job["jid"], rmobj.tostr()))
 
-            print str(self.oid)+" add : "+str(job["load"]/float(len(self.RM_loads)))
+            # print str(self.oid)+" add : "+str(job["load"]/float(len(self.RM_loads)))
             self.RM_loads[rmid] += (job["load"]/float(len(self.RM_loads)))
 
             self.jobs_assigned_RM[rmid].append(job)
@@ -308,6 +309,15 @@ class GridScheduler(Node):
                     jobs["RM_assigned"] = -1
                     self._write("readd job "+str(jobs))
                     self.addjob(serpent.dumps(jobs))
+
+    def query_rmload(self):
+        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
+        totalworkload = 0.0
+        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+            with Pyro4.Proxy(rm_uri) as rmobj:
+                totalworkload += rmobj.get_workloadRM()
+
+        return totalworkload
 
     def _takeover_jobs(self, inactive_lid):
         takeover_gsid=[]
