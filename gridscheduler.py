@@ -53,7 +53,7 @@ class GridScheduler(Node):
         self.RM_loads = [0.0 for i in range(Constant.TOTAL_RM)] #rm connected in this
 
 
-        thread = threading.Thread(target=_periodicresult)
+        thread = threading.Thread(target=self._periodicresult)
         thread.setDaemon(True)
         thread.start()
 
@@ -134,7 +134,7 @@ class GridScheduler(Node):
     def get_csvrmload(self):
         buff = ""
         for idx, jobl in enumerate(self.jobs_assigned_RM):
-            buff += "\t%f;%d," %str(self.RM_loads[idx], len(jobl)-1)
+            buff += "\t%f;%d," %(self.RM_loads[idx], len(jobl)-1)
         return buff
 
 

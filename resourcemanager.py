@@ -40,7 +40,7 @@ class ResourceManager(Node):
         jobhead = self._choose_job()
         nodetosubmit = self._choose_nodes()
 
-        if nodetosubmit is not None:
+        if nodetosubmit is not None and jobhead is not None:
             self._assignjob(nodetosubmit, jobhead)
 
 
@@ -65,7 +65,7 @@ class ResourceManager(Node):
             ajob = self._choose_job()
             nodetosubmit = self._choose_nodes()
 
-            if nodetosubmit is not None:
+            if nodetosubmit is not None and jobhead is not None:
                 self._assignjob(nodetosubmit, ajob)
             else:
                 self.job_queue.append(ajob)
@@ -94,8 +94,11 @@ class ResourceManager(Node):
     ###Activity : this function takes out the high prioirity job for the RM Queue
     ## output : the latest job
     def _choose_job(self):
-        job = self.job_queue.pop()
-        return job
+        if len(self.job_queue) != 0:
+            job = self.job_queue.pop()
+            return job
+        else:
+            return None
 
     # choose nodes available
     def _choose_nodes(self):

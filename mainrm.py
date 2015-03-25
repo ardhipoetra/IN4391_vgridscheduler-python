@@ -24,6 +24,7 @@ def mainrm():
     # Pyro4.config.COMMTIMEOUT=0.5
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
+    Pyro4.config.SERVERTYPE = "multiplex"
 
 
     ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
