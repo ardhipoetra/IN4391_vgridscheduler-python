@@ -144,9 +144,9 @@ class ResourceManager(Node):
 
     def get_totaljobs_run(self):
         totnon = 0
-        for ob in jobs_assigned_node:
+        for ob in self.jobs_assigned_node:
             if ob is not None:
-                totnon++
+                totnon+=1
 
         return totnon
 
