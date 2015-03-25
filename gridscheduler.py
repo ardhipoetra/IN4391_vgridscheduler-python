@@ -185,7 +185,7 @@ class GridScheduler(Node):
         uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
 
         with Pyro4.Proxy(uri) as rmobj:
-            self._write('send job to %s' % (rmobj.tostr()))
+            self._write('send job %d to %s' % (job["jid"], rmobj.tostr()))
 
             self.RM_loads[rmid] += job["load"]
 
