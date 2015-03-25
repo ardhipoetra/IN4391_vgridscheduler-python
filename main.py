@@ -24,7 +24,7 @@ def main():
     # Pyro4.config.COMMTIMEOUT=0.5
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
-    Pyro4.config.THREADPOOL_SIZE = 50000
+    os.environ["THREADPOOL_SIZE"] = 50000
 
 
     nsrm = Pyro4.locateNS(host=Constant.IP_RM_NS)
