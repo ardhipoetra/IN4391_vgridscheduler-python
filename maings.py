@@ -50,7 +50,7 @@ def maings():
             out = False
         elif ip == '1':
             for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
-                with Pyro4.Proxy(gs_uri) as self.gsobj:
+                with Pyro4.Proxy(gs_uri) as gsobj:
                     print ("from gs : "+str(gsobj.getoid()))
                     print (gsobj.get_gs_info())
                     print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
