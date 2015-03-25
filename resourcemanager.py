@@ -55,8 +55,8 @@ class ResourceManager(Node):
         ns = Pyro4.locateNS(host=Constant.IP_GS_NS)
         try:
             uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(job["GS_assignee"])+"]"+str(job["GS_assignee"]))
-            gsobj_r = Pyro4.Proxy(uri)
-            gsobj_r.receive_report(self.oid, d_job)
+            with Pyro4.Proxy(uri) as gsobj_r:
+                gsobj_r.receive_report(self.oid, d_job)
         except Pyro4.errors.NamingError as e:
             self._write("CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"])
 
@@ -94,10 +94,10 @@ class ResourceManager(Node):
     ###Activity : this function takes out the high prioirity job for the RM Queue
     ## output : the latest job
     def _choose_job(self):
-        if len(self.job_queue) != 0:
+        try:
             job = self.job_queue.pop()
             return job
-        else:
+        except IndexError:
             return None
 
     # choose nodes available

@@ -89,8 +89,12 @@ class GridScheduler(Node):
                 return False
             else:
                 jobsub = self._choose_job()
-                jobsub["RM_assigned"] = rmidsub
-                self._assignjob(rmidsub, serpent.dumps(jobsub))
+
+                if jobsub is None
+                    self._write("no job available")
+                else:
+                    jobsub["RM_assigned"] = rmidsub
+                    self._assignjob(rmidsub, serpent.dumps(jobsub))
 
     # add job to this GS
     def addjob(self, d_job):
@@ -107,8 +111,12 @@ class GridScheduler(Node):
             return False
         else:
             jobsub = self._choose_job()
-            jobsub["RM_assigned"] = rmidsub
-            self._assignjob(rmidsub, serpent.dumps(jobsub))
+
+            if jobsub is None
+                self._write("no job available")
+            else:
+                jobsub["RM_assigned"] = rmidsub
+                self._assignjob(rmidsub, serpent.dumps(jobsub))
         return True
 
     # handle when retrieving state from other GS
@@ -169,35 +177,38 @@ class GridScheduler(Node):
 
         ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
         uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
-        rmobj = Pyro4.Proxy(uri)
 
-        self._write('send job to %s' % (rmobj.tostr()))
+        with Pyro4.Proxy(uri) as rmobj:
+            self._write('send job to %s' % (rmobj.tostr()))
 
-        self.RM_loads[rmid] += job["load"]
+            self.RM_loads[rmid] += job["load"]
 
-        self.jobs_assigned_RM[rmid].append(job)
+            self.jobs_assigned_RM[rmid].append(job)
 
-        (act_neig, inact_neig) = self._monitorneighborGS()
+            (act_neig, inact_neig) = self._monitorneighborGS()
 
-        if len(inact_neig) != 0: #there some inactive GS
-            self._takeover_jobs(inact_neig)
+            if len(inact_neig) != 0: #there some inactive GS
+                self._takeover_jobs(inact_neig)
 
-        self._push_structure(act_neig, self._update_GSstructure())
+            self._push_structure(act_neig, self._update_GSstructure())
 
-        rmobj.add_job(d_job)
+            rmobj.add_job(d_job)
 
     # GS choose job
     def _choose_job(self):
-        job = self.job_queue.pop()
-        self._write("choose job to submit..%s" %job)
-        return job
+        try:
+            job = self.job_queue.pop()
+            self._write("choose job to submit..%s" %job)
+            return job
+        except IndexError:
+            return None
 
     def _chooseRM(self):
         ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
         rm_tmp = [0.0] * Constant.TOTAL_RM
         for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
-            rmobj = Pyro4.Proxy(rm_uri)
-            rm_tmp[rmobj.getoid()] = rmobj.get_workloadRM()
+            with Pyro4.Proxy(rm_uri) as rmobj:
+                rm_tmp[rmobj.getoid()] = rmobj.get_workloadRM()
 
         x = sorted(rm_tmp)
 
@@ -237,8 +248,9 @@ class GridScheduler(Node):
 
         for gsid in gs_listid:
             gso_uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(gsid)+"]"+str(gsid))
-            gsobj = Pyro4.Proxy(gso_uri)
-            gsobj.get_structure(self.oid, msg_gs)
+
+            with Pyro4.Proxy(gso_uri) as gsobj :
+                gsobj.get_structure(self.oid, msg_gs)
 
         return True
 
@@ -249,9 +261,9 @@ class GridScheduler(Node):
         activeid = [self.oid]
         inactiveid = []
         for gs_o, gso_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
-            gsobj = Pyro4.Proxy(gso_uri)
-            if gsobj.getoid() != self.oid:
-                activeid.append(gsobj.getoid())
+            with Pyro4.Proxy(gso_uri) as gsobj :
+                if gsobj.getoid() != self.oid:
+                    activeid.append(gsobj.getoid())
 
         if len(activeid) != Constant.TOTAL_GS:
             inactiveid = list(set([x for x in range(0, Constant.TOTAL_GS)]) - set(activeid))

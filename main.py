@@ -24,7 +24,7 @@ def main():
     # Pyro4.config.COMMTIMEOUT=0.5
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
-    Pyro4.config.SERVERTYPE = "multiplex"
+    Pyro4.config.THREADPOOL_SIZE = 50000
 
 
     nsrm = Pyro4.locateNS(host=Constant.IP_RM_NS)
@@ -42,13 +42,13 @@ def main():
                     print ("GS %d unavailable, try again" %target)
                     continue
 
-            gsobj = Pyro4.Proxy(uri)
-            jobsu = Job(jid, "gen-jobs-"+str(jid), random.randint(10,35), random.random(), target, time.time())
-            d_job = serpent.dumps(jobsu)
-            gsobj.addjob(d_job)
+            with Pyro4.Proxy(uri) as gsobj:
+                jobsu = Job(jid, "gen-jobs-"+str(jid), random.randint(10,35), random.random(), target, time.time())
+                d_job = serpent.dumps(jobsu)
+                gsobj.addjob(d_job)
 
-            if jid % 50 == 0:
-                gsobj._pyroRelease()
+                if jid % 50 == 0:
+                    gsobj._pyroRelease()
         return
 
 

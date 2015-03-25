@@ -30,9 +30,9 @@ class WorkerNode(Node):
             try:
                 ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
                 uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
-                rmobj = Pyro4.Proxy(uri)
-                self._write("Job finished from worker")
-                rmobj.receive_report(self.oid, serpent.dumps(jobj))
+                with Pyro4.Proxy(uri) as rmobj:
+                    self._write("Job finished from worker")
+                    rmobj.receive_report(self.oid, serpent.dumps(jobj))
             except Pyro4.errors.NamingError as e:
                 self._write("CAN'T REACH RM, IGNORE REPORT TO RM")
 

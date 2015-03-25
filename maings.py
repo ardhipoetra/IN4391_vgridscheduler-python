@@ -24,8 +24,7 @@ def maings():
     # Pyro4.config.COMMTIMEOUT=0.5
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
-    Pyro4.config.SERVERTYPE = "multiplex"
-
+    Pyro4.config.THREADPOOL_SIZE = 50000
 
     ns = Pyro4.locateNS(host=Constant.IP_GS_NS)
 
@@ -51,10 +50,10 @@ def maings():
             out = False
         elif ip == '1':
             for gs, gs_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
-                gsobj = Pyro4.Proxy(gs_uri)
-                print ("from gs : "+str(gsobj.getoid()))
-                print (gsobj.get_gs_info())
-                print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
+                with Pyro4.Proxy(gs_uri) as self.gsobj:
+                    print ("from gs : "+str(gsobj.getoid()))
+                    print (gsobj.get_gs_info())
+                    print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
         elif ip.startswith("killgs"):
             keykill, idkill_s = ip.split()
             idkill = int(idkill_s)
