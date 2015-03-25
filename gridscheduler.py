@@ -95,7 +95,7 @@ class GridScheduler(Node):
                     self._write("no job available")
                 else:
                     jobsub["RM_assigned"] = rmidsub
-                    self._write("job %d submitted to %d" %(str(jobsub["jid"]), rmidsub))
+                    self._write("job %d submitted to %d" %(jobsub["jid"], rmidsub))
                     self._assignjob(rmidsub, serpent.dumps(jobsub))
 
     # add job to this GS
