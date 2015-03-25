@@ -36,6 +36,8 @@ class ResourceManager(Node):
     def add_job(self,d_job):
         job = serpent.loads(d_job)
 
+        self._write("get job {%s} added" %(job))
+
         self.job_queue.append(job)
 
         jobhead = self._choose_job()
@@ -43,6 +45,10 @@ class ResourceManager(Node):
 
         if nodetosubmit is not None and jobhead is not None:
             self._assignjob(nodetosubmit, jobhead)
+        elif jobhead is not None:
+            self._write("WAITING for turn {%s}" %(jobhead))
+        elif nodetosubmit is not None:
+            self._write("WAITING for available {%s}" %str(nodetosubmit))
 
 
     # receive report from node
