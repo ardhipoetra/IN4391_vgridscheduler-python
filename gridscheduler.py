@@ -90,7 +90,7 @@ class GridScheduler(Node):
             else:
                 jobsub = self._choose_job()
 
-                if jobsub is None
+                if jobsub is None:
                     self._write("no job available")
                 else:
                     jobsub["RM_assigned"] = rmidsub
@@ -112,7 +112,7 @@ class GridScheduler(Node):
         else:
             jobsub = self._choose_job()
 
-            if jobsub is None
+            if jobsub is None:
                 self._write("no job available")
             else:
                 jobsub["RM_assigned"] = rmidsub
