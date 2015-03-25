@@ -58,6 +58,7 @@ class GridScheduler(Node):
         thread.start()
 
     # report received after finishing the task from RM
+    @Pyro4.oneway
     def receive_report(self, rmid, d_job):
         job = serpent.loads(d_job)
         self._write('received report %s from RM-%d' %(job, rmid))
@@ -97,6 +98,7 @@ class GridScheduler(Node):
                     self._assignjob(rmidsub, serpent.dumps(jobsub))
 
     # add job to this GS
+    @Pyro4.oneway
     def addjob(self, d_job):
         job = serpent.loads(d_job)
         self._write("get job {%s} added" %(job))
@@ -108,7 +110,6 @@ class GridScheduler(Node):
 
         if rmidsub == -1 :
             self._write('no rm available!')
-            return False
         else:
             jobsub = self._choose_job()
 
@@ -117,7 +118,6 @@ class GridScheduler(Node):
             else:
                 jobsub["RM_assigned"] = rmidsub
                 self._assignjob(rmidsub, serpent.dumps(jobsub))
-        return True
 
     # handle when retrieving state from other GS
     def get_structure(self, id_GS, d_structureObj):
@@ -172,6 +172,7 @@ class GridScheduler(Node):
         return buff
 
     # assign job to RM
+    @Pyro4.oneway
     def _assignjob(self, rmid, d_job):
         job = serpent.loads(d_job)
 

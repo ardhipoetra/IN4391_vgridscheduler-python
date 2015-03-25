@@ -32,6 +32,7 @@ class ResourceManager(Node):
 
 
     #Activity : add the incoming jobs to the local queue if all the nodes are occupied. Then wait and monitor the system
+    @Pyro4.oneway
     def add_job(self,d_job):
         job = serpent.loads(d_job)
 
@@ -45,6 +46,7 @@ class ResourceManager(Node):
 
 
     # receive report from node
+    @Pyro4.oneway
     def receive_report(self, node_id, d_job):
         job = serpent.loads(d_job)
 
@@ -84,11 +86,12 @@ class ResourceManager(Node):
         return buff
 
     # assign job to node
+    @Pyro4.oneway
     def _assignjob(self, wnode, job):
         self.jobs_assigned_node[wnode.getoid() - self.oid * 10000] = job
         self._write(str(wnode)+' assigned job '+ str(job))
         wnode.startjob(job, self)
-        return wnode
+
 
 
     ###Activity : this function takes out the high prioirity job for the RM Queue
@@ -109,6 +112,7 @@ class ResourceManager(Node):
 
         return None
 
+    @Pyro4.oneway
     def _creating_wnodes(self, n):
         for x in range(0,n):
             n_oid = self.oid * 10000 + x
