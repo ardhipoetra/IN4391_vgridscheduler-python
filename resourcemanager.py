@@ -12,7 +12,7 @@ stop = True;
 class ResourceManager(Node):
 
     # list of jobs that waiting in RM before assigned to node
-    job_queue = []
+    job_queue = Queue()
 
     # id node as index,  node as val
     nodes_stat = [None] * Constant.TOTAL_NODE_EACH
@@ -29,6 +29,7 @@ class ResourceManager(Node):
         self.nodes_stat = [i for i in range(0, Constant.TOTAL_NODE_EACH)]
         self.jobs_assigned_node = [i for i in range(0, Constant.TOTAL_NODE_EACH)]
         self._creating_wnodes(nodeamount)
+        self.job_queue = Queue()
 
 
     #Activity : add the incoming jobs to the local queue if all the nodes are occupied. Then wait and monitor the system
@@ -38,9 +39,9 @@ class ResourceManager(Node):
 
         self._write("get job {%s} added" %(job))
 
-        self.job_queue.append(job)
+        self.job_queue.put(job)
 
-        jobhead = self._choose_job()
+        # jobhead = self._choose_job()
         nodetosubmit = self._choose_nodes()
 
         if nodetosubmit is not None and jobhead is not None:
@@ -68,7 +69,7 @@ class ResourceManager(Node):
         except Pyro4.errors.NamingError as e:
             self._write("CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"])
 
-        if len(self.job_queue) != 0:
+        if self.job_queue.qsize() != 0:
             self._write("queue not empty, try assign job to nodes")
             ajob = self._choose_job()
             nodetosubmit = self._choose_nodes()
@@ -76,7 +77,7 @@ class ResourceManager(Node):
             if nodetosubmit is not None and jobhead is not None:
                 self._assignjob(nodetosubmit, ajob)
             else:
-                self.job_queue.append(ajob)
+                self.job_queue.put(ajob)
 
     def get_cluster_info(self):
         buff = ""
@@ -104,7 +105,7 @@ class ResourceManager(Node):
     ## output : the latest job
     def _choose_job(self):
         try:
-            job = self.job_queue.pop()
+            job = self.job_queue.get()
             return job
         except IndexError:
             return None
