@@ -40,7 +40,7 @@ class ResourceManager(Node):
 
         self._write("get job {%s} added" %(job))
 
-        self.job_queue.put(job)
+        self.job_queue.put(job, True, 2)
 
         jobhead = self._choose_job()
         nodetosubmit = self._choose_nodes()
@@ -78,7 +78,7 @@ class ResourceManager(Node):
             if nodetosubmit is not None and jobhead is not None:
                 self._assignjob(nodetosubmit, ajob)
             else:
-                self.job_queue.put(ajob)
+                self.job_queue.put(ajob, True, 2)
 
     def get_cluster_info(self):
         buff = ""
