@@ -51,6 +51,7 @@ class ResourceManager(Node):
             self.job_queue.put(jobhead, True, 2)
             self._write("WAITING for available node {%s}" %(jobhead))
         elif nodetosubmit is not None:
+            self.job_queue.put(jobhead, True, 2)
             self._write("WAITING for available job {%s}" %str(nodetosubmit))
 
 
@@ -76,7 +77,7 @@ class ResourceManager(Node):
             ajob = self._choose_job()
             nodetosubmit = self._choose_nodes()
 
-            if nodetosubmit is not None and jobhead is not None:
+            if nodetosubmit is not None and ajob is not None:
                 self._assignjob(nodetosubmit, ajob)
             else:
                 self.job_queue.put(ajob, True, 2)
