@@ -42,7 +42,7 @@ def main():
                     continue
 
             gsobj = Pyro4.Proxy(uri)
-            jobsu = Job(jid, "gen-jobs-"+str(jid), random.randint(10,65), random.random(), target, time.time())
+            jobsu = Job(jid, "gen-jobs-"+str(jid), random.randint(10,35), random.random(), target, time.time())
             d_job = serpent.dumps(jobsu)
             gsobj.addjob(d_job)
         return

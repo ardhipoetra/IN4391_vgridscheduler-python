@@ -124,6 +124,9 @@ class ResourceManager(Node):
 
         return sum(x)/float(len(x))
 
+    def get_jobq(self):
+        return self.job_queue
+
 def check_stop():
     return stop
 

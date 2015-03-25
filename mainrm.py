@@ -48,6 +48,7 @@ def mainrm():
             for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
                 rmobj = Pyro4.Proxy(rm_uri)
                 print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
+                print ("queue => "+str(rmobj.get_jobq()))
                 print (rmobj.get_cluster_info())
                 print ("========\n")
         elif ip == '2':

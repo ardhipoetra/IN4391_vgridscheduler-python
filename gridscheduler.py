@@ -39,6 +39,11 @@ class GridScheduler(Node):
     def _write(self, string):
         utils.write(Constant.NODE_GRIDSCHEDULER, self.oid, string)
 
+    def _periodicresult(self):
+        while True:
+            time.sleep(3)
+            self._write("[CLUSTERLOAD]"+self.get_csvrmload())
+
    ## Define the data structure which maintains the state of each GS
     def __init__(self, oid, name="GS"):
         Node.__init__(self, oid, name)
@@ -46,6 +51,11 @@ class GridScheduler(Node):
 
         self.jobs_assigned_RM = utils.initarraylist_none(Constant.TOTAL_RM)
         self.RM_loads = [0.0 for i in range(Constant.TOTAL_RM)] #rm connected in this
+
+
+        thread = threading.Thread(target=_periodicresult)
+        thread.setDaemon(True)
+        thread.start()
 
     # report received after finishing the task from RM
     def receive_report(self, rmid, d_job):
@@ -120,6 +130,13 @@ class GridScheduler(Node):
                 pass
 
         return return_stat;
+
+    def get_csvrmload(self):
+        buff = ""
+        for idx, jobl in enumerate(self.jobs_assigned_RM):
+            buff += "\t%f;%d," %str(self.RM_loads[idx], len(jobl)-1)
+        return buff
+
 
     def get_gs_info(self):
         buff = ""
