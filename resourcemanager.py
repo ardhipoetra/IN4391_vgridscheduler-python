@@ -70,7 +70,7 @@ class ResourceManager(Node):
         except Pyro4.errors.NamingError as e:
             self._write("CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"])
 
-        if self.job_queue.qsize() != 0:
+        if not self.job_queue.empty():
             self._write("queue not empty, try assign job to nodes")
             ajob = self._choose_job()
             nodetosubmit = self._choose_nodes()
@@ -106,9 +106,10 @@ class ResourceManager(Node):
     ## output : the latest job
     def _choose_job(self):
         try:
-            job = self.job_queue.get()
-            return job
-        except IndexError:
+            sjob = self.job_queue.get(True, 2)
+            return sjob
+        except Empty:
+            self._write("q was empty!! %d" % self.job_queue.qsize())
             return None
 
     # choose nodes available
