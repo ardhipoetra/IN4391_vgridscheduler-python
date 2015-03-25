@@ -145,7 +145,7 @@ class ResourceManager(Node):
     def get_jobq(self):
         buff = "["
         for elem in list(self.job_queue.queue):
-            buff += elem["jid"]+","
+            buff += str(elem["jid"])+","
         buff+="]\n"
         return buff
 
