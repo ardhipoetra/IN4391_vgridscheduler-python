@@ -42,8 +42,8 @@ class GridScheduler(Node):
     def _periodicresult(self):
         while True:
             time.sleep(3)
-            self._write("[JOB_RUNNING] %s" %self.query_rmjob())
-            self._write("[CLUSTERLOAD] %s" %self.query_rmload())
+            # self._write("[JOB_RUNNING] %s" %self.query_rmjob())
+            self._write("[CLUSTERLOAD] %s" %self.query_rm())
 
    ## Define the data structure which maintains the state of each GS
     def __init__(self, oid, name="GS"):
@@ -81,7 +81,7 @@ class GridScheduler(Node):
 
         timedone = time.time()
         tdiff = timedone - job["starttime"]
-        self._write('job %s GS-FINISHED at %f (%f)' %(job, timedone, tdiff))
+        self._write('job %d FINISHED at %f (%f)' %(job["jid"], timedone, tdiff))
 
         # if there's job in the queue
         if len(self.job_queue) != 0:
@@ -329,6 +329,19 @@ class GridScheduler(Node):
             with Pyro4.Proxy(rm_uri) as rmobj:
                 totaljobrunning += rmobj.get_totaljobs_run()
                 buff += "[%d] %f," %(rmobj.getoid(), rmobj.get_totaljobs_run())
+
+        return buff
+
+    def query_rm(self):
+        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
+        totaljobrunning = 0.0
+        totalworkload = 0.0
+        buff = ""
+        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+            with Pyro4.Proxy(rm_uri) as rmobj:
+                totalworkload += rmobj.get_workloadRM()
+                totaljobrunning += rmobj.get_totaljobs_run()
+                buff += "%f;%d, " %(rmobj.get_workloadRM(), rmobj.get_totaljobs_run())
 
         return buff
 
