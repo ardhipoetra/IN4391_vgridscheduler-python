@@ -142,6 +142,15 @@ class ResourceManager(Node):
 
         return sum(x)/float(len(x))
 
+    def get_totaljobs_run(self):
+        totnon = 0
+        for ob in jobs_assigned_node:
+            if ob is not None:
+                totnon++
+
+        return totnon
+
+
     def get_jobq(self):
         buff = "["
         for elem in list(self.job_queue.queue):

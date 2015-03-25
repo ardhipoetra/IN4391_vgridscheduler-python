@@ -1,8 +1,8 @@
 
 class Constant(object):
 
-	IP_GS_NS = "10.149.3.1"
-	IP_RM_NS = "10.149.3.3"
+	IP_GS_NS = "10.149.3.6"
+	IP_RM_NS = "10.149.3.11"
 
 	TOTAL_GS = 3
 	TOTAL_RM = 5

@@ -42,8 +42,8 @@ class GridScheduler(Node):
     def _periodicresult(self):
         while True:
             time.sleep(3)
-            self._write("[CLUSTERLOAD]"+self.get_csvrmload())
-            self._write("[QUERY_WORKLOAD] %f" %(self.query_rmload()))
+            self._write("[JOB_RUNNING] %d" %self.query_rmjob())
+            self._write("[CLUSTERLOAD] %f" %self.query_rmload())
 
    ## Define the data structure which maintains the state of each GS
     def __init__(self, oid, name="GS"):
@@ -318,6 +318,15 @@ class GridScheduler(Node):
                 totalworkload += rmobj.get_workloadRM()
 
         return totalworkload
+
+    def query_rmjob(self):
+        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
+        totaljobrunning = 0.0
+        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
+            with Pyro4.Proxy(rm_uri) as rmobj:
+                totaljobrunning += rmobj.get_totaljobs_run()
+
+        return totaljobrunning
 
     def _takeover_jobs(self, inactive_lid):
         takeover_gsid=[]
