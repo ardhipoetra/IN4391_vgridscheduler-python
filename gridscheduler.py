@@ -192,8 +192,8 @@ class GridScheduler(Node):
 
             self._push_structure(act_neig, self._update_GSstructure())
 
-            aycall = Pyro4.async(rmobj)
-            aycall.addjob(d_job)
+            # aycall = Pyro4.async(rmobj)
+            rmobj.addjob(d_job)
 
     # GS choose job
     def _choose_job(self):
