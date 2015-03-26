@@ -1,6 +1,7 @@
 import Pyro4
 import serpent
 from constant import Constant
+from constant import Pool
 from worker import WorkerNode
 from node import Node
 import sys
@@ -8,6 +9,9 @@ import signal
 import random
 import utils
 from Queue import Queue
+import socket
+import subprocess
+
 stop = True;
 
 class ResourceManager(Node):
@@ -235,9 +239,9 @@ def check_env():
                 time.sleep(1)
                 ready = (len([el for el in lgs_tmp if el is None]) == 0)
 
-    # for gid, gip in enumerate(lgs_tmp):
-    #     if ("gs-"+str(gid) not in Pool.lookuptable)
-    #         Constant.lookuptable["gs-"+str(gid)] = gip
+    for gid, gip in enumerate(lgs_tmp):
+        if "gs-"+str(gid) not in Pool.lookuptable:
+            Pool.lookuptable["gs-"+str(gid)] = gip
 
     # check if all RM are ready
     lrm_tmp = [None] * Constant.TOTAL_RM
@@ -256,9 +260,9 @@ def check_env():
                 time.sleep(1)
                 ready = (len([el for el in lrm_tmp if el is None]) == 0)
 
-    # for rid, rip in enumerate(lrm_tmp):
-    #     if (("rm-"+str(rid)) not in Pool.lookuptable)
-    #         Constant.lookuptable["rm-"+str(rid)] = rip
+    for rid, rip in enumerate(lrm_tmp):
+        if ("rm-"+str(rid)) not in Pool.lookuptable:
+            Constant.lookuptable["rm-"+str(rid)] = rip
 
 
 if __name__=="__main__":

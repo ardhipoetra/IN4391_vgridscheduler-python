@@ -22,8 +22,7 @@ class Constant(object):
 	NAMESPACE_WK = "rd.vgs.workernode"
 
 class Pool(object):
-	POTENTIAL_LINK =
-	[
+	POTENTIAL_LINK = [
 		"10.149.3.6",
 		"10.149.3.11"
 	]
