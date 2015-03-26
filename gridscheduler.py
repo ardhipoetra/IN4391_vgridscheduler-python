@@ -51,7 +51,7 @@ class GridScheduler(Node):
    ## Define the data structure which maintains the state of each GS
     def __init__(self, oid, name="GS"):
         Node.__init__(self, oid, name)
-        utils.write(Constant.NODE_RESOURCEMANAGER, self.oid, "created with id %d" %(oid))
+        utils.write(Constant.NODE_GRIDSCHEDULER, self.oid, "created with id %d" %(oid))
 
         self.jobs_assigned_RM = utils.initarraylist_none(Constant.TOTAL_RM)
         self.RM_loads = [0.0 for i in range(Constant.TOTAL_RM)] #rm connected in this
@@ -214,7 +214,6 @@ class GridScheduler(Node):
             return None
 
     def _chooseRM(self):
-        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
         rm_tmp = [0.0] * Constant.TOTAL_RM
 
         for rmid in range(0, Constant.TOTAL_RM):
@@ -266,8 +265,6 @@ class GridScheduler(Node):
 
     # monitor GS to handle fault in GS
     def _monitorneighborGS(self):
-        ns = Pyro4.locateNS(host=Constant.IP_GS_NS)
-
         activeid = [self.oid]
         inactiveid = []
         for gid in range(0, Constant.TOTAL_GS):

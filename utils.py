@@ -44,4 +44,4 @@ def find(type, nid):
         return None
 
 
-    return "PYRONAME:%s.[RM-%d]%d@%s" %(namespace,nid,nid,ip)
+    return "PYRONAME:%s.[%s%d]%d@%s" %(namespace,header.upper(),nid,nid,ip)
