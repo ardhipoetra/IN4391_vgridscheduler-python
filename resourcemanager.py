@@ -10,6 +10,7 @@ import random
 import utils
 from Queue import Queue
 import socket
+import time
 import subprocess
 
 stop = True;
@@ -262,7 +263,7 @@ def check_env():
 
     for rid, rip in enumerate(lrm_tmp):
         if ("rm-"+str(rid)) not in Pool.lookuptable:
-            Constant.lookuptable["rm-"+str(rid)] = rip
+            Pool.lookuptable["rm-"+str(rid)] = rip
 
 
 if __name__=="__main__":

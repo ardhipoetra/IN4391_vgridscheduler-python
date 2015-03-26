@@ -23,8 +23,8 @@ class Constant(object):
 
 class Pool(object):
 	POTENTIAL_LINK = [
-		"10.149.3.6",
-		"10.149.3.11"
+		"10.141.3.6",
+		"10.141.3.11"
 	]
 
 	lookuptable = dict()
