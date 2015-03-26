@@ -1,8 +1,7 @@
 
 class Constant(object):
-
-	IP_GS_NS = "10.149.3.6"
-	IP_RM_NS = "10.149.3.11"
+	# IP_GS_NS = "10.149.3.6"
+	# IP_RM_NS = "10.149.3.11"
 
 	TOTAL_GS = 3
 	TOTAL_RM = 5
@@ -21,3 +20,12 @@ class Constant(object):
 	NAMESPACE_RM = "rd.vgs.resourcemanager"
 	NAMESPACE_GS = "rd.vgs.gridscheduler"
 	NAMESPACE_WK = "rd.vgs.workernode"
+
+class Pool(object):
+	POTENTIAL_LINK =
+	[
+		"10.149.3.6",
+		"10.149.3.11"
+	]
+
+	lookuptable = dict()

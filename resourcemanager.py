@@ -162,34 +162,104 @@ def check_stop():
     return stop
 
 def main():
+    #check for ns :
+    nsready = 0
+    hostname = socket.gethostname()
+    rm_ip = Pyro4.socketutil.getIpAddress(hostname, workaround127=True)
 
-    ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
+    # spawn ns, probably can't find it
+    try :
+        Pyro4.locateNS(host=rm_ip)
+        nsready = -1
+    except Pyro4.errors.NamingError:
+        subprocess.Popen(["python","-m","Pyro4.naming","--host="+rm_ip], shell=True)
+        nsready = 1
 
-    if len(sys.argv) == 0:
-        oid = len(ns.list(prefix=Constant.NAMESPACE_RM+"."))
+
+    # ns should be available
+    while(nsready > 0):
+        try:
+            Pyro4.locateNS(host=rm_ip)
+            nsrun = -1
+        except Pyro4.errors.NamingError:
+            time.sleep(0.5)
+
+    #ns should be ready by now
+    if len(sys.argv) != 1:
+        print "you must provide RM id"
+        sys.exit()
     else:
         oid = int(sys.argv[1])
 
-    node = ResourceManager(oid, "[RM-"+str(oid)+"]", Constant.TOTAL_NODE_EACH)
 
-    daemon = Pyro4.Daemon(Constant.IP_RM_NS)
+    node = ResourceManager(oid, "[RM-"+str(oid)+"]", Constant.TOTAL_NODE_EACH)
+    daemon = Pyro4.Daemon(rm_ip)
     uri = daemon.register(node)
     node.seturi(uri)
-
-    ns.register(Constant.NAMESPACE_RM+"."+node.getname()+str(oid), uri)
 
     def signal_handler(signal, frame):
         utils.write(Constant.NODE_RESOURCEMANAGER, oid, "RM will down!")
         stop = False
         daemon.shutdown()
 
+    with Pyro4.locateNS(host=rm_ip) as ns:
+        ns.register(Constant.NAMESPACE_RM+"."+node.getname()+str(oid), uri)
+
     signal.signal(signal.SIGINT, signal_handler)
+
+    check_env()
+
+    print "[%f]-%d RM everything ready!" %(time.time(), oid)
 
     try:
         daemon.requestLoop(loopCondition=check_stop)
     finally:
         ns.remove(name=Constant.NAMESPACE_RM+"."+node.getname()+str(oid))
         daemon.shutdown()
+
+def check_env():
+    # check if all GS are ready
+    lgs_tmp = [None] * Constant.TOTAL_GS
+    ready = False
+    while(not ready):
+        for i in range(Constant.TOTAL_GS):
+            for ip in Pool.POTENTIAL_LINK:
+                try:
+                    Pyro4.Proxy("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_GS,i,i,ip))
+                    lgs_tmp[i] = ip
+                except Pyro4.errors.NamingError:
+                    pass
+
+
+            if i == Constant.TOTAL_GS - 1:
+                time.sleep(1)
+                ready = (len([el for el in lgs_tmp if el is None]) == 0)
+
+    for gid, gip in enumerate(lgs_tmp):
+        if (("gs-"+str(gid)) not in Constant.lookuptable)
+            Constant.lookuptable["gs-"+str(gid)] = gip
+
+    # check if all RM are ready
+    lrm_tmp = [None] * Constant.TOTAL_RM
+    ready = False
+    while(not ready):
+        for i in range(Constant.TOTAL_RM):
+            for ip in Pool.POTENTIAL_LINK:
+                try:
+                    Pyro4.Proxy("PYRONAME:%s.[RM-%d]%d@%s" %(Constant.NAMESPACE_RM,i,i,ip))
+                    lrm_tmp[i] = ip
+                except Pyro4.errors.NamingError:
+                    pass
+
+
+            if i == Constant.TOTAL_RM - 1:
+                time.sleep(1)
+                ready = (len([el for el in lrm_tmp if el is None]) == 0)
+
+    for rid, rip in enumerate(lrm_tmp):
+        if (("rm-"+str(rid)) not in Constant.lookuptable)
+            Constant.lookuptable["rm-"+str(rid)] = rip
+
 
 if __name__=="__main__":
     main()
