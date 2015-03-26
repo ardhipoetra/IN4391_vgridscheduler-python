@@ -69,12 +69,19 @@ class ResourceManager(Node):
         self.jobs_assigned_node[node_id - self.oid * 10000] = None
         self._write("get report from node %d : %s" %(node_id, str(job)))
 
-        ns = Pyro4.locateNS(host=Constant.IP_GS_NS)
         try:
-            uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(job["GS_assignee"])+"]"+str(job["GS_assignee"]))
-            with Pyro4.Proxy(uri) as gsobj_r:
+            struri = utils.find(Constant.NODE_GRIDSCHEDULER, job["GS_assignee"])
+            if struri is None:
+                raise Exception('None in Pool')
+
+            # tes connection
+            Pyro4.resolve(struri)
+
+            with Pyro4.Proxy(struri) as gsobj_r:
                 gsobj_r.receive_report(self.oid, d_job)
         except Pyro4.errors.NamingError as e:
+            self._write("CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"])
+        except Exception as e:
             self._write("CAN'T REACH GS, IGNORE REPORT TO GS %d" %job["GS_assignee"])
 
         if not self.job_queue.empty():

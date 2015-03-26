@@ -27,9 +27,21 @@ def main():
     os.environ["THREADPOOL_SIZE"] = "50000"
     # os.environ["SERVERTYPE"] = "multiplex"
 
-
-    nsrm = Pyro4.locateNS(host=Constant.IP_RM_NS)
-    nsgs = Pyro4.locateNS(host=Constant.IP_GS_NS)
+    for ip in Pool.POTENTIAL_LINK:
+        for i in range(0,Constant.TOTAL_GS):
+            try:
+                Pyro4.resolve("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_GS,i,i,ip))
+                if "gs-"+str(i) not in Pool.lookuptable:
+                    Pool.lookuptable["gs-"+str(i)] = gip
+            except Pyro4.errors.NamingError:
+                pass
+        for j in range(0,Constant.TOTAL_RM):
+            try:
+                Pyro4.resolve("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_RM,j,j,ip))
+                if "rm-"+str(j) not in Pool.lookuptable:
+                    Pool.lookuptable["rm-"+str(j)] = gip
+            except Pyro4.errors.NamingError:
+                pass
 
     def _jobgen(count,gs_ns):
         for jid in range(0,count):
@@ -54,9 +66,9 @@ def main():
         return
 
 
-    thread = threading.Thread(target=_jobgen, args=[Constant.NUMBER_OF_JOBS,nsgs])
-    thread.setDaemon(True)
-    thread.start()
+    # thread = threading.Thread(target=_jobgen, args=[Constant.NUMBER_OF_JOBS,nsgs])
+    # thread.setDaemon(True)
+    # thread.start()
 
 
     out = True
@@ -69,40 +81,40 @@ def main():
         ip = input("Input:")
 
         if ip == '1':
-            for rm, rm_uri in nsrm.list(prefix=Constant.NAMESPACE_RM+".").items():
-                rmobj = Pyro4.Proxy(rm_uri)
-                print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
-                print (rmobj.get_cluster_info())
-                print ("========\n")
-                print (rmobj.get_job_node())
-                print ("----------------\n")
+            # for rm, rm_uri in nsrm.list(prefix=Constant.NAMESPACE_RM+".").items():
+            #     rmobj = Pyro4.Proxy(rm_uri)
+            #     print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
+            #     print (rmobj.get_cluster_info())
+            #     print ("========\n")
+            #     print (rmobj.get_job_node())
+            #     print ("----------------\n")
+            pass
         elif ip == '2': # see message to send from all GS
-            for gs, gs_uri in nsgs.list(prefix=Constant.NAMESPACE_GS+".").items():
-                gsobj = Pyro4.Proxy(gs_uri)
-                print ("from gs : "+str(gsobj.getoid()))
-                print (gsobj.get_gs_info())
-                print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
+            # for gs, gs_uri in nsgs.list(prefix=Constant.NAMESPACE_GS+".").items():
+            #     gsobj = Pyro4.Proxy(gs_uri)
+            #     print ("from gs : "+str(gsobj.getoid()))
+            #     print (gsobj.get_gs_info())
+            #     print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
+            pass
         elif ip == '3':
             pass
         elif ip == '4': #see status all GS
-            for gs, gs_uri in nsgs.list(prefix=Constant.NAMESPACE_GS+".").items():
-                gsobj = Pyro4.Proxy(gs_uri)
-                print ("from gs : "+str(gsobj.getoid()))
-                print (gsobj.get_all_gs_info())
-                print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
-        else:
+            # for gs, gs_uri in nsgs.list(prefix=Constant.NAMESPACE_GS+".").items():
+            #     gsobj = Pyro4.Proxy(gs_uri)
+            #     print ("from gs : "+str(gsobj.getoid()))
+            #     print (gsobj.get_all_gs_info())
+            #     print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
             pass
-            # for now send to GS 0
-            # target = random.randint(0, Constant.TOTAL_GS-1)
-            # uri = nsgs.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
-            # gsobj = Pyro4.Proxy(uri)
-            #
-            # jobsu = Job(count, ip+str(count), random.randint(15,25), random.random(), target)
-            #
-            # d_job = serpent.dumps(jobsu)
-            #
-            # gsobj.addjob(d_job)
-            # count+=1
+        else:
+            target = random.randint(0, Constant.TOTAL_GS-1)
+            struri = utils.find(Constant.NODE_GRIDSCHEDULER)
+
+            jobsu = Job(count, ip+str(count), random.randint(15,25), random.random(), target)
+            d_job = serpent.dumps(jobsu)
+
+            with Pyro4.Proxy(struri) as gsobj:
+                gsobj.addjob(d_job)
+            count+=1
     return
 
 if __name__=="__main__":

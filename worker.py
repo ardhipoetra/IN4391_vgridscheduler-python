@@ -28,15 +28,19 @@ class WorkerNode(Node):
             self.load = 0.0
 
             try:
-                ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
-                uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
+                struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
+                if struri is None:
+                    raise Exception('None in Pool')
+
+                # test connection
+                Pyro4.resolve(struri)
 
                 self._write("Job finished from worker")
                 lermobj.receive_report(self.oid, serpent.dumps(jobj))
-
             except Pyro4.errors.NamingError as e:
                 self._write("CAN'T REACH RM, IGNORE REPORT TO RM")
-
+            except Exception as e:
+                self._write("CAN'T REACH RM, IGNORE REPORT TO RM")
 
 
     	thread = threading.Thread(target=do_job, args=([job_obj["duration"],job_obj,  job_obj['load'], job_obj["RM_assigned"], rmobj]))

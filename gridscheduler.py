@@ -186,10 +186,7 @@ class GridScheduler(Node):
     def _assignjob(self, rmid, d_job):
         job = serpent.loads(d_job)
 
-        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
-        uri = ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
-
-        with Pyro4.Proxy(uri) as rmobj:
+        with Pyro4.Proxy(utils.find(Constant.NODE_RESOURCEMANAGER, rmid)) as rmobj:
             self._write('send job %d to %s' % (job["jid"], rmobj.tostr()))
 
             # print str(self.oid)+" add : "+str(job["load"]/float(len(self.RM_loads)))
@@ -219,8 +216,12 @@ class GridScheduler(Node):
     def _chooseRM(self):
         ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
         rm_tmp = [0.0] * Constant.TOTAL_RM
-        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
-            with Pyro4.Proxy(rm_uri) as rmobj:
+
+        for rmid in range(0, Constant.TOTAL_RM):
+            struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
+            if struri is None:
+                continue
+            with Pyro4.Proxy(struri) as rmobj:
                 rm_tmp[rmobj.getoid()] = rmobj.get_workloadRM()
 
         x = sorted(rm_tmp)
@@ -257,12 +258,8 @@ class GridScheduler(Node):
 
         self._write("push state to neighbor")
 
-        ns = Pyro4.locateNS(host=Constant.IP_GS_NS)
-
         for gsid in gs_listid:
-            gso_uri = ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(gsid)+"]"+str(gsid))
-
-            with Pyro4.Proxy(gso_uri) as gsobj :
+            with Pyro4.Proxy(utils.find(Constant.NODE_GRIDSCHEDULER, gsid)) as gsobj :
                 gsobj.get_structure(self.oid, msg_gs)
 
         return True
@@ -273,8 +270,11 @@ class GridScheduler(Node):
 
         activeid = [self.oid]
         inactiveid = []
-        for gs_o, gso_uri in ns.list(prefix=Constant.NAMESPACE_GS+".").items():
-            with Pyro4.Proxy(gso_uri) as gsobj :
+        for gid in range(0, Constant.TOTAL_GS):
+            struri = utils.find(Constant.NODE_GRIDSCHEDULER, gid)
+            if struri is None:
+                continue
+            with Pyro4.Proxy(struri) as gsobj :
                 if gsobj.getoid() != self.oid:
                     activeid.append(gsobj.getoid())
 
@@ -287,8 +287,6 @@ class GridScheduler(Node):
 
     # monitor RM to handle fault in RM
     def _monitorRM(self):
-        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
-
         # only look at related RM
         for rmid, jobs_in_rm in enumerate(self.jobs_assigned_RM):
             if jobs_in_rm == [None]:
@@ -296,7 +294,10 @@ class GridScheduler(Node):
 
             try:
                 self._write("monitoring check RM %d" %(rmid))
-                ns.lookup(Constant.NAMESPACE_RM+"."+"[RM-"+str(rmid)+"]"+str(rmid))
+                struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
+                if struri is None:
+                    raise Exception('None in Pool')
+                Pyro4.resolve(struri)
             except Exception as e:
                 # handle dead RM
                 self._write("RM %d detected dead!" %(rmid))
@@ -314,34 +315,40 @@ class GridScheduler(Node):
                     self.addjob(serpent.dumps(jobs))
 
     def query_rmload(self):
-        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
         totalworkload = 0.0
         buff = ""
-        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
-            with Pyro4.Proxy(rm_uri) as rmobj:
+        for rmid in range(0, Constant.TOTAL_RM):
+            struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
+            if struri is None:
+                continue
+            with Pyro4.Proxy(struri) as rmobj:
                 totalworkload += rmobj.get_workloadRM()
-                buff += "[%d] %f," %(rmobj.getoid(), rmobj.get_workloadRM())
+                buff += "[%d] %f," %(rmid, rmobj.get_workloadRM())
 
         return buff
 
     def query_rmjob(self):
-        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
         totaljobrunning = 0.0
         buff = ""
-        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
-            with Pyro4.Proxy(rm_uri) as rmobj:
+        for rmid in range(0, Constant.TOTAL_RM):
+            struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
+            if struri is None:
+                continue
+            with Pyro4.Proxy(struri) as rmobj:
                 totaljobrunning += rmobj.get_totaljobs_run()
-                buff += "[%d] %f," %(rmobj.getoid(), rmobj.get_totaljobs_run())
+                buff += "[%d] %f," %(rmid, rmobj.get_totaljobs_run())
 
         return buff
 
     def query_rm(self):
-        ns = Pyro4.locateNS(host=Constant.IP_RM_NS)
         totaljobrunning = 0.0
         totalworkload = 0.0
         buff = ""
-        for rm, rm_uri in ns.list(prefix=Constant.NAMESPACE_RM+".").items():
-            with Pyro4.Proxy(rm_uri) as rmobj:
+        for rmid in range(0, Constant.TOTAL_RM):
+            struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
+            if struri is None:
+                continue
+            with Pyro4.Proxy(struri) as rmobj:
                 totalworkload += rmobj.get_workloadRM()
                 totaljobrunning += rmobj.get_totaljobs_run()
                 buff += "%f;%d, " %(rmobj.get_workloadRM(), rmobj.get_totaljobs_run())
