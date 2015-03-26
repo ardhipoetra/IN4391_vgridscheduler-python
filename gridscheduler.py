@@ -11,6 +11,8 @@ import signal
 import sys
 from operator import attrgetter
 import random
+import socket
+import subprocess
 
 stop = True
 
@@ -404,7 +406,7 @@ def main():
         Pyro4.locateNS(host=gs_ip)
         nsready = -1
     except Pyro4.errors.NamingError:
-        subprocess.Popen(["python","-m","Pyro4.naming","--host="+gs_ip], shell=True)
+        subprocess.Popen(["python","-m","Pyro4.naming","--host="+gs_ip])
         nsready = 1
 
 
@@ -412,13 +414,13 @@ def main():
     while(nsready > 0):
         try:
             Pyro4.locateNS(host=gs_ip)
-            nsrun = -1
+            nsready = -1
         except Pyro4.errors.NamingError:
             time.sleep(0.5)
             pass
 
     #ns should be ready by now
-    if len(sys.argv) != 1:
+    if len(sys.argv) != 2:
         print "you must provide GS id"
         sys.exit()
     else:
@@ -456,7 +458,7 @@ def check_env():
         for i in range(Constant.TOTAL_GS):
             for ip in Pool.POTENTIAL_LINK:
                 try:
-                    Pyro4.Proxy("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_GS,i,i,ip))
+                    Pyro4.resolve("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_GS,i,i,ip))
                     lgs_tmp[i] = ip
                 except Pyro4.errors.NamingError:
                     pass
@@ -466,30 +468,30 @@ def check_env():
                 time.sleep(1)
                 ready = (len([el for el in lgs_tmp if el is None]) == 0)
 
-    for gid, gip in enumerate(lgs_tmp):
-        if (("gs-"+str(gid)) not in Constant.lookuptable)
-            Constant.lookuptable["gs-"+str(gid)] = gip
+    # for gid, gip in enumerate(lgs_tmp):
+    #     if (("gs-"+str(gid)) not in Constant.lookuptable)
+    #         Constant.lookuptable["gs-"+str(gid)] = gip
 
     # check if all RM are ready
-    lrm_tmp = [None] * Constant.TOTAL_RM
-    ready = False
-    while(not ready):
-        for i in range(Constant.TOTAL_RM):
-            for ip in Pool.POTENTIAL_LINK:
-                try:
-                    Pyro4.Proxy("PYRONAME:%s.[RM-%d]%d@%s" %(Constant.NAMESPACE_RM,i,i,ip))
-                    lrm_tmp[i] = ip
-                except Pyro4.errors.NamingError:
-                    pass
+    # lrm_tmp = [None] * Constant.TOTAL_RM
+    # ready = False
+    # while(not ready):
+    #     for i in range(Constant.TOTAL_RM):
+    #         for ip in Pool.POTENTIAL_LINK:
+    #             try:
+    #                 Pyro4.resolve("PYRONAME:%s.[RM-%d]%d@%s" %(Constant.NAMESPACE_RM,i,i,ip))
+    #                 lrm_tmp[i] = ip
+    #             except Pyro4.errors.NamingError:
+    #                 pass
+    #
+    #
+    #         if i == Constant.TOTAL_RM - 1:
+    #             time.sleep(1)
+    #             ready = (len([el for el in lrm_tmp if el is None]) == 0)
 
-
-            if i == Constant.TOTAL_RM - 1:
-                time.sleep(1)
-                ready = (len([el for el in lrm_tmp if el is None]) == 0)
-
-    for rid, rip in enumerate(lrm_tmp):
-        if (("rm-"+str(rid)) not in Constant.lookuptable)
-            Constant.lookuptable["rm-"+str(rid)] = rip
+    # for rid, rip in enumerate(lrm_tmp):
+    #     if (("rm-"+str(rid)) not in Constant.lookuptable)
+    #         Constant.lookuptable["rm-"+str(rid)] = rip
 
 
 if __name__=="__main__":
