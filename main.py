@@ -1,8 +1,8 @@
 import Pyro4
 import sys
 import time
-# from gridscheduler import GridScheduler
 from constant import Constant
+from constant import Pool
 from job import Job
 import utils
 import serpent
@@ -32,14 +32,14 @@ def main():
             try:
                 Pyro4.resolve("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_GS,i,i,ip))
                 if "gs-"+str(i) not in Pool.lookuptable:
-                    Pool.lookuptable["gs-"+str(i)] = gip
+                    Pool.lookuptable["gs-"+str(i)] = ip
             except Pyro4.errors.NamingError:
                 pass
         for j in range(0,Constant.TOTAL_RM):
             try:
-                Pyro4.resolve("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_RM,j,j,ip))
+                Pyro4.resolve("PYRONAME:%s.[RM-%d]%d@%s" %(Constant.NAMESPACE_RM,j,j,ip))
                 if "rm-"+str(j) not in Pool.lookuptable:
-                    Pool.lookuptable["rm-"+str(j)] = gip
+                    Pool.lookuptable["rm-"+str(j)] = ip
             except Pyro4.errors.NamingError:
                 pass
 
