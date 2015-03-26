@@ -458,7 +458,7 @@ def check_env():
         for i in range(0,Constant.TOTAL_GS):
             for ip in Pool.POTENTIAL_LINK:
                 try:
-                    Pyro4.Proxy("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_GS,i,i,ip))
+                    Pyro4.resolve("PYRONAME:%s.[GS-%d]%d@%s" %(Constant.NAMESPACE_GS,i,i,ip))
                     lgs_tmp[i] = ip
                 except Pyro4.errors.NamingError:
                     pass
@@ -479,7 +479,7 @@ def check_env():
         for i in range(0,Constant.TOTAL_RM):
             for ip in Pool.POTENTIAL_LINK:
                 try:
-                    Pyro4.Proxy("PYRONAME:%s.[RM-%d]%d@%s" %(Constant.NAMESPACE_RM,i,i,ip))
+                    Pyro4.resolve("PYRONAME:%s.[RM-%d]%d@%s" %(Constant.NAMESPACE_RM,i,i,ip))
                     lrm_tmp[i] = ip
                 except Pyro4.errors.NamingError:
                     pass

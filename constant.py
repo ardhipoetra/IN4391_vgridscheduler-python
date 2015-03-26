@@ -3,8 +3,8 @@ class Constant(object):
 	# IP_GS_NS = "10.149.3.6"
 	# IP_RM_NS = "10.149.3.11"
 
-	TOTAL_GS = 3
-	TOTAL_RM = 5
+	TOTAL_GS = 2
+	TOTAL_RM = 3
 	TOTAL_NODE_EACH = 20
 	TOTAL_NODE = TOTAL_RM * TOTAL_NODE_EACH
 
