@@ -18,6 +18,8 @@ if sys.version_info < (3, 0):
 subp_gs = []
 subp_rm = []
 
+adding_gen = False
+
 def main():
 
     # Pyro4.config.SERIALIZER = "json"
@@ -49,38 +51,48 @@ def main():
             while True:
                 target = random.randint(0, Constant.TOTAL_GS-1)
                 try :
-                    uri = gs_ns.lookup(Constant.NAMESPACE_GS+"."+"[GS-"+str(target)+"]"+str(target))
+                    struri = utils.find(Constant.NODE_GRIDSCHEDULER, target)
+                    if struri is None:
+                        raise Exception('None in Pool')
+
+                    # tes connection
+                    Pyro4.resolve(struri)
                     break
-                except Pyro4.errors.NamingError as e:
+                except Exception as e:
                     print ("GS %d unavailable, try again" %target)
                     continue
 
-            with Pyro4.Proxy(uri) as gsobj:
+            with Pyro4.Proxy(struri) as gsobj:
                 jobsu = Job(jid, "gen-jobs-"+str(jid), random.randint(10,35), random.random(), target, time.time())
                 d_job = serpent.dumps(jobsu)
-                aycall = Pyro4.async(gsobj)
-                aycall.addjob(d_job)
+                gsobj.addjob(d_job)
 
-                if jid % 50 == 0:
-                    gsobj._pyroRelease()
+
+        adding_gen = False
         return
 
 
-    # thread = threading.Thread(target=_jobgen, args=[Constant.NUMBER_OF_JOBS,nsgs])
-    # thread.setDaemon(True)
-    # thread.start()
+    #
 
 
     out = True
     count = 0
     while(out):
         print ("\n\nPlease select")
-        print ("other input: Msg GS -> RM")
+        print ("other input: Add job manually")
         print ("0: OUT")
+        print ("1: Add auto jobs")
+
 
         ip = input("Input:")
-
-        if ip == '1':
+        if ip == '0':
+            out = False
+        elif ip == '1':
+            adding_gen = True
+            thread = threading.Thread(target=_jobgen, args=[Constant.NUMBER_OF_JOBS,nsgs])
+            thread.setDaemon(True)
+            thread.start()
+            print ("%d job try to be submitted" %Constant.NUMBER_OF_JOBS)
             # for rm, rm_uri in nsrm.list(prefix=Constant.NAMESPACE_RM+".").items():
             #     rmobj = Pyro4.Proxy(rm_uri)
             #     print ("from rm : "+str(rmobj.getoid())+" -> "+str(rmobj.get_workloadRM()))
@@ -106,6 +118,10 @@ def main():
             #     print (";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n")
             pass
         else:
+            if adding_gen:
+                print ("cant add job, pending job still in process")
+                continue
+
             target = random.randint(0, Constant.TOTAL_GS-1)
             struri = utils.find(Constant.NODE_GRIDSCHEDULER, target)
 
