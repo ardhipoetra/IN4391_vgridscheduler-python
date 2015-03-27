@@ -107,7 +107,7 @@ def main():
             pass
         else:
             target = random.randint(0, Constant.TOTAL_GS-1)
-            struri = utils.find(Constant.NODE_GRIDSCHEDULER)
+            struri = utils.find(Constant.NODE_GRIDSCHEDULER, target)
 
             jobsu = Job(count, ip+str(count), random.randint(15,25), random.random(), target)
             d_job = serpent.dumps(jobsu)

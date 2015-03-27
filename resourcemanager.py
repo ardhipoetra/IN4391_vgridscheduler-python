@@ -226,7 +226,6 @@ def main():
     try:
         daemon.requestLoop(loopCondition=check_stop)
     finally:
-        ns.remove(name=Constant.NAMESPACE_RM+"."+node.getname()+str(oid))
         daemon.shutdown()
 
 def check_env():

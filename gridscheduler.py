@@ -448,11 +448,8 @@ def main():
     check_env()
 
     print "[%f]-%d GS everything ready!" %(time.time(), oid)
-
-    try:
-        daemon.requestLoop(loopCondition=check_stop)
-    finally:
-        ns.remove(name=Constant.NAMESPACE_GS+"."+node.getname()+str(oid))
+    
+    daemon.requestLoop(loopCondition=check_stop)
 
 def check_env():
     # check if all GS are ready
