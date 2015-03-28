@@ -21,7 +21,7 @@ subp_rm = []
 adding_gen = False
 
 def main():
-
+    adding_gen = False
     # Pyro4.config.SERIALIZER = "json"
     # Pyro4.config.COMMTIMEOUT=0.5
     os.environ["PYRO_LOGFILE"] = "pyro.log"
@@ -45,7 +45,7 @@ def main():
             except Pyro4.errors.NamingError:
                 pass
 
-    def _jobgen(count,gs_ns):
+    def _jobgen(count):
         for jid in range(0,count):
             time.sleep(random.randint(5,10) * 0.01)
             while True:
@@ -89,7 +89,7 @@ def main():
             out = False
         elif ip == '1':
             adding_gen = True
-            thread = threading.Thread(target=_jobgen, args=[Constant.NUMBER_OF_JOBS,nsgs])
+            thread = threading.Thread(target=_jobgen, args=[Constant.NUMBER_OF_JOBS])
             thread.setDaemon(True)
             thread.start()
             print ("%d job try to be submitted" %Constant.NUMBER_OF_JOBS)
