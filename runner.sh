@@ -29,12 +29,32 @@ do
     fi
 done
 
-OPTIONS="List kill Quit"
+OPTIONS="List ListNS SpawnGS SpawnRM Kill Quit"
 select opt in $OPTIONS;
 do
     if [ "$opt" = "Quit" ]; then
         echo "done"
         exit
+    elif [ "$opt" = "SpawnGS" ]; then
+        echo "input id GS  : "
+        read idspawn
+        if [[ "${gspid[$idspawn]}" = -1 ]]; then
+            echo "runs GS : $idspawn"
+            python gridscheduler.py $idspawn &
+            gspid[$idspawn]=$!
+        else
+            echo "process not dead"
+        fi
+    elif [ "$opt" = "SpawnRM" ]; then
+        echo "input id RM  : "
+        read idspawn
+        if [[ "${rmpid[$idspawn]}" = -1 ]]; then
+            echo "runs RM : $idspawn"
+            python resourcemanager.py $idspawn &
+            rmpid[$idspawn]=$!
+        else
+            echo "process not dead"
+        fi
     elif [ "$opt" = "List" ]; then
         for rid in "${rmids[@]}"
         do
@@ -44,10 +64,13 @@ do
         do
             echo "GS $gid run in ${gspid[$gid]}"
         done
-    elif [ "$opt" = "kill" ]; then
+    elif [ "$opt" = "Kill" ]; then
         echo "input pid  : "
         read pidkill
         kill -SIGINT $pidkill
         echo "killed."
+        gspid[$gid]=-1
+    elif [ "$opt" = "ListNS" ]; then
+        python -m Pyro4.nsc list
     fi
 done
