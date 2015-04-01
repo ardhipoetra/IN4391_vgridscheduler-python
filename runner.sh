@@ -29,7 +29,7 @@ do
     fi
 done
 
-OPTIONS="List ListNS SpawnGS SpawnRM Kill Quit"
+OPTIONS="List ListNS SpawnGS SpawnRM KillGS KillRM Quit"
 select opt in $OPTIONS;
 do
     if [ "$opt" = "Quit" ]; then
@@ -64,12 +64,20 @@ do
         do
             echo "GS $gid run in ${gspid[$gid]}"
         done
-    elif [ "$opt" = "Kill" ]; then
-        echo "input pid  : "
-        read pidkill
-        kill -SIGINT $pidkill
-        echo "killed."
-        gspid[$gid]=-1
+    elif [ "$opt" = "KillGS" ]; then
+        echo "input GS id  : "
+        read k_gid
+        kill -SIGINT ${gspid[$k_gid]}
+        echo "GS killed."
+
+        gspid[$k_gid]=-1
+    elif [ "$opt" = "KillRM" ]; then
+        echo "input GS id  : "
+        read k_rid
+        kill -SIGINT ${rmpid[$k_rid]}
+        echo "RM killed."
+
+        rmpid[$k_rid]=-1
     elif [ "$opt" = "ListNS" ]; then
         python -m Pyro4.nsc list
     fi
