@@ -72,7 +72,7 @@ do
 
         gspid[$k_gid]=-1
     elif [ "$opt" = "KillRM" ]; then
-        echo "input GS id  : "
+        echo "input RM id  : "
         read k_rid
         kill -SIGINT ${rmpid[$k_rid]}
         echo "RM killed."

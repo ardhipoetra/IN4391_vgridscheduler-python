@@ -57,9 +57,9 @@ class GridScheduler(Node):
         self.RM_loads = [0.0 for i in range(Constant.TOTAL_RM)] #rm connected in this
 
 
-        # thread = threading.Thread(target=self._periodicresult)
-        # thread.setDaemon(True)
-        # thread.start()
+        thread = threading.Thread(target=self._periodicresult)
+        thread.setDaemon(True)
+        thread.start()
 
     # report received after finishing the task from RM
     @Pyro4.oneway
@@ -262,8 +262,12 @@ class GridScheduler(Node):
         self._write("push state to neighbor")
 
         for gsid in gs_listid:
-            with Pyro4.Proxy(utils.find(Constant.NODE_GRIDSCHEDULER, gsid)) as gsobj :
-                gsobj.get_structure(self.oid, msg_gs)
+            try:
+                with Pyro4.Proxy(utils.find(Constant.NODE_GRIDSCHEDULER, gsid)) as gsobj :
+                    gsobj.get_structure(self.oid, msg_gs)
+            except Pyro4.errors.NamingError as e:
+                self._write("GS %d inactive state" %gsid)
+                continue
 
         return True
 
@@ -350,7 +354,6 @@ class GridScheduler(Node):
 
         return buff
 
-    #UNUSABLE FOR NOW
     def query_rm(self):
         totaljobrunning = 0.0
         totalworkload = 0.0
@@ -359,10 +362,15 @@ class GridScheduler(Node):
             struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
             if struri is None:
                 continue
-            with Pyro4.Proxy(struri) as rmobj:
-                totalworkload += rmobj.get_workloadRM()
-                totaljobrunning += rmobj.get_totaljobs_run()
-                buff += "%f;%d, " %(rmobj.get_workloadRM(), rmobj.get_totaljobs_run())
+            try:
+                with Pyro4.Proxy(struri) as rmobj:
+                    workload = rmobj.get_workloadRM()
+                    jobrun = rmobj.get_totaljobs_run()
+                    totalworkload += workload
+                    totaljobrunning += jobrun
+                    buff += "%f;%d, " %(workload, jobrun)
+            except Pyro4.errors.NamingError as e:
+                    buff += "%f;%d, " %(-1, -1)
 
         return buff
 
