@@ -38,11 +38,11 @@ do
     elif [ "$opt" = "List" ]; then
         for rid in "${rmids[@]}"
         do
-            echo "RM $rid run in $rmpid[$rid]"
+            echo "RM $rid run in ${rmpid[$rid]}"
         done
         for gid in "${gsids[@]}"
         do
-            echo "GS $gid run in $gspid[$gid]"
+            echo "GS $gid run in ${gspid[$gid]}"
         done
     elif [ "$opt" = "kill" ]; then
         echo "input pid  : "

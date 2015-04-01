@@ -34,6 +34,8 @@ class WorkerNode(Node):
 
                 # test connection
                 Pyro4.resolve(struri)
+                with Pyro4.Proxy(struri) as rmobj:
+                    pass
 
                 self._write("Job finished from worker")
                 lermobj.receive_report(self.oid, serpent.dumps(jobj))

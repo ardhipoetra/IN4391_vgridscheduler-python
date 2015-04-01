@@ -20,12 +20,12 @@ def write(name, idp, stringtoprint):
 
     toprint = timestamp + nameid + " | " + stringtoprint
 
-    # f = open("logs/"+nameid+".txt","a")
-    #
-    # print(toprint+os.linesep, file=f)
-    print(toprint)
-    #
-    # f.close()
+    f = open("logs/"+nameid+".txt","a")
+
+    print(toprint+os.linesep, file=f)
+    # print(toprint)
+
+    f.close()
 
 def find(type, nid):
     if type == Constant.NODE_GRIDSCHEDULER:

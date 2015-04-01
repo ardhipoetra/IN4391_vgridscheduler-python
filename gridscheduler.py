@@ -214,14 +214,18 @@ class GridScheduler(Node):
             return None
 
     def _chooseRM(self):
-        rm_tmp = [0.0] * Constant.TOTAL_RM
+        rm_tmp = [99.99] * Constant.TOTAL_RM
 
         for rmid in range(0, Constant.TOTAL_RM):
             struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
             if struri is None:
                 continue
-            with Pyro4.Proxy(struri) as rmobj:
-                rm_tmp[rmobj.getoid()] = rmobj.get_workloadRM()
+            try:
+                with Pyro4.Proxy(struri) as rmobj:
+                    rm_tmp[rmobj.getoid()] = rmobj.get_workloadRM()
+            except Pyro4.errors.NamingError as e:
+                continue
+
 
         x = sorted(rm_tmp)
 
@@ -271,9 +275,12 @@ class GridScheduler(Node):
             struri = utils.find(Constant.NODE_GRIDSCHEDULER, gid)
             if struri is None:
                 continue
-            with Pyro4.Proxy(struri) as gsobj :
-                if gsobj.getoid() != self.oid:
-                    activeid.append(gsobj.getoid())
+            try:
+                with Pyro4.Proxy(struri) as gsobj :
+                    if gsobj.getoid() != self.oid:
+                        activeid.append(gsobj.getoid())
+            except Pyro4.errors.NamingError as e:
+                continue
 
         if len(activeid) != Constant.TOTAL_GS:
             inactiveid = list(set([x for x in range(0, Constant.TOTAL_GS)]) - set(activeid))
@@ -295,6 +302,9 @@ class GridScheduler(Node):
                 if struri is None:
                     raise Exception('None in Pool')
                 Pyro4.resolve(struri)
+
+                with Pyro4.Proxy(struri) as rmobj:
+                    pass
             except Exception as e:
                 # handle dead RM
                 self._write("RM %d detected dead!" %(rmid))
@@ -311,6 +321,8 @@ class GridScheduler(Node):
                     self._write("readd job "+str(jobs))
                     self.addjob(serpent.dumps(jobs))
 
+
+    #UNUSABLE FOR NOW
     def query_rmload(self):
         totalworkload = 0.0
         buff = ""
@@ -324,6 +336,7 @@ class GridScheduler(Node):
 
         return buff
 
+    #UNUSABLE FOR NOW
     def query_rmjob(self):
         totaljobrunning = 0.0
         buff = ""
@@ -337,6 +350,7 @@ class GridScheduler(Node):
 
         return buff
 
+    #UNUSABLE FOR NOW
     def query_rm(self):
         totaljobrunning = 0.0
         totalworkload = 0.0
@@ -448,7 +462,7 @@ def main():
     check_env()
 
     print "[%f]-%d GS everything ready!" %(time.time(), oid)
-    
+
     daemon.requestLoop(loopCondition=check_stop)
 
 def check_env():
