@@ -227,6 +227,8 @@ def main():
         daemon.requestLoop(loopCondition=check_stop)
     finally:
         daemon.shutdown()
+        with Pyro4.locateNS(host=rm_ip) as ns:
+            ns.remove(Constant.NAMESPACE_RM+"."+node.getname()+str(oid))
 
 def check_env():
     # check if all GS are ready

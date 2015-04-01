@@ -465,6 +465,9 @@ def main():
 
     daemon.requestLoop(loopCondition=check_stop)
 
+    with Pyro4.locateNS(host=gs_ip) as ns:
+        ns.remove(Constant.NAMESPACE_GS+"."+node.getname()+str(oid))
+
 def check_env():
     # check if all GS are ready
     lgs_tmp = [None] * Constant.TOTAL_GS
