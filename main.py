@@ -23,7 +23,6 @@ adding_gen = False
 def main():
     adding_gen = False
     # Pyro4.config.SERIALIZER = "json"
-    # Pyro4.config.COMMTIMEOUT=0.5
     os.environ["PYRO_LOGFILE"] = "pyro.log"
     os.environ["PYRO_LOGLEVEL"] = "DEBUG"
     os.environ["THREADPOOL_SIZE"] = "50000"
@@ -58,6 +57,7 @@ def main():
                     # tes connection
                     Pyro4.resolve(struri)
                     with Pyro4.Proxy(struri) as gsobj:
+                        gsobj._pyroTimeout = 1
                         gsobj.test_con()
 
                     break

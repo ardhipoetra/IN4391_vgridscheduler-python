@@ -227,8 +227,9 @@ class GridScheduler(Node):
                 continue
             try:
                 with Pyro4.Proxy(struri) as rmobj:
+                    rmobj._pyroTimeout=2
                     rm_tmp[rmobj.getoid()] = rmobj.get_workloadRM()
-            except Pyro4.errors.NamingError as e:
+            except Exception as e:
                 continue
 
 
@@ -269,6 +270,7 @@ class GridScheduler(Node):
         for gsid in gs_listid:
             try:
                 with Pyro4.Proxy(utils.find(Constant.NODE_GRIDSCHEDULER, gsid)) as gsobj :
+                    gsobj._pyroTimeout = 2
                     gsobj.get_structure(self.oid, msg_gs)
             except Pyro4.errors.NamingError as e:
                 self._write("GS %d inactive state" %gsid)
@@ -286,6 +288,7 @@ class GridScheduler(Node):
                 continue
             try:
                 with Pyro4.Proxy(struri) as gsobj :
+                    gsobj._pyroTimeout = 1
                     if gsobj.getoid() != self.oid:
                         activeid.append(gsobj.getoid())
             except Pyro4.errors.NamingError as e:
@@ -316,6 +319,7 @@ class GridScheduler(Node):
                 Pyro4.resolve(struri)
 
                 with Pyro4.Proxy(struri) as rmobj:
+                    rmobj._pyroTimeout=1
                     rmobj.test_con()
             except Exception as e:
                 # handle dead RM
@@ -333,35 +337,6 @@ class GridScheduler(Node):
                     self._write("readd job "+str(jobs))
                     self.addjob(serpent.dumps(jobs))
 
-
-    #UNUSABLE FOR NOW
-    def query_rmload(self):
-        totalworkload = 0.0
-        buff = ""
-        for rmid in range(0, Constant.TOTAL_RM):
-            struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
-            if struri is None:
-                continue
-            with Pyro4.Proxy(struri) as rmobj:
-                totalworkload += rmobj.get_workloadRM()
-                buff += "[%d] %f," %(rmid, rmobj.get_workloadRM())
-
-        return buff
-
-    #UNUSABLE FOR NOW
-    def query_rmjob(self):
-        totaljobrunning = 0.0
-        buff = ""
-        for rmid in range(0, Constant.TOTAL_RM):
-            struri = utils.find(Constant.NODE_RESOURCEMANAGER, rmid)
-            if struri is None:
-                continue
-            with Pyro4.Proxy(struri) as rmobj:
-                totaljobrunning += rmobj.get_totaljobs_run()
-                buff += "[%d] %f," %(rmid, rmobj.get_totaljobs_run())
-
-        return buff
-
     def query_rm(self):
         totaljobrunning = 0.0
         totalworkload = 0.0
@@ -372,13 +347,16 @@ class GridScheduler(Node):
                 continue
             try:
                 with Pyro4.Proxy(struri) as rmobj:
+                    rmobj._pyroTimeout=1
                     workload = rmobj.get_workloadRM()
                     jobrun = rmobj.get_totaljobs_run()
                     totalworkload += workload
                     totaljobrunning += jobrun
                     buff += "%f;%d, " %(workload, jobrun)
             except Pyro4.errors.NamingError as e:
-                    buff += "%f;%d, " %(-1, -1)
+                buff += "%f;%d, " %(-1, -1)
+            except Exception as e:
+                buff += "%f;%d, " %(-1, -1)
 
         return buff
 
