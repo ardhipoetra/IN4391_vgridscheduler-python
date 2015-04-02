@@ -57,6 +57,9 @@ def main():
 
                     # tes connection
                     Pyro4.resolve(struri)
+                    with Pyro4.Proxy(struri) as gsobj:
+                        gsobj.test_con()
+
                     break
                 except Exception as e:
                     print ("GS %d unavailable, try again" %target)

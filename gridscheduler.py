@@ -290,6 +290,9 @@ class GridScheduler(Node):
                         activeid.append(gsobj.getoid())
             except Pyro4.errors.NamingError as e:
                 continue
+            except Exception as e:
+                # socket error
+                continue
 
         if len(activeid) != Constant.TOTAL_GS:
             inactiveid = list(set([x for x in range(0, Constant.TOTAL_GS)]) - set(activeid))
@@ -313,7 +316,7 @@ class GridScheduler(Node):
                 Pyro4.resolve(struri)
 
                 with Pyro4.Proxy(struri) as rmobj:
-                    pass
+                    rmobj.test_con()
             except Exception as e:
                 # handle dead RM
                 self._write("RM %d detected dead!" %(rmid))

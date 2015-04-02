@@ -6,7 +6,7 @@ class Node(object):
     def __init__(self, oid, name="node"):
         self.oid = oid
         self.name = name
-    
+
     def getname(self):
         return self.name
 
@@ -24,3 +24,7 @@ class Node(object):
 
     def seturi(self, uri):
         self.uri = uri
+
+    @Pyro4.oneway
+    def test_con(self):
+        pass
