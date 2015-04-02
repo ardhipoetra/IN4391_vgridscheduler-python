@@ -65,12 +65,17 @@ class GridScheduler(Node):
     @Pyro4.oneway
     def receive_report(self, rmid, d_job):
         job = serpent.loads(d_job)
-        self._write('received report %s from RM-%d' %(job, rmid))
 
-        # remove from stat monitor
-        # print str(self.oid)+" dec  "+str(job["load"]/float(len(self.RM_loads)))
-        self.RM_loads[rmid] -= (job["load"]/float(len(self.RM_loads)))
-        self.jobs_assigned_RM[rmid].remove(job)
+
+        try:
+            self.jobs_assigned_RM[rmid].remove(job)
+            self._write('received report %s from RM-%d' %(job, rmid))
+            # remove from stat monitor
+            # print str(self.oid)+" dec  "+str(job["load"]/float(len(self.RM_loads)))
+            self.RM_loads[rmid] -= (job["load"]/float(len(self.RM_loads)))
+        except ValueError:
+            self._write('[IGNORED] received spurious report %s from RM-%d' %(job, rmid))
+
 
         # resync with neighbor
         (act_neig, inact_neig) = self._monitorneighborGS()
