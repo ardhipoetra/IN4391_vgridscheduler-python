@@ -432,7 +432,7 @@ def main():
             pass
 
     #ns should be ready by now
-    if len(sys.argv) != 2:
+    if len(sys.argv) < 2:
         print "you must provide GS id"
         sys.exit()
     else:
@@ -453,9 +453,14 @@ def main():
 
     signal.signal(signal.SIGINT, signal_handler)
 
-    check_env()
+    if len(sys.argv) == 3:
+        recheck = int(sys.argv[2])
+    else:
+        recheck = 0
 
-    print "[%f]-%d GS everything ready!" %(time.time(), oid)
+    if recheck == 0:
+        check_env()
+        print "[%f]-%d GS everything ready!" %(time.time(), oid)
 
     daemon.requestLoop(loopCondition=check_stop)
 

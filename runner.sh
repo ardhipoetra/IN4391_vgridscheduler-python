@@ -7,7 +7,7 @@ gspid=()
 for rid in "${rmids[@]}"
 do
     echo "runs RM : $rid"
-    python resourcemanager.py $rid &
+    python resourcemanager.py $rid 0 &
     rmpid[$rid]=$!
 
     if [[ $rid = "${rmids[0]}" ]]; then
@@ -20,7 +20,7 @@ done
 for gid in "${gsids[@]}"
 do
     echo "runs GS : $gid"
-    python gridscheduler.py $gid &
+    python gridscheduler.py $gid 0 &
     gspid[$gid]=$!
     if [[ $gid = "${gsids[0]}" ]]; then
         sleep 1.5
@@ -40,7 +40,7 @@ do
         read idspawn
         if [[ "${gspid[$idspawn]}" = -1 ]]; then
             echo "runs GS : $idspawn"
-            python gridscheduler.py $idspawn &
+            python gridscheduler.py $idspawn 1 &
             gspid[$idspawn]=$!
         else
             echo "process not dead"
@@ -50,7 +50,7 @@ do
         read idspawn
         if [[ "${rmpid[$idspawn]}" = -1 ]]; then
             echo "runs RM : $idspawn"
-            python resourcemanager.py $idspawn &
+            python resourcemanager.py $idspawn 1 &
             rmpid[$idspawn]=$!
         else
             echo "process not dead"
