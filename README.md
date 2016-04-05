@@ -1,1 +1,5 @@
 # vgridscheduler-python
+shamelessly copied from our report : 
+
+
+Virtual grid system (VGS), is a kind of distributed system which uses the large scale computer resources from different location to achieve the intended goal. This document describes the system level design information to simulate the VGS for the research purpose.  The simulated VGS supports the distributed multi cluster environment. Simulated VGS is highly scalable executing huge number of jobs across multiple cluster. Each Cluster is controlled by the resource manager who bridge the gap between the grid scheduler and the jobs being executed on multiple cluster, ensure the job allocation to the processor and communicate the job execution status to other resource manager from different cluster and also to the grid scheduler. Simulated grid scheduler ensure the load balancing between the various clusters ensuring stable system operation. Within our experiment during the simulation of VGS system we found that Distributed VGS offer improved fault tolerance and better scalability. 
